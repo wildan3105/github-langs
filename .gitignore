@@ -1,0 +1,10 @@
+# Node
+node_modules
+test
+
+# API keys
+.env
+
+# Coder
+.idea
+
