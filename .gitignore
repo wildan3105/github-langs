@@ -2,7 +2,7 @@
 node_modules
 
 # API keys
-.env
+.env.example
 
 # Coder
 .idea
