@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
-    <title>GitHub Language Checker</title>
+    <title>{{title}}</title>
     <!-- Bootstrap core CSS -->
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
@@ -18,11 +18,20 @@
         <div class="cover-container">
           <div class="inner cover">
             <h1 class="cover-heading">GitHub Language Checker</h1>
-            <form id="search-form" action="index.html" method="get" action="#">
-              <input type="text" name="" placeholder="search">
-              <button type="submit" name="button">Search</button>
+            <form id="search-form" action="" method="get" action="#">
+              <input type="text" name="username" placeholder="search">
+              <button type="submit" name="">Search</button>
             </form>
           </div>
+          <br>
+          <h4>RESULT : </h4>
+          <p>
+            <br>
+            <h5>Total : {{total}}</h5>
+            {{#each languages}}
+              {{@key}}: {{this}},
+            {{/each}}
+          </p>
           <div class="mastfoot">
             <div class="inner">
               <p>Disclaimer : This site is a fan made and not affiliated with GitHub.
