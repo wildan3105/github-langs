@@ -4,7 +4,8 @@
   "description": "show percentage repository of github's account based on language",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "eslint": "eslint lib/*.js index.js"
   },
   "repository": {
     "type": "git",
