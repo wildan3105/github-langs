@@ -3,6 +3,7 @@ node_modules
 
 # API keys
 .env.example
+config.json
 
 # Coder
 .idea
