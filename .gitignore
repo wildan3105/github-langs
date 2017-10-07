@@ -1,6 +1,7 @@
 # Node
 node_modules
 dump
+*.log
 
 # API keys
 .env.example
