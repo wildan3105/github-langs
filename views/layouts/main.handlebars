@@ -20,7 +20,7 @@
             <a href='./' title='Back to home'><h1 class="cover-heading">GitHub Language Checker</h1> </a>
             <br>
             <form id="search-form" action="" method="get" action="#">
-              <input type="text" name="username" placeholder="search" required>
+              <input type="text" name="username" placeholder="type your username" required>
               <button type="submit" name="">Search</button>
             </form>
           </div>
@@ -29,7 +29,12 @@
           <div class="hide" style="display:{{showResult}}">
             <h4>RESULT FOR <i> {{username}} </i> </h4>
             <h3>Total public repos : {{repos}}</h3>
-
+            <p>
+              <h4> Languages : </h4>
+              {{#each languages}}
+                {{@key}}: {{this}},
+              {{/each}}
+            </p>
           </div>
           <div class="mastfoot">
             <div class="inner">
