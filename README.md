@@ -14,7 +14,6 @@ Useful web checker to see what languages are used from a github account inspired
 
 * Create `.env` file with this content :
 ```json
-#client_id
 CLIENT_ID=your_client_id
 CLIENT_SECRET=your_client_secret
 ```
