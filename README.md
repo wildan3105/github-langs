@@ -8,14 +8,15 @@ Useful web checker to see what languages are used from a github account inspired
 
 ## Running the app locally
 
-* [Generate a GitHub personal access token](https://github.com/settings/tokens/new?scopes=&description=Hacktoberfest%20Checker) to ensure you don't get rate limited API call.
+* [Generate a GitHub personal access token](https://github.com/settings/tokens/new?scopes=&description=GitHub%20langs) to ensure you don't get rate limited API call.
 
 * Create `config.json` file with this content :
 ```json
 {
   "client_id":"your_client_id",
   "client_secret":"your_client_secret"
-}```
+}
+```
 
 * If you want to run test (with eslint) : `npm run eslint`
 
