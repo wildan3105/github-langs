@@ -56,11 +56,11 @@
           <div style="display:{{showResult}}">
             <img class="img-circle" src='{{avatar}}'>
             <br>
-            <a href="https://github.com/{{username}}" title="go to github" target="_blank"><caption>{{username}}</caption></a>
+            <a href="https://github.com/{{username}}" title="go to {{username}}'s github page" target="_blank"><caption>{{username}}</caption></a>
             <h4> Repos : {{repos}}</h4>
             ===
             <p>
-              <h4> Languages : </h4>
+              <h4 style="display:{{showLanguage}}"> Languages : </h4>
               {{#each languages}}
                 {{@key}}: {{this}},
               {{/each}}
