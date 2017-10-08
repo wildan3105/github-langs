@@ -12,6 +12,10 @@
     <!-- Custom styles for this template -->
     <link href="public/cover.css" rel="stylesheet">
     <style media="screen">
+      /*body{
+        background-color: black;
+        color:white;
+      }*/
       .img-circle {
         border-radius: 50%;
         width: 15%;
@@ -52,7 +56,7 @@
           <div style="display:{{showResult}}">
             <img class="img-circle" src='{{avatar}}'>
             <br>
-            <caption>{{username}}</caption>
+            <a href="https://github.com/{{username}}" title="go to github" target="_blank"><caption>{{username}}</caption></a>
             <h4> Repos : {{repos}}</h4>
             ===
             <p>
