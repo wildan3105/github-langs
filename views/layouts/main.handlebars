@@ -11,8 +11,19 @@
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="http://getbootstrap.com/docs/4.0/examples/cover/cover.css" rel="stylesheet">
+    <style media="screen">
+      .img-circle {
+        border-radius: 50%;
+        width: 15%;
+        height: 15%;
+      }
+    </style>
   </head>
   <body>
+    <a href="http://github.com/wildan3105/github-langs" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" /></a>
+</body>
+</html>
+
     <div class="site-wrapper">
       <div class="site-wrapper-inner">
         <div class="cover-container">
@@ -25,10 +36,13 @@
             </form>
           </div>
           <br>
-          <h3>{{message}}</h3>
-          <div class="hide" style="display:{{showResult}}">
-            <h4>RESULT FOR <i> {{username}} </i> </h4>
-            <h3>Total public repos : {{repos}}</h3>
+          <h3>{{msg}}</h3>
+          <div style="display:{{showResult}}">
+            <img class="img-circle" src='{{avatar}}'>
+            <br>
+            <caption>{{username}}</caption>
+            <h4> Repos : {{repos}}</h4>
+            ===
             <p>
               <h4> Languages : </h4>
               {{#each languages}}
@@ -38,10 +52,7 @@
           </div>
           <div class="mastfoot">
             <div class="inner">
-              <p>Disclaimer : This site is a fan made and not affiliated with GitHub.
-                <br>
-                <a href="https://github.com/wildan3105/github-langs" target="_blank">Source code</a>
-              </p>
+              <p>Disclaimer : This site is a fan made and not affiliated with GitHub.</p>
             </div>
           </div>
         </div>
