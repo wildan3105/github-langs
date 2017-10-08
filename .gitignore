@@ -4,7 +4,7 @@ dump
 *.log
 
 # API keys
-.env.example
+.env
 config.json
 
 # Coder
