@@ -8,7 +8,7 @@ Useful web checker to see what languages are used from a github account inspired
 
 ## Running the app locally
 
-* [Generate a GitHub personal access token](https://github.com/settings/tokens/new?scopes=&description=GitHub%20langs) to ensure you don't get rate limited API call.
+* [Generate a GitHub OAuth client id and client secret](https://github.com/settings/applications/new) to ensure you don't get rate limited API call.
 
 * Create `config.json` file with this content :
 ```json
