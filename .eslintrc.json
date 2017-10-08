@@ -40,7 +40,6 @@
         "no-restricted-syntax":"error",
         "no-restricted-properties":"error",
         "no-undef":"error",
-        "no-plusplus":"warn",
         "no-nested-ternary":"error",
         "no-underscore-dangle":"error",
         "no-mixed-spaces-and-tabs": 2,
