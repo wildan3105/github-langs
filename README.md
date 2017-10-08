@@ -1,5 +1,7 @@
 # Github Language Checker
 
+[![Build Status](https://travis-ci.org/wildan3105/github-langs.svg?branch=master)](https://travis-ci.org/wildan3105/github-langs)
+
 Useful web checker to see what languages are used from a github account inspired by [Hacktoberfestchecker](https://hacktoberfestchecker.herokuapp.com)
 
 [Github-langs](https://github-langs.herokuapp.com)
