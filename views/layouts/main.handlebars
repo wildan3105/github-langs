@@ -8,14 +8,22 @@
     <link rel="icon" href="public/img/coding.png">
     <title>{{title}}</title>
     <!-- Bootstrap core CSS -->
-    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="public/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="http://getbootstrap.com/docs/4.0/examples/cover/cover.css" rel="stylesheet">
+    <link href="public/cover.css" rel="stylesheet">
     <style media="screen">
       .img-circle {
         border-radius: 50%;
         width: 15%;
         height: 15%;
+      }
+      .mastfoot {
+        position:fixed;
+       left:0px;
+       bottom:30px;
+       height:30px;
+       width:100%;
+       background:;
       }
     </style>
   </head>
@@ -27,8 +35,12 @@
     <div class="site-wrapper">
       <div class="site-wrapper-inner">
         <div class="cover-container">
+          <center>
+
           <div class="inner cover">
+            <br><br>
             <a href='./' title='Back to home'><h1 class="cover-heading">GitHub Language Checker</h1> </a>
+
             <br>
             <form id="search-form" action="" method="get" action="#">
               <input type="text" name="username" placeholder="type your username" required>
@@ -55,6 +67,7 @@
               <p>Disclaimer : This site is a fan made and not affiliated with GitHub.</p>
             </div>
           </div>
+          </center>
         </div>
       </div>
     </div>
