@@ -19,7 +19,6 @@
         "indent":"error",
         "keyword-spacing":"error",
         "max-depth": ["error", 4],
-        "max-len": [1, 120, 2, {"ignoreComments": true}],
         "max-statements": [1, 30],
         "newline-per-chained-call":"error",
         "no-array-constructor":"error",
