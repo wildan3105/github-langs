@@ -2,9 +2,9 @@
 
 [![Build Status](https://travis-ci.org/wildan3105/github-langs.svg?branch=master)](https://travis-ci.org/wildan3105/github-langs)
 
-Useful web checker to see what languages are used from a github account inspired by [Hacktoberfestchecker](https://hacktoberfestchecker.herokuapp.com)
+> Useful web checker to see what languages are used from a github account.
 
-[Github-langs](https://githublangs.herokuapp.com)
+[Go to the web!](https://githublangs.herokuapp.com)
 
 ![Screenshot](screenshot2.png)
 
@@ -26,8 +26,8 @@ CLIENT_SECRET=your_client_secret
 - [ ] : Beautify the page
 
 ## Contributors :
-- Wildan S. Nahar [](https://github.com/wildan3105)
-- Leonardo Cardoso [](https://github.com/Leocardoso94)
+- [Wildan S. Nahar](https://github.com/wildan3105)
+- [Leonardo Cardoso](https://github.com/Leocardoso94)
 
 ## License :
 
