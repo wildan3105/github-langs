@@ -18,7 +18,7 @@ CLIENT_ID=your_client_id
 CLIENT_SECRET=your_client_secret
 ```
 
-* If you want to run test (with eslint) : `npm run eslint`
+* If you want to run test (with eslint) : `npm run test`
 
 * Install dependency : `npm install`
 
