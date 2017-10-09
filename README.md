@@ -21,9 +21,13 @@ CLIENT_SECRET=your_client_secret
 * Start the app `npm start` and go to : `http://localhost:5000`
 
 ## TO DO LIST :
-- [ ] : Show repo > 100 (currently, only support repo < 100)
+- [x] : Show repo > 100 (currently, only support repo < 100)
 - [ ] : Add vertical bar based on languages
 - [ ] : Beautify the page
+
+## Contributors :
+- Wildan S. Nahar [](https://github.com/wildan3105)
+- Leonardo Cardoso [](https://github.com/Leocardoso94)
 
 ## License :
 
