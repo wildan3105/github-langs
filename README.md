@@ -1,6 +1,6 @@
 # Github Language Checker
 
-[![Build Status](https://travis-ci.org/wildan3105/github-langs.svg?branch=master)](https://travis-ci.org/wildan3105/github-langs) [![HitCount](http://hits.dwyl.com/wildan3105/github-langs.svg)](http://hits.dwyl.com/wildan3105/github-langs)  [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues) 
+[![Build Status](https://travis-ci.org/wildan3105/github-langs.svg?branch=master)](https://travis-ci.org/wildan3105/github-langs) [![HitCount](http://hits.dwyl.com/wildan3105/github-langs.svg)](http://hits.dwyl.com/wildan3105/github-langs)   [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/wildan3105/github-langs/issues)
 
 
 > Useful web checker to see what languages are used from a github account.
@@ -23,7 +23,7 @@ CLIENT_SECRET=your_client_secret
 
 ## TO DO LIST :
 - [x] : Show repo > 100 (currently, only support repo < 100)
-- [ ] : Add vertical bar based on languages
+- [x] : Add vertical bar based on languages
 - [ ] : Beautify the page
 
 ## Contributors :
