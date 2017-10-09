@@ -11,18 +11,14 @@ Useful web checker to see what languages are used from a github account inspired
 ## Running the app locally
 
 * [Generate a GitHub OAuth client id and client secret](https://github.com/settings/applications/new) to ensure you don't get rate limited API call.
-
 * Create `.env` file with this content :
 ```json
 CLIENT_ID=your_client_id
 CLIENT_SECRET=your_client_secret
 ```
-
-* If you want to run test (with eslint) : `npm run test`
-
 * Install dependency : `npm install`
-
-* `npm start` and go to : `http://localhost:5000`
+* If you want to run test (with eslint) : `npm run test`
+* Start the app `npm start` and go to : `http://localhost:5000`
 
 ## TO DO LIST :
 - [ ] : Show repo > 100 (currently, only support repo < 100)
