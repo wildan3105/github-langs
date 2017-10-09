@@ -4,7 +4,7 @@
 
 Useful web checker to see what languages are used from a github account inspired by [Hacktoberfestchecker](https://hacktoberfestchecker.herokuapp.com)
 
-[Github-langs](https://github-langs.herokuapp.com)
+[Github-langs](https://githublangs.herokuapp.com)
 
 ![Screenshot](screenshot.png)
 
