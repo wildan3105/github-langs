@@ -18,6 +18,7 @@
     }
 
     const chart = () => {
+      const color = 'white';
       let languages = parse(document.getElementById('canvas-container').dataset.languages)
       new Chart(document.getElementById('myChart'), {
         type: 'bar',
@@ -25,17 +26,29 @@
           labels: Object.keys(languages),
           datasets: [{
             label: "Language Stats",
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
+            backgroundColor: color,
+            borderColor: color,
             data: Object.values(languages),
           }]
         },
         options: {
           maintainAspectRatio: false,
+          legend: {
+            labels: {
+              fontColor: color
+            },
+            position: 'bottom'
+          },
           scales: {
             yAxes: [{
               ticks: {
-                beginAtZero: true
+                beginAtZero: true,
+                fontColor: color
+              }
+            }],
+            xAxes: [{
+              ticks: {
+                fontColor: color
               }
             }]
           }
