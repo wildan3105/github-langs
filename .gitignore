@@ -9,3 +9,6 @@ config.json
 
 # Coder
 .idea
+
+# Analytics
+views/partials/footer.handlebars
