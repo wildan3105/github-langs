@@ -6,7 +6,7 @@ Useful web checker to see what languages are used from a github account inspired
 
 [Github-langs](https://githublangs.herokuapp.com)
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot2.png)
 
 ## Running the app locally
 
