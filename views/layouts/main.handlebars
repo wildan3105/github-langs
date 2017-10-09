@@ -1,85 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="public/img/favicon.png">
-    <title>{{title}}</title>
-    <!-- Bootstrap core CSS -->
-    <link href="public/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <!-- Custom styles for this template -->
-    <!-- <link href="public/cover.css" rel="stylesheet"> -->
-    <style media="screen">
-      /*body{
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
+  <script>
+    const parse = text => {
+      let languages = {};
+      text.trim().split(" ").forEach(string => {
+        let [key, value] = string.split(":")
+        languages[key] = value
+      })
+      return languages;
+    }
+
+    const chart = () => {
+      const color = 'white';
+      let languages = parse(document.getElementById('canvas-container').dataset.languages)
+      new Chart(document.getElementById('myChart'), {
+        type: 'bar',
+        data: {
+          labels: Object.keys(languages),
+          datasets: [{
+            label: "Language Stats",
+            backgroundColor: color,
+            borderColor: color,
+            data: Object.values(languages),
+          }]
+        },
+        options: {
+          maintainAspectRatio: false,
+          legend: {
+            labels: {
+              fontColor: color
+            },
+            position: 'bottom'
+          },
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: true,
+                fontColor: color
+              }
+            }],
+            xAxes: [{
+              ticks: {
+                fontColor: color
+              }
+            }]
+          }
+        }
+      })
+    };
+  </script>
+  <link rel="icon" href="public/img/favicon.png">
+  <title>{{title}}</title>
+  <!-- Bootstrap core CSS -->
+  <link href="public/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Custom styles for this template -->
+  <!-- <link href="public/cover.css" rel="stylesheet"> -->
+  <style media="screen">
+    /*body{
         background-color: #1f1c21;
         color:white;
       }*/
-      body {
-        background-image: radial-gradient(circle, #0f229e 0, #202a6b 120%);
-        font-family: "proxima-nova", -apple-system, BlinkMacSystemFont, "Segoe UI",
-          "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue",
-          "Arial", sans-serif;
-      }
-      .img-circle {
-        border-radius: 50%;
-        border: 6px solid white;
-        width: 12%;
-        height: 12%;
-      }
-      .mastfoot {
-        position: fixed;
-        left: 0px;
-        bottom: 0px;
-        height: 50px;
-        width: 100%;
-        font-weight: bold;
-        text-transform: uppercase;
-        background-color: #233140;
-        padding-top: 15px;
-        font-size: 14px;
-      }
-      #search-form input{
-        padding: 10px;
-        border: none;
-        outline: none;
-        font-size: 1.4em;
-        border-radius: 35px;
-        border-top-right-radius: 0px;
-        border-bottom-right-radius: 0px;
-        text-align: center;
-      }
-      #search-form button{
-        border-top-right-radius: 35px;
-        border-bottom-right-radius: 35px;
-        background-color: #0275d8;
-        color: white;
-        cursor: pointer;
-      }
-      .result, h3 {
-        color:white;
-      }
 
-      a .username {
-        color: white;
-      }
+    body {
+      background-image: radial-gradient(circle, #0f229e 0, #202a6b 120%);
+      font-family: "proxima-nova", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue",
+      "Arial", sans-serif;
+    }
 
-    </style>
-  </head>
-  <body>
-    <a href="http://github.com/wildan3105/github-langs" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="public/img/forkme.png" alt="Fork me on GitHub" /></a>
-</body>
-</html>
+    .img-circle {
+      border-radius: 50%;
+      border: 6px solid white;
+      width: 12%;
+      height: 12%;
+    }
 
-    <div class="site-wrapper">
-      <div class="site-wrapper-inner">
-        <div class="cover-container">
-          <center>
+    .mastfoot {
+      position: fixed;
+      left: 0px;
+      bottom: 0px;
+      height: 50px;
+      width: 100%;
+      font-weight: bold;
+      text-transform: uppercase;
+      background-color: #233140;
+      padding-top: 15px;
+      font-size: 14px;
+    }
+    #search-form input{
+      padding: 10px;
+      border: none;
+      outline: none;
+      font-size: 1.4em;
+      border-radius: 35px;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+      text-align: center;
+    }
+    #search-form button{
+      border-top-right-radius: 35px;
+      border-bottom-right-radius: 35px;
+      background-color: #0275d8;
+      color: white;
+      cursor: pointer;
+    }
+    .result,
+    h3 {
+      color: white;
+    }
+
+    #canvas-container {
+      height: 400px;
+      max-width: 600px
+    }
+
+    a .username {
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="http://github.com/wildan3105/github-langs" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="public/img/forkme.png" alt="Fork me on GitHub" /></a>
+
+  <div class="site-wrapper">
+    <div class="site-wrapper-inner">
+      <div class="cover-container">
+        <center>
           <div class="inner cover">
             <br><br>
-            <a style="text-decoration:none; color:white" href='./' title='Back to home'><h1 class="cover-heading">GitHub Language Checker</h1> </a>
+            <a style="text-decoration:none; color:white" href='./' title='Back to home'>
+              <h1 class="cover-heading">GitHub Language Checker</h1>
+            </a>
 
             <br>
             <div class="container">
@@ -99,9 +158,6 @@
           </div>
           <br>
 
-          <!-- test form -->
-          <!-- <canvas id="myChart" width="400" height="400"></canvas> -->
-
           <h3>{{msg}}</h3>
           <div class="result" style="display:{{showResult}}">
             <div class="container">
@@ -112,15 +168,19 @@
                 <div class="col-md-12">
                     <h4> {{repos}} {{showEmoji}}</h4>
                     <p>{{statement}}</p>
+                  </div>
                 </div>
-              </div>
-            </center>
+              </center>
+            </div>
+            <div id="canvas-container" data-languages="{{#each languages}}{{@key}}:{{this}} {{/each}}">
+              <canvas id="myChart"></canvas>
+              <script>
+                chart()
+              </script>
             </div>
             <p>
               <h4 style="display:{{showLanguage}}"> Language(s) : </h4>
-              {{#each languages}}
-                {{@key}}: {{this}},
-              {{/each}}
+              {{#each languages}} {{@key}}: {{this}}, {{/each}}
             </p>
           </div>
           <div class="mastfoot">
@@ -128,49 +188,12 @@
               <p style="color:white">Disclaimer : This site is a fan made and not affiliated with GitHub.</p>
             </div>
           </div>
-          </center>
-        </div>
+        </center>
       </div>
     </div>
-    {{> footer}}
-  </body>
-  <script>
-    var ctx = document.getElementById("myChart");
-    var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-            datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255,99,132,1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero:true
-                    }
-                }]
-            }
-        }
-    });
-</script>
+  </div>
+  {{> footer}}
+
+</body>
+
 </html>
