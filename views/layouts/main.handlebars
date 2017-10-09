@@ -9,6 +9,7 @@
     <title>{{title}}</title>
     <!-- Bootstrap core CSS -->
     <link href="public/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- Custom styles for this template -->
     <!-- <link href="public/cover.css" rel="stylesheet"> -->
     <style media="screen">
@@ -29,12 +30,33 @@
         height: 12%;
       }
       .mastfoot {
-        position:fixed;
-       left:0px;
-       bottom:10px;
-       height:30px;
-       width:100%;
-       background:;
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+        height: 50px;
+        width: 100%;
+        font-weight: bold;
+        text-transform: uppercase;
+        background-color: #233140;
+        padding-top: 15px;
+        font-size: 14px;
+      }
+      #search-form input{
+        padding: 10px;
+        border: none;
+        outline: none;
+        font-size: 1.4em;
+        border-radius: 35px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        text-align: center;
+      }
+      #search-form button{
+        border-top-right-radius: 35px;
+        border-bottom-right-radius: 35px;
+        background-color: #0275d8;
+        color: white;
+        cursor: pointer;
       }
       .result, h3 {
         color:white;
@@ -60,10 +82,20 @@
             <a style="text-decoration:none; color:white" href='./' title='Back to home'><h1 class="cover-heading">GitHub Language Checker</h1> </a>
 
             <br>
-            <form id="search-form" action="" method="get" action="#">
-              <input type="text" autofocus="autofocus" name="username" placeholder="Github username" required>
-              <button type="submit" name="">Search</button>
-            </form>
+            <div class="container">
+              <div class="row">
+                <div class="order-md-2 col-md-6">
+                  <form id="search-form" action="" method="get" action="#">
+                    <div class="input-group">
+                      <input type="text" class="form-control" autofocus="autofocus" name="username" placeholder="Github username" required>
+                      <button type="submit" class="input-group-addon btn" name=""><i class="fa fa-search"></i> &nbsp;Search</button>
+                    </div>
+                  </form>
+                </div>
+                <div class="col-md-3"></div>
+              </div>
+
+            </div>
           </div>
           <br>
 
@@ -78,7 +110,7 @@
                 <br>
               <div class="row">
                 <div class="col-md-12">
-                    <h4> {{repos}} </h4>
+                    <h4> {{repos}} {{showEmoji}}</h4>
                     <p>{{statement}}</p>
                 </div>
               </div>
