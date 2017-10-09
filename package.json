@@ -1,7 +1,7 @@
 {
   "name": "github-langs",
-  "version": "0.0.0",
-  "description": "show percentage repository of github's account based on language",
+  "version": "1.0.1",
+  "description": "show programming language based on the repos of github's account",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -14,7 +14,7 @@
   "keywords": [
     "github",
     "language",
-    "search"
+    "repository"
   ],
   "author": "Wildan S. Nahar",
   "license": "ISC",
