@@ -83,7 +83,6 @@
     }
 
     .mastfoot {
-      position: fixed;
       left: 0px;
       bottom: 0px;
       height: 50px;
@@ -118,12 +117,13 @@
 
     #canvas-container {
       height: 400px;
-      max-width: 600px
+      max-width: 600px;
     }
 
     a .username {
       color: white;
     }
+
   </style>
 </head>
 
@@ -178,10 +178,7 @@
                 chart()
               </script>
             </div>
-            <p>
-              <h4 style="display:{{showLanguage}}"> Language(s) : </h4>
-              {{#each languages}} {{@key}}: {{this}}, {{/each}}
-            </p>
+            <div style="display:none;">Languages: {{#each languages}} {{@key}}: {{this}}, {{/each}}</div>
           </div>
           <div class="mastfoot">
             <div class="inner">
@@ -195,5 +192,4 @@
   {{> footer}}
 
 </body>
-
 </html>
