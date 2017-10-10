@@ -8,6 +8,10 @@ body {
   "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue",
   "Arial", sans-serif;
 }
+
+.img-container {
+  position: relative;
+}
 .img-circle {
   border-radius: 50%;
   border: 6px solid white;
@@ -15,8 +19,12 @@ body {
   height: 12%;
 }
 .img-organisation {
-  width: 20%;
-  margin: -73px;
+  position: absolute;
+  width: 9%;
+  top: 156px;
+  right: 802px;
+  outline-style: dotted;
+  outline-color: #00ff00;
 }
 .mastfoot {
   position: fixed;
