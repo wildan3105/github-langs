@@ -22,14 +22,14 @@
     "url": "https://github.com/wildan3105/github-langs/issues"
   },
   "homepage": "https://github.com/wildan3105/github-langs#readme",
-  "dependencies":{
+  "dependencies": {
     "body-parser": "^1.15.1",
     "dotenv": "~4.0.0",
-    "eslint":"4.8.0",
+    "eslint": "4.8.0",
     "express": "4.16.0",
-    "express-handlebars":"3.0.0",
+    "express-handlebars": "3.0.0",
     "lodash": "^4.17.4",
     "method-override": "^2.3.5",
-    "request":"2.83.0"
+    "request": "2.83.0"
   }
 }
