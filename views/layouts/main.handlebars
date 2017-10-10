@@ -6,62 +6,18 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
-  <script>
-    const parse = text => {
-      let languages = {};
-      text.trim().split(" ").forEach(string => {
-        let [key, value] = string.split(":")
-        languages[key] = value
-      })
-      return languages;
-    }
 
-    const chart = () => {
-      const color = 'white';
-      let languages = parse(document.getElementById('canvas-container').dataset.languages)
-      new Chart(document.getElementById('myChart'), {
-        type: 'bar',
-        data: {
-          labels: Object.keys(languages),
-          datasets: [{
-            label: "Language Stats",
-            backgroundColor: color,
-            borderColor: color,
-            data: Object.values(languages),
-          }]
-        },
-        options: {
-          maintainAspectRatio: false,
-          legend: {
-            labels: {
-              fontColor: color
-            },
-            position: 'bottom'
-          },
-          scales: {
-            yAxes: [{
-              ticks: {
-                beginAtZero: true,
-                fontColor: color
-              }
-            }],
-            xAxes: [{
-              ticks: {
-                fontColor: color
-              }
-            }]
-          }
-        }
-      })
-    };
-  </script>
+  <!-- chart.js customized -->
+  <script src="public/js/chart.js"></script>
+
   <link rel="icon" href="public/img/favicon.png">
   <title>{{title}}</title>
+
   <!-- Bootstrap core CSS -->
   <link href="public/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
   <!-- Custom styles for this template -->
-  <!-- <link href="public/cover.css" rel="stylesheet"> -->
   <link href="public/css/screen.css" rel="stylesheet" media="screen">
 </head>
 
