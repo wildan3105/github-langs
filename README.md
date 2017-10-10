@@ -18,7 +18,7 @@ CLIENT_ID=your_client_id
 CLIENT_SECRET=your_client_secret
 ```
 * Install dependency : `npm install`
-* If you want to run test (with eslint) : `npm run test`
+* **ALWAYS** run test before start the app : `npm run test`
 * Start the app `npm start` and go to : `http://localhost:5000`
 
 ## TO DO LIST :
