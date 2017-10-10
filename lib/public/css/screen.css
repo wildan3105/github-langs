@@ -14,6 +14,10 @@ body {
   width: 12%;
   height: 12%;
 }
+.img-organisation {
+  width: 20%;
+  margin: -73px;
+}
 .mastfoot {
   position: fixed;
   left: 0px;
