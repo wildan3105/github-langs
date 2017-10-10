@@ -26,9 +26,9 @@ CLIENT_SECRET=your_client_secret
 - [x] : Add vertical bar based on languages
 - [ ] : Beautify the page
 
-## Contributors :
-- [Wildan S. Nahar](https://github.com/wildan3105)
-- [Leonardo Cardoso](https://github.com/Leocardoso94)
+## Contributing
+
+Check out this [page](CONTRIBUTING.md)
 
 ## License :
 
