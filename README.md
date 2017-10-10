@@ -7,7 +7,7 @@
 
 [Go to the web!](https://githublangs.herokuapp.com)
 
-![Screenshot](screenshot2.png)
+![Screenshot](screenshot3.png)
 
 ## Running the app locally
 
