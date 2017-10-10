@@ -13,7 +13,7 @@
 
 * [Generate a GitHub OAuth client id and client secret](https://github.com/settings/applications/new) to ensure you don't get rate limited API call.
 * Create `.env` file with this content :
-```json
+```bash
 CLIENT_ID=your_client_id
 CLIENT_SECRET=your_client_secret
 ```

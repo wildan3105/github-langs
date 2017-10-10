@@ -13,3 +13,4 @@ Here are the steps to contribute to this project :
 - [Leonardo Cardoso](https://github.com/Leocardoso94)
 - [Juan Ignacio Cuiule](https://github.com/juancuiule)
 - [Premprakash singh](https://github.com/PREMPRAKASHSINGH)
+- [Ayman Nedjmeddine](https://github.com/IOAyman)
