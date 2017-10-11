@@ -33,8 +33,16 @@ CLIENT_SECRET=your_client_secret
 ## Running app through Docker
 
 * Build image : `docker build -t local/github-langs .`
-* Run image : `docker run -it -p 5000:5000 --env-file .env local/github-langs`
-* App now available on `http://localhost:5000`
+* Run image : ```docker run -v `pwd`/tests/screenshot-testing/screenshots:/app/tests/screenshot-testing/screenshots -v `pwd`/views:/app/views -v `pwd`/lib:/app/lib -it -p 5000:5000 --env-file .env local/github-langs```
+* Start server in appeared terminal : `npm start`
+* App is now available on `http://localhost:5000`
+
+## Testing app through Docker
+
+* Build image : `docker build -t local/github-langs .`
+* Run image : ```docker run -v `pwd`/tests/screenshot-testing/screenshots:/app/tests/screenshot-testing/screenshots -v `pwd`/views:/app/views -v `pwd`/lib:/app/lib -it -p 5000:5000 --env-file .env local/github-langs```
+* Redirect display output to xvfb : `source start-xvfb.sh`
+* Execute tests : `npm test`
 
 ## TO DO LIST (ordered by priority) :
 - [x] : Show repo > 100 (currently, only support repo < 100)

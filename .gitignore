@@ -13,3 +13,6 @@ config.json
 
 # Analytics
 views/partials/footer.handlebars
+
+# Tests reports
+/build
