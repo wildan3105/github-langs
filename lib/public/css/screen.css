@@ -12,10 +12,10 @@ body {
 }
 
 .spinner{
-  width: 80px;
-  height: 80px;
-  border: 2px solid #f3f3f3;
-  border-top: 3px solid #f25a41;
+  width: 40px;
+  height: 40px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #6b9eef;
   border-radius: 100%;
   position: relative;
   margin: 50px;
@@ -24,7 +24,7 @@ body {
 
 #realContent{
   position: relative;
-  bottom: 145px;
+  bottom: 85px;
 }
 
 @keyframes spin{
