@@ -4,7 +4,7 @@
   "description": "show programming language based on the repos of github's account",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "nodemon index.js",
     "test": "eslint --fix lib/*.js index.js"
   },
   "repository": {
@@ -25,11 +25,14 @@
   "dependencies": {
     "body-parser": "^1.15.1",
     "dotenv": "~4.0.0",
-    "eslint": "4.8.0",
     "express": "4.16.0",
     "express-handlebars": "3.0.0",
     "lodash": "^4.17.4",
     "method-override": "^2.3.5",
+    "nodemon": "~1.12.1",
     "request": "2.83.0"
+  },
+  "devDependencies": {
+    "eslint": "~4.8.0"
   }
 }
