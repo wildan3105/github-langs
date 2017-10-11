@@ -11,7 +11,6 @@ body {
   "Arial", sans-serif;
 }
 
-
 .spinner{
   width: 80px;
   height: 80px;
@@ -21,6 +20,11 @@ body {
   position: relative;
   margin: 50px;
   animation: spin 1s infinite linear;
+}
+
+#realContent{
+  position: relative;
+  bottom: 145px;
 }
 
 @keyframes spin{
