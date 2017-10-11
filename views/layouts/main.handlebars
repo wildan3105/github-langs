@@ -1,98 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
-
-  <!-- chart.js customized -->
-  <script src="public/js/chart.js"></script>
-
-  <link rel="icon" href="public/img/favicon.png">
-  <title>{{title}}</title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="public/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
-  <!-- Custom styles for this template -->
-  <link href="public/css/screen.css" rel="stylesheet" media="screen">
-</head>
+{{> head}}
 
 <body>
-  <a href="http://github.com/wildan3105/github-langs" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="public/img/forkme.png" alt="Fork me on GitHub" /></a>
+<a href="http://github.com/wildan3105/github-langs" target="_blank">
+  <img style="position: absolute; top: 0; right: 0; border: 0;"
+       src="public/img/forkme.png" alt="Fork me on GitHub"/>
+</a>
 
-  <div class="site-wrapper">
-    <div class="site-wrapper-inner">
-      <div class="cover-container">
-        <center>
-          <div class="inner cover">
-            <br><br>
-            <a style="text-decoration:none; color:white" href='./' title='Back to home'>
-              <h1 class="cover-heading">GitHub Language Checker</h1>
-            </a>
+<div class="site-wrapper">
+  <div class="site-wrapper-inner">
+    <div class="cover-container">
 
-            <br>
-            <div class="container">
-              <div class="row">
-                <div class="order-md-2 col-md-6">
-                  <form id="search-form" action="" method="get" action="#">
-                    <div class="input-group">
-                      <input type="text" class="form-control" autofocus="autofocus" id="username"  name="username" placeholder="Github username" required>
-                      <button type="submit" class="input-group-addon btn" name="" onClick="showLoader()" ><i class="fa fa-search"></i> &nbsp;Search</button>
-                    </div>
-                  </form>
-                </div>
-                <div class="col-md-3"></div>
-              </div>
+      {{#if error}}
+        {{> 404}}
+      {{else}}
+        {{> body}}
+      {{/if}}
 
-            </div>
-          </div>
-	    <div id="overlay">
-	      <div class="spinner"></div>
-	    </div>
-	  <div id="realContent">
-          <h3>{{msg}}</h3>
-          {{#if show.result}}
-            <div class="result">
-              <div class="container">
-                <center>
-                  <img class="img-circle" src='{{avatar}}'>
-                  <br>
-                <div class="row">
-                  <div class="col-md-12">
-                      <h4> {{repos}} {{showEmoji}}</h4>
-                      <p>{{statement}}</p>
-                    </div>
-                  </div>
-                </center>
-              </div>
-              {{#if show.chart}}
-              <div>
-                <div id="canvas-container" data-languages="{{#each languages}}{{@key}}:{{this}} {{/each}}">
-                  <canvas id="myChart"></canvas>
-                  <script>
-                    chart()
-                  </script>
-                </div>
-              </div>
-              {{/if}}
-            </div>
-          {{/if}}
-	 </div>
-          <div class="mastfoot">
-            <div class="inner">
-              <p style="color:white">Disclaimer : This site is a fan made and not affiliated with GitHub.</p>
-            </div>
-          </div>
-        </center>
-      </div>
     </div>
   </div>
-  {{> footer}}
-<script src="public/js/spinner.js"></script>
-</body>
+</div>
 
+{{> footer}}
+</body>
 </html>
