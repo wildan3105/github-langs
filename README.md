@@ -24,7 +24,7 @@ CLIENT_ID=your_client_id
 CLIENT_SECRET=your_client_secret
 ```
 * Install dependency : `npm install`
-* **ALWAYS** run test before start the app : `npm run test`
+* **ALWAYS** run test before start the app : `npm run lint`
 * Start the app `npm start` and go to : `http://localhost:5000`
 
 ## Running app through Docker
