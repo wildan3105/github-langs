@@ -40,8 +40,8 @@
                 <div class="order-md-2 col-md-6">
                   <form id="search-form" action="" method="get" action="#">
                     <div class="input-group">
-                      <input type="text" class="form-control" autofocus="autofocus" name="username" placeholder="Github username" required>
-                      <button type="submit" class="input-group-addon btn" name=""><i class="fa fa-search"></i> &nbsp;Search</button>
+                      <input type="text" class="form-control" autofocus="autofocus" id="username" name="username" placeholder="Github username" required>
+                      <button type="submit" class="input-group-addon btn" name="" onClick="showLoad()"><i class="fa fa-search"></i> &nbsp;Search</button>
                     </div>
                   </form>
                 </div>
@@ -51,6 +51,11 @@
             </div>
           </div>
 
+	<div id="overlay">	
+	<div class="spinner"></div>
+</div>
+	
+	<div id="realContent" style="visibility:hidden">
           <h3>{{msg}}</h3>
           {{#if show.result}}
             <div class="result">
@@ -77,6 +82,13 @@
               </div>
               {{/if}}
             </div>
+            <p>
+              <h4 style="display:{{showLanguage}}"> Language(s) : </h4>
+              {{#each languages}} {{@key}}: {{this}}, {{/each}}
+            </p>
+          </div>
+	</div>
+	
           {{/if}}
           <div class="mastfoot">
             <div class="inner">
@@ -88,7 +100,7 @@
     </div>
   </div>
   {{> footer}}
-
+<script src="public/js/spinner.js"></script>
 </body>
 
 </html>
