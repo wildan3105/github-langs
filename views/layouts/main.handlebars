@@ -40,8 +40,8 @@
                 <div class="order-md-2 col-md-6">
                   <form id="search-form" action="" method="get" action="#">
                     <div class="input-group">
-                      <input type="text" class="form-control" autofocus="autofocus" name="username" placeholder="Github username" required>
-                      <button type="submit" class="input-group-addon btn" name=""><i class="fa fa-search"></i> &nbsp;Search</button>
+                      <input type="text" class="form-control" autofocus="autofocus" id="username"  name="username" placeholder="Github username" required>
+                      <button type="submit" class="input-group-addon btn" name="" onClick="showLoader()" ><i class="fa fa-search"></i> &nbsp;Search</button>
                     </div>
                   </form>
                 </div>
@@ -50,7 +50,10 @@
 
             </div>
           </div>
-
+	    <div id="overlay">
+	      <div class="spinner"></div>
+	    </div>
+	  <div id="realContent">
           <h3>{{msg}}</h3>
           {{#if show.result}}
             <div class="result">
@@ -78,6 +81,7 @@
               {{/if}}
             </div>
           {{/if}}
+	 </div>
           <div class="mastfoot">
             <div class="inner">
               <p style="color:white">Disclaimer : This site is a fan made and not affiliated with GitHub.</p>
@@ -88,7 +92,7 @@
     </div>
   </div>
   {{> footer}}
-
+<script src="public/js/spinner.js"></script>
 </body>
 
 </html>
