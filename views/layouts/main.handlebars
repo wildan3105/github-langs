@@ -50,7 +50,6 @@
 
             </div>
           </div>
-          <br>
 
 	<div id="overlay">	
 	<div class="spinner"></div>
@@ -58,24 +57,30 @@
 	
 	<div id="realContent" style="visibility:hidden">
           <h3>{{msg}}</h3>
-          <div class="result" style="display:{{showResult}}">
-            <div class="container">
-              <center>
-                <img class="img-circle" src='{{avatar}}'>
-                <br>
-              <div class="row">
-                <div class="col-md-12">
-                    <h4> {{repos}} {{showEmoji}}</h4>
-                    <p>{{statement}}</p>
+          {{#if show.result}}
+            <div class="result">
+              <div class="container">
+                <center>
+                  <img class="img-circle" src='{{avatar}}'>
+                  <br>
+                <div class="row">
+                  <div class="col-md-12">
+                      <h4> {{repos}} {{showEmoji}}</h4>
+                      <p>{{statement}}</p>
+                    </div>
                   </div>
+                </center>
+              </div>
+              {{#if show.chart}}
+              <div>
+                <div id="canvas-container" data-languages="{{#each languages}}{{@key}}:{{this}} {{/each}}">
+                  <canvas id="myChart"></canvas>
+                  <script>
+                    chart()
+                  </script>
                 </div>
-              </center>
-            </div>
-            <div id="canvas-container" data-languages="{{#each languages}}{{@key}}:{{this}} {{/each}}">
-              <canvas id="myChart"></canvas>
-              <script>
-                chart()
-              </script>
+              </div>
+              {{/if}}
             </div>
             <p>
               <h4 style="display:{{showLanguage}}"> Language(s) : </h4>
@@ -84,6 +89,7 @@
           </div>
 	</div>
 	
+          {{/if}}
           <div class="mastfoot">
             <div class="inner">
               <p style="color:white">Disclaimer : This site is a fan made and not affiliated with GitHub.</p>
@@ -94,7 +100,7 @@
     </div>
   </div>
   {{> footer}}
-<script src="public/js/myScripts.js"></script>
+<script src="public/js/spinner.js"></script>
 </body>
 
 </html>

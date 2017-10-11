@@ -40,21 +40,20 @@ body {
 
 .img-circle {
   border-radius: 50%;
-  border: 6px solid white;
-  width: 12%;
-  height: 12%;
+  border: 5px solid white;
+  width: 10%;
+  height: 10%;
 }
 .mastfoot {
   position: fixed;
   left: 0px;
   bottom: 0px;
-  height: 50px;
+  height: 5%;
   width: 100%;
-  font-weight: bold;
   text-transform: uppercase;
-  background-color: #233140;
-  padding-top: 15px;
-  font-size: 14px;
+  background-color: #444547;
+  padding-top: 8px;
+  font-size: 0.8em;
 }
 #search-form input{
   padding: 10px;
@@ -83,4 +82,7 @@ h3 {
 }
 a .username {
   color: white;
+}
+.result {
+  margin-bottom: 5%;
 }

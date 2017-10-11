@@ -13,13 +13,19 @@
 
 * [Generate a GitHub OAuth client id and client secret](https://github.com/settings/applications/new) to ensure you don't get rate limited API call.
 * Create `.env` file with this content :
-```json
+```bash
 CLIENT_ID=your_client_id
 CLIENT_SECRET=your_client_secret
 ```
 * Install dependency : `npm install`
 * **ALWAYS** run test before start the app : `npm run test`
 * Start the app `npm start` and go to : `http://localhost:5000`
+
+## Running app through Docker
+
+* Build image : `docker build -t local/github-langs .`
+* Run image : `docker run -it -p 5000:5000 --env-file .env local/github-langs`
+* App now available on `http://localhost:5000`
 
 ## TO DO LIST :
 - [x] : Show repo > 100 (currently, only support repo < 100)
