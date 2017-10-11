@@ -9,8 +9,10 @@ Here are the steps to contribute to this project :
 - Start hacking!
 
 ## Contributors :
-- [Wildan S. Nahar](https://github.com/wildan3105)
+- [Wildan S. Nahar](https://github.com/wildan3105) (initiator)
 - [Leonardo Cardoso](https://github.com/Leocardoso94)
 - [Juan Ignacio Cuiule](https://github.com/juancuiule)
 - [Premprakash singh](https://github.com/PREMPRAKASHSINGH)
 - [Ayman Nedjmeddine](https://github.com/IOAyman)
+- [Dmitriy Derepko](https://github.com/xepozz)
+- [Patrick Rainier Juen](https://github.com/uLan08)
