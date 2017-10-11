@@ -24,7 +24,7 @@ CLIENT_SECRET=your_client_secret
 ## Running app through Docker
 
 * Build image : `docker build -t local/github-langs .`
-* Run image : `docker run -p 5000:5000 --env-file .env local/github-langs`
+* Run image : `docker run -it -p 5000:5000 --env-file .env local/github-langs`
 * App now available on `http://localhost:5000`
 
 ## TO DO LIST :
