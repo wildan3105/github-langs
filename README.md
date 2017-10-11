@@ -3,11 +3,17 @@
 [![Build Status](https://travis-ci.org/wildan3105/github-langs.svg?branch=master)](https://travis-ci.org/wildan3105/github-langs) [![HitCount](http://hits.dwyl.com/wildan3105/github-langs.svg)](http://hits.dwyl.com/wildan3105/github-langs)   [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/wildan3105/github-langs/issues)
 
 
+## What ?
+
 > Useful web checker to see what languages are used from a github account.
 
 [Go to the web!](https://githublangs.herokuapp.com)
 
 ![Screenshot](screenshot3.png)
+
+## Why ?
+
+Let everyone know their languages statistic on github repo.
 
 ## Running the app locally
 
@@ -31,6 +37,7 @@ CLIENT_SECRET=your_client_secret
 - [x] : Show repo > 100 (currently, only support repo < 100)
 - [x] : Add vertical bar based on languages
 - [ ] : Beautify the page
+- [ ] : Refactor the controller
 
 ## Contributing
 
