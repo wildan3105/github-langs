@@ -21,6 +21,12 @@ CLIENT_SECRET=your_client_secret
 * **ALWAYS** run test before start the app : `npm run test`
 * Start the app `npm start` and go to : `http://localhost:5000`
 
+## Running app through Docker
+
+* Build image : `docker build -t local/github-langs .`
+* Run image : `docker run -it -p 5000:5000 --env-file .env local/github-langs`
+* App now available on `http://localhost:5000`
+
 ## TO DO LIST :
 - [x] : Show repo > 100 (currently, only support repo < 100)
 - [x] : Add vertical bar based on languages
