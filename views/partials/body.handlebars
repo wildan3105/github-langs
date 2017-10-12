@@ -11,8 +11,8 @@
         <div class="order-md-2 col-md-6">
           <form id="search-form" action="" method="get" action="#">
             <div class="input-group">
-              <input type="text" class="form-control" autofocus="autofocus" id="username" name="username"
-                     placeholder="Github username" required>
+              <input type="text" class="form-control" autofocus="autofocus" id="username" name="username" placeholder="Github username"
+                required>
               <button type="submit" class="input-group-addon btn" name="" onClick="showLoader();">
                 <i class="fa fa-search"></i> &nbsp;Search
               </button>
@@ -28,8 +28,9 @@
     <div class="spinner"></div>
   </div>
   <div id="realContent">
-    <h3>{{msg}}</h3>
-    {{#if show.result}}
+    <center>
+      <h3>{{msg}}</h3>
+      {{#if show.result}}
       <div class="result">
         <div class="container">
           <center>
@@ -44,23 +45,25 @@
           </center>
         </div>
         {{#if show.chart}}
-          <div>
-            <div id="canvas-container" data-languages="{{#each languages}}{{@key}}:{{this}} {{/each}}">
-              <canvas id="myChart"></canvas>
-              <script>
-                chart();
-              </script>
-            </div>
+        <div>
+          <div id="canvas-container" data-languages="{{#each languages}}{{@key}}:{{this}} {{/each}}">
+            <canvas id="myChart"></canvas>
+            {{#if limitLabel}}
+            <span>we only show top 20 languages</span> {{/if}}
+            <script>
+              chart(20)
+            </script>
           </div>
+        </div>
         {{/if}}
       </div>
-    {{/if}}
-  </div>
-  <div class="mastfoot">
-    <div class="inner">
-      <p style="color:white">Disclaimer : This site is a fan made and not affiliated with GitHub.</p>
-    </div>
-  </div>
+      {{/if}}
+      <div class="mastfoot">
+        <div class="inner">
+          <p style="color:white">Disclaimer : This site is a fan made and not affiliated with GitHub.</p>
+        </div>
+      </div>
+    </center>
 </center>
 
 <script src="public/js/spinner.js"></script>
