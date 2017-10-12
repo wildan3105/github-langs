@@ -33,11 +33,17 @@ CLIENT_SECRET=your_client_secret
 * Run image : `docker run -it -p 5000:5000 --env-file .env local/github-langs`
 * App now available on `http://localhost:5000`
 
-## TO DO LIST :
+## TO DO LIST (sorted by priority) :
 - [x] : Show repo > 100 (currently, only support repo < 100)
 - [x] : Add vertical bar based on languages
-- [ ] : Beautify the page
-- [ ] : Refactor the controller
+- [ ] : Beautify the page [#16](https://github.com/wildan3105/github-langs/issues/16)
+- [ ] : Refactor the controller (**urgent**) [#22](https://github.com/wildan3105/github-langs/issues/22)
+- [ ] : Add social button (fb `share` & twitter `tweet`)
+- [ ] : Save graph as image
+- [ ] : Toggle graph color (white or colorful)
+- [ ] : Redirect to `/me` if user already logged in (Github)
+- [ ] : Improve UI
+- [ ] : Increase speed & security
 
 ## Contributing
 
