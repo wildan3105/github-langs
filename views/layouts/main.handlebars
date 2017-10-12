@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -53,30 +54,32 @@
 
           <h3>{{msg}}</h3>
           {{#if show.result}}
-            <div class="result">
-              <div class="container">
-                <center>
-                  <img class="img-circle" src='{{avatar}}'>
-                  <br>
+          <div class="result">
+            <div class="container">
+              <center>
+                <img class="img-circle" src='{{avatar}}'>
+                <br>
                 <div class="row">
                   <div class="col-md-12">
-                      <h4> {{repos}} {{showEmoji}}</h4>
-                      <p>{{statement}}</p>
-                    </div>
+                    <h4> {{repos}} {{showEmoji}}</h4>
+                    <p>{{statement}}</p>
                   </div>
-                </center>
-              </div>
-              {{#if show.chart}}
-              <div>
-                <div id="canvas-container" data-languages="{{#each languages}}{{@key}}:{{this}} {{/each}}">
-                  <canvas id="myChart"></canvas>
-                  <script>
-                    chart()
-                  </script>
                 </div>
-              </div>
-              {{/if}}
+              </center>
             </div>
+            {{#if show.chart}}
+            <div>
+              <div id="canvas-container" data-languages="{{#each languages}}{{@key}}:{{this}} {{/each}}">
+                <canvas id="myChart"></canvas>
+                {{#if limitLabel}}
+                <span>we only show top 20 languages</span> {{/if}}
+                <script>
+                  chart(20)
+                </script>
+              </div>
+            </div>
+            {{/if}}
+          </div>
           {{/if}}
           <div class="mastfoot">
             <div class="inner">
