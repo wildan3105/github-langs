@@ -1,0 +1,72 @@
+<center>
+  <div class="inner cover">
+    <br><br>
+    <a style="text-decoration:none; color:white" href='./' title='Back to home'>
+      <h1 class="cover-heading">GitHub Language Checker</h1>
+    </a>
+
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="order-md-2 col-md-6">
+          <form id="search-form" action="" method="get" action="#">
+            <div class="input-group">
+              <input type="text" class="form-control" autofocus="autofocus" id="username" name="username" placeholder="Github username"
+                required>
+              <button type="submit" class="input-group-addon btn" name="" onClick="showLoader();">
+                <i class="fa fa-search"></i> &nbsp;Search
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+
+    </div>
+  </div>
+  <div id="overlay">
+    <div class="spinner"></div>
+  </div>
+  <div id="realContent">
+    <center>
+      <h3>{{msg}}</h3>
+      {{#if show.result}}
+      <div class="result">
+        <div class="img-container">
+          <center>
+            <img class="img-circle" src='{{avatar}}'>
+            {{#if type}}
+              <img class="img-organisation" src="public/img/blue-check.png" title='{{username}}' alt='{{username}}'/>
+            {{/if}}
+            <br>
+            <div class="row">
+              <div class="col-md-12">
+                <h4> {{repos}} {{showEmoji}}</h4>
+                <p>{{statement}}</p>
+              </div>
+            </div>
+          </center>
+        </div>
+        {{#if show.chart}}
+        <div>
+          <div id="canvas-container" data-languages="{{#each languages}}{{@key}}:{{this}} {{/each}}">
+            <canvas id="myChart"></canvas>
+            {{#if limitLabel}}
+            <span class="badge badge-pill badge-primary">For users with a lot of repo, only shown top 20 languages</span> {{/if}}
+            <script>
+              chart(20)
+            </script>
+          </div>
+        </div>
+        {{/if}}
+      </div>
+      {{/if}}
+      <div class="mastfoot">
+        <div class="inner">
+          <p style="color:white">Disclaimer : This site is a fan made and not affiliated with GitHub.</p>
+        </div>
+      </div>
+    </center>
+</center>
+
+<script src="public/js/spinner.js"></script>

@@ -2,67 +2,112 @@
     background-color: #1f1c21;
     color:white;
   }*/
-body {
-  background-image: radial-gradient(circle, #0f229e 0, #202a6b 120%);
-  font-family: "proxima-nova", -apple-system, BlinkMacSystemFont, "Segoe UI",
-  "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue",
-  "Arial", sans-serif;
+  body {
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, #0f229e 0, #202a6b 120%);
+    font-family: "proxima-nova", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue",
+    "Arial", sans-serif;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #6b9eef;
+    border-radius: 100%;
+    position: relative;
+    margin: 50px;
+    animation: spin 1s infinite linear;
 }
 
 .img-container {
-  position: relative;
+    position: relative;
 }
-.img-circle {
-  border-radius: 50%;
-  border: 6px solid white;
-  width: 12%;
-  height: 12%;
-}
+
 .img-organisation {
-  position: absolute;
-  width: 9%;
-  top: 156px;
-  right: 802px;
-  outline-style: dotted;
-  outline-color: #00ff00;
+    position: absolute;
+    width: 9%;
+    top: 156px;
+    right: 802px;
 }
+
+#realContent {
+    position: relative;
+    bottom: 85px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.img-circle {
+    border-radius: 50%;
+    border: 5px solid white;
+    width: 10%;
+    height: 10%;
+}
+
 .mastfoot {
-  position: fixed;
-  left: 0px;
-  bottom: 0px;
-  height: 50px;
-  width: 100%;
-  font-weight: bold;
-  text-transform: uppercase;
-  background-color: #233140;
-  padding-top: 15px;
-  font-size: 14px;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    height: 5%;
+    width: 100%;
+    text-transform: uppercase;
+    background-color: #444547;
+    padding-top: 8px;
+    font-size: 0.8em;
 }
-#search-form input{
-  padding: 10px;
-  border: none;
-  outline: none;
-  font-size: 1.4em;
-  border-radius: 35px;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-  text-align: center;
+
+#search-form input {
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 1.4em;
+    border-radius: 35px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    text-align: center;
 }
-#search-form button{
-  border-top-right-radius: 35px;
-  border-bottom-right-radius: 35px;
-  background-color: #0275d8;
-  color: white;
-  cursor: pointer;
+
+#search-form button {
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+    background-color: #0275d8;
+    color: white;
+    cursor: pointer;
 }
+
 .result,
 h3 {
-  color: white;
+    color: white;
 }
+
 #canvas-container {
-  height: 400px;
-  max-width: 600px
+    height: 400px;
+    max-width: 680px
 }
+
 a .username {
-  color: white;
+    color: white;
+}
+
+.result {
+    margin-bottom: 5%;
+}
+
+/*
+Styles for the 404 page
+*/
+
+.error-container {
+    color: white;
+    padding-top: 20vh;
 }

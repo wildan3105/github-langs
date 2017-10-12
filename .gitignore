@@ -9,6 +9,7 @@ config.json
 
 # Coder
 .idea
+.vscode
 
 # Analytics
 views/partials/footer.handlebars
