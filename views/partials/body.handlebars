@@ -49,7 +49,7 @@
           <div id="canvas-container" data-languages="{{#each languages}}{{@key}}:{{this}} {{/each}}">
             <canvas id="myChart"></canvas>
             {{#if limitLabel}}
-            <span>we only show top 20 languages</span> {{/if}}
+            <span class="badge badge-ppill badge-primary">For users with a lot of repo, only shown top 20 languages</span> {{/if}}
             <script>
               chart(20)
             </script>
