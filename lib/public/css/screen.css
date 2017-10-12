@@ -24,13 +24,16 @@
 
 .img-container {
     position: relative;
+    display:inline-block;
+    width: 100%;
+    height: 100%;
 }
 
 .img-organisation {
     position: absolute;
     width: 9%;
-    top: 156px;
-    right: 802px;
+    top: 112px;
+    right: 805px;
 }
 
 #realContent {
