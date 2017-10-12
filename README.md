@@ -19,12 +19,20 @@ Let everyone know their languages statistic on github repo.
 
 * [Generate a GitHub OAuth client id and client secret](https://github.com/settings/applications/new) to ensure you don't get rate limited API call.
 * Create `.env` file with this content :
-```bash
+
+```
 CLIENT_ID=your_client_id
 CLIENT_SECRET=your_client_secret
 ```
+
+* If you use proxy within your network, add this line : `PROXY=http://username:password@host:port` to the `.env` file and modify line #4 in `lib/controller.js` :
+
+```javascript
+const request = require('request').defaults({ proxy: process.env.PROXY });
+```
 * Install dependency : `npm install`
 * **ALWAYS** run test before start the app : `npm run lint`
+
 * Start the app `npm start` and go to : `http://localhost:5000`
 
 ## Running app through Docker
