@@ -37,7 +37,7 @@ CLIENT_SECRET=your_client_secret
 - [x] : Show repo > 100 (currently, only support repo < 100)
 - [x] : Add vertical bar based on languages
 - [ ] : Beautify the page [#16](https://github.com/wildan3105/github-langs/issues/16)
-- [ ] : Refactor the controller
+- [ ] : Refactor the controller [#22](https://github.com/wildan3105/github-langs/issues/22)
 - [ ] : Add social button (fb `share` & twitter `tweet`)
 - [ ] : Save graph as image
 - [ ] : Toggle graph color (white or colorful)
