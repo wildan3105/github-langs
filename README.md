@@ -28,7 +28,8 @@ CLIENT_SECRET=your_client_secret
 * If you use proxy within your network, add this line : `PROXY=http://username:password@host:port` to the `.env` file and modify line #4 in `lib/controller.js` :
 
 ```javascript
-const request = require('request').defaults({ proxy: process.env.PROXY });```
+const request = require('request').defaults({ proxy: process.env.PROXY });
+```
 * Install dependency : `npm install`
 * **ALWAYS** run test before start the app : `npm run lint`
 
