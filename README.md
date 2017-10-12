@@ -25,11 +25,6 @@ CLIENT_ID=your_client_id
 CLIENT_SECRET=your_client_secret
 ```
 
-* If you use proxy within your network, add this line : `PROXY=http://username:password@host:port` to the `.env` file and modify line #4 in `lib/controller.js` :
-
-```javascript
-const request = require('request').defaults({ proxy: process.env.PROXY });
-```
 * Install dependency : `npm install`
 * **ALWAYS** run test before start the app : `npm run lint`
 
@@ -44,8 +39,8 @@ const request = require('request').defaults({ proxy: process.env.PROXY });
 ## TO DO LIST (sorted by priority) :
 - [x] : Show repo > 100 (currently, only support repo < 100)
 - [x] : Add vertical bar based on languages
+- [x] : Refactor the controller (**urgent**) [#22](https://github.com/wildan3105/github-langs/issues/22)
 - [ ] : Beautify the page [#16](https://github.com/wildan3105/github-langs/issues/16)
-- [ ] : Refactor the controller (**urgent**) [#22](https://github.com/wildan3105/github-langs/issues/22)
 - [ ] : Add social button (fb `share` & twitter `tweet`)
 - [ ] : Save graph as image
 - [ ] : Toggle graph color (white or colorful)
