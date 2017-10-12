@@ -8,6 +8,7 @@ body {
   "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue",
   "Arial", sans-serif;
 }
+
 .img-circle {
   border-radius: 50%;
   border: 5px solid white;
@@ -18,13 +19,17 @@ body {
   position: fixed;
   left: 0px;
   bottom: 0px;
-  height: 5%;
   width: 100%;
   text-transform: uppercase;
-  background-color: #444547;
-  padding-top: 8px;
+  background-color: rgba(0,4,69,0.92);
+  padding: 12px 8px;
   font-size: 0.8em;
 }
+
+.mastfoot p {
+  margin: 0;
+}
+
 #search-form input{
   padding: 10px;
   border: none;
@@ -55,4 +60,10 @@ a .username {
 }
 .result {
   margin-bottom: 5%;
+}
+
+@media (max-width: 480px) {
+  .cover-container {
+    padding: 75px 5px 75px 5px;
+  }
 }
