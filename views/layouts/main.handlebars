@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -21,37 +20,23 @@
   <!-- Custom styles for this template -->
   <link href="public/css/screen.css" rel="stylesheet" media="screen">
 </head>
+{{> head}}
 
 <body>
-  <a href="http://github.com/wildan3105/github-langs" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="public/img/forkme.png" alt="Fork me on GitHub" /></a>
+<a href="http://github.com/wildan3105/github-langs" target="_blank">
+  <img style="position: absolute; top: 0; right: 0; border: 0;"
+       src="public/img/forkme.png" alt="Fork me on GitHub"/>
+</a>
 
-  <div class="site-wrapper">
-    <div class="site-wrapper-inner">
-      <div class="cover-container">
-        <center>
-          <div class="inner cover">
-            <br><br>
-            <a style="text-decoration:none; color:white" href='./' title='Back to home'>
-              <h1 class="cover-heading">GitHub Language Checker</h1>
-            </a>
+<div class="site-wrapper">
+  <div class="site-wrapper-inner">
+    <div class="cover-container">
 
-            <br>
-            <div class="container">
-              <div class="row">
-                <div class="order-md-2 col-md-6">
-                  <form id="search-form" action="" method="get" action="#">
-                    <div class="input-group">
-                      <input type="text" class="form-control" autofocus="autofocus" name="username" placeholder="Github username" required>
-                      <button type="submit" class="input-group-addon btn" name=""><i class="fa fa-search"></i> &nbsp;Search</button>
-                    </div>
-                  </form>
-                </div>
-                <div class="col-md-3"></div>
-              </div>
-
-            </div>
-          </div>
-
+      {{#if error}}
+        {{> 404}}
+      {{else}}
+        {{> body}}
+      {{/if}}
           <h3>{{msg}}</h3>
           {{#if show.result}}
           <div class="result">
@@ -90,8 +75,8 @@
       </div>
     </div>
   </div>
-  {{> footer}}
+</div>
 
+{{> footer}}
 </body>
-
 </html>

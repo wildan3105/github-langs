@@ -17,3 +17,4 @@ Here are the steps to contribute to this project :
 - [Dmitriy Derepko](https://github.com/xepozz)
 - [Patrick Rainier Juen](https://github.com/uLan08)
 - [Cole J Calamos](https://github.com/ccalamos)
+- [Dmytro Yurchenko](https://github.com/metamaker)
