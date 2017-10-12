@@ -13,15 +13,22 @@ Here are the steps to contribute to this project :
 - Create a feature/bug/whatever-you-mean branch
 - Commit the change
 - Push to the branch
-- Create pull request 
+- Create pull request
+
+## Maintainer(s) :
+
+- [Wildan S. Nahar](https://github.com/wildan3105)
+
+## Active Contributor(s) :
+
+- [Juan Ignacio Cuiule](https://github.com/juancuiule)
+- [Ayman Nedjmeddine](https://github.com/IOAyman)
+- [Dmytro Yurchenko](https://github.com/metamaker)
 
 ## Contributors :
-- [Wildan S. Nahar](https://github.com/wildan3105) (initiator)
+
 - [Leonardo Cardoso](https://github.com/Leocardoso94)
-- [Juan Ignacio Cuiule](https://github.com/juancuiule)
 - [Premprakash singh](https://github.com/PREMPRAKASHSINGH)
-- [Ayman Nedjmeddine](https://github.com/IOAyman)
 - [Dmitriy Derepko](https://github.com/xepozz)
 - [Patrick Rainier Juen](https://github.com/uLan08)
 - [Cole J Calamos](https://github.com/ccalamos)
-- [Dmytro Yurchenko](https://github.com/metamaker)
