@@ -27,6 +27,7 @@
     display:inline-block;
     width: 100%;
     height: 100%;
+    margin-bottom: 20px;
 }
 
 .img-organisation {
@@ -55,9 +56,10 @@
     border: 5px solid white;
     width: 10%;
     height: 10%;
+    margin-bottom: 20px;
 }
 
-.mastfoot {
+footer {
     position: fixed;
     left: 0px;
     bottom: 0px;
@@ -68,8 +70,9 @@
     font-size: 0.8em;
 }
 
-.mastfoot p {
+footer p {
     margin: 0;
+    color: white;
 }
 
 #search-form input {
@@ -109,6 +112,11 @@ a .username {
     margin-bottom: 5%;
 }
 
+#btn-saveChart {
+    color: #e0e0e0;
+    ont-size: 21px;
+}
+
 /*
 Styles for the 404 page
 */
@@ -122,10 +130,16 @@ Styles for the 404 page
     body {
         padding-top: 80px;
     }
+    .img-circle {
+        width: 30%;
+    }
 }
 
 @media only screen and (max-width : 480px) {
     body {
         padding-top: 80px;
+    }
+    .img-circle {
+        width: 40%;
     }
 }
