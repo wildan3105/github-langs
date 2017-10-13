@@ -16,19 +16,23 @@
 Let everyone know their languages statistic on github repo.
 
 ## Running the app locally
-
-* [Generate a GitHub OAuth client id and client secret](https://github.com/settings/applications/new) to ensure you don't get rate limited API call.
-* Create `.env` file with this content :
-
+* Copy `.env.sample` to `.env`
+* [Generate a GitHub OAuth client id and client secret](https://github.com/settings/applications/new) to ensure you don't get rate limited API call,
+and add them to your `.env` file:
 ```
 CLIENT_ID=your_client_id
 CLIENT_SECRET=your_client_secret
 ```
-
 * Install dependency : `npm install`
-* **ALWAYS** run test before start the app : `npm run lint`
-
 * Start the app `npm start` and go to : `http://localhost:5000`
+
+## Running the app in production
+You have to provide you [OpBeat](https://opbeat.com/) credentials as well in `.env` file:
+```
+OPBEAT_APP_ID=your_key
+OPBEAT_ORGANIZATION_ID=your_key
+OPBEAT_SECRET_TOKEN=your_key
+```
 
 ## Running app through Docker
 
