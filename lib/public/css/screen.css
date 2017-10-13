@@ -61,12 +61,15 @@
     position: fixed;
     left: 0px;
     bottom: 0px;
-    height: 5%;
     width: 100%;
     text-transform: uppercase;
     background-color: #444547;
-    padding-top: 8px;
+    padding: 8px;
     font-size: 0.8em;
+}
+
+.mastfoot p {
+    margin: 0;
 }
 
 #search-form input {
@@ -113,4 +116,16 @@ Styles for the 404 page
 .error-container {
     color: white;
     padding-top: 20vh;
+}
+
+@media only screen and (max-width : 768px) {
+    body {
+        padding-top: 80px;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    body {
+        padding-top: 80px;
+    }
 }
