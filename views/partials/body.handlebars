@@ -30,25 +30,9 @@
   <div id="realContent">
     <center>
       <h3>{{msg}}</h3>
-      <div id="social">
-        <div>
-          <a class="twitter-share-button"
-            href="https://twitter.com/intent/tweet"
-            data-url="https://githublangs.herokuapp.com?username={{username}}"
-            data-text="My top used languange is {{goodAt}}"
-            data-hashtags="github,{{goodAt}}"
-            data-size="large">
-          Tweet</a>
-        </div>
-        <div class="fb-share-button" data-href="https://githublangs.herokuapp.com" data-layout="button" data-size="large">
-          <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgithublangs.herokuapp.com%2F&amp;src=sdkpreparse">
-            Share
-          </a>
-        </div>
-      </div>
-      <br>
       {{#if show.result}}
       <div class="result">
+        <br>
         <div class="img-container">
           <center>
             {{#if type}}
@@ -73,6 +57,22 @@
             <script>
               chart(20)
             </script>
+          </div>
+        </div>
+        <div id="social">
+          <div>
+            <a class="twitter-share-button"
+              href="https://twitter.com/intent/tweet"
+              data-url="https://githublangs.herokuapp.com?username={{username}}"
+              data-text="My top used language is {{goodAt}}"
+              data-hashtags="github,{{goodAt}}"
+              data-size="large">
+            Tweet</a>
+          </div>
+          <div class="fb-share-button" data-href="https://githublangs.herokuapp.com" data-layout="button" data-size="large">
+            <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgithublangs.herokuapp.com%2F&amp;src=sdkpreparse">
+              Share
+            </a>
           </div>
         </div>
         {{/if}}
