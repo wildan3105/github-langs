@@ -2,7 +2,7 @@
     background-color: #1f1c21;
     color:white;
   }*/
-body {
+  body {
     width: 100%;
     height: 100%;
     background-image: radial-gradient(circle, #0f229e 0, #202a6b 120%);
@@ -20,6 +20,20 @@ body {
     position: relative;
     margin: 50px;
     animation: spin 1s infinite linear;
+}
+
+.img-container {
+    position: relative;
+    display:inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.img-organisation {
+    position: absolute;
+    width: 9%;
+    top: 112px;
+    right: 805px;
 }
 
 #realContent {

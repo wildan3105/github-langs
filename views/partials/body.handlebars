@@ -32,8 +32,11 @@
       <h3>{{msg}}</h3>
       {{#if show.result}}
       <div class="result">
-        <div class="container">
+        <div class="img-container">
           <center>
+            {{#if type}}
+              <img class="img-organisation" src="public/img/blue-check.png" title='{{username}}' alt='{{username}}'/>
+            {{/if}}
             <img class="img-circle" src='{{avatar}}'>
             <br>
             <div class="row">
