@@ -52,6 +52,9 @@ CLIENT_SECRET=your_client_secret
 
 Check out this [page](CONTRIBUTING.md)
 
+## Related project(s)
+- [Githut](https://github.com/madnight/githut) or [here](https://github.com/topics/github-language-statistics)
+
 ## License :
 
 MIT (c) Wildan S. Nahar 2017
