@@ -1,4 +1,5 @@
-const fs = require('fs');
+'use strict';
+// const fs = require('fs');  // fs is already resolved by CasperJS
 const path = fs.absolute(fs.workingDirectory + '/node_modules/phantomcss/phantomcss.js');
 var phantomcss = require(path);
 const screenRect = {left: 0, top: 0, width: 1280, height: 1024};
