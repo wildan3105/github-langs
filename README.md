@@ -10,7 +10,7 @@
 
 [Go to the web!](https://githublangs.herokuapp.com)
 
-![Screenshot](lib/public/img/screenshot4.png)
+![Screenshot](screenshot4.png)
 
 ## Why ?
 
