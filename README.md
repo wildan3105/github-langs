@@ -50,9 +50,9 @@ CLIENT_SECRET=your_client_secret
 
 ## Contributing
 
-Check out this [page](CONTRIBUTING.md)x
+Check out this [page](CONTRIBUTING.md)
 ## Related project(s)
-- [Githut](https://github.com/madnight/githut) or [here](https://github.com/topics/github-language-statistics)
+- [Githut](https://github.com/madnight/githut)
 
 ## License :
 
