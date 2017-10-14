@@ -37,3 +37,4 @@ Here are the steps to contribute to this project :
 - [Chris McNulty](https://github.com/ChrisMcNulty91)
 - [Danil](https://github.com/WarEnek)
 - [Sarun Peetasai](https://github.com/iamham)
+- [Alexey](https://github.com/masquel)
