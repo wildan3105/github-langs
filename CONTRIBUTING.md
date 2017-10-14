@@ -35,3 +35,4 @@ Here are the steps to contribute to this project :
 - [Mohammed Azhar](https://github.com/azharakbar)
 - [Slava Bezgachev](https://github.com/slavabez)
 - [Chris McNulty](https://github.com/ChrisMcNulty91)
+- [Danil](https://github.com/WarEnek)
