@@ -41,8 +41,8 @@ CLIENT_SECRET=your_client_secret
 - [x] : Add vertical bar based on languages
 - [x] : Refactor the controller (**urgent**) [#22](https://github.com/wildan3105/github-langs/issues/22)
 - [x] : Beautify the page [#16](https://github.com/wildan3105/github-langs/issues/16)
+- [x] : Toggle graph color (white or colorful)
 - [ ] : Add social button (fb `share` & twitter `tweet`)
-- [ ] : Toggle graph color (white or colorful)
 - [ ] : Save graph as image
 - [ ] : Redirect to `/me` if user already logged in (Github)
 - [ ] : Improve UI
@@ -50,8 +50,7 @@ CLIENT_SECRET=your_client_secret
 
 ## Contributing
 
-Check out this [page](CONTRIBUTING.md)
-
+Check out this [page](CONTRIBUTING.md)x
 ## Related project(s)
 - [Githut](https://github.com/madnight/githut) or [here](https://github.com/topics/github-language-statistics)
 
