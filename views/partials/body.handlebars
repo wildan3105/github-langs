@@ -49,7 +49,12 @@
         </div>
         {{#if show.chart}}
         <div>
-          <div id="canvas-container" data-languages='{{languages}}' data-colors='{{colors}}'>
+          <div 
+            id="canvas-container"
+            data-username='{{username}}'
+            data-languages='{{languages}}'
+            data-colors='{{colors}}'
+          >
             <canvas id="myChart"></canvas>
             <div id="toggle-button-container" onclick="toggleColor()">
               <button>Toggle Color</button>
