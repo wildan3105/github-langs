@@ -1,6 +1,7 @@
 <center>
   <div class="inner cover">
-    <br><br>
+    <br>
+    <br>
     <a style="text-decoration:none; color:white" href='./' title='Back to home'>
       <h1 class="cover-heading">GitHub Language Checker</h1>
     </a>
@@ -49,10 +50,12 @@
           <div id="canvas-container" data-languages="{{#each languages}}{{@key}}:{{this}} {{/each}}">
             <canvas id="myChart"></canvas>
             {{#if limitLabel}}
-            <span>we only show top 20 languages</span> {{/if}}
+            <span>we only show top 20 languages</span>
+            <br> {{/if}}
             <script>
               chart(20)
             </script>
+            <button class="save" onclick="saveChart();">Save chart as an image</button>
           </div>
         </div>
         {{/if}}
