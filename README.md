@@ -19,12 +19,15 @@ Let everyone know their languages statistic on github repo.
 
 * [Generate a GitHub OAuth client id and client secret](https://github.com/settings/applications/new) to ensure you don't get rate limited API call.
 * Create `.env` file with this content :
-```bash
+
+```
 CLIENT_ID=your_client_id
 CLIENT_SECRET=your_client_secret
 ```
+
 * Install dependency : `npm install`
 * **ALWAYS** run test before start the app : `npm run lint`
+
 * Start the app `npm start` and go to : `http://localhost:5000`
 
 ## Running app through Docker
@@ -36,8 +39,8 @@ CLIENT_SECRET=your_client_secret
 ## TO DO LIST (sorted by priority) :
 - [x] : Show repo > 100 (currently, only support repo < 100)
 - [x] : Add vertical bar based on languages
-- [ ] : Beautify the page [#16](https://github.com/wildan3105/github-langs/issues/16)
-- [ ] : Refactor the controller (**urgent**) [#22](https://github.com/wildan3105/github-langs/issues/22)
+- [x] : Refactor the controller (**urgent**) [#22](https://github.com/wildan3105/github-langs/issues/22)
+- [x] : Beautify the page [#16](https://github.com/wildan3105/github-langs/issues/16)
 - [ ] : Add social button (fb `share` & twitter `tweet`)
 - [ ] : Save graph as image
 - [ ] : Toggle graph color (white or colorful)
