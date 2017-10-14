@@ -133,3 +133,20 @@ Styles for the 404 page
         padding-top: 80px;
     }
 }
+
+button#btn-toggle {
+    border-radius: 20px;
+    font-weight: 500;
+    padding: 2px 10px 2px 10px;
+}
+
+.active{
+    background-color: #37e559;
+    border: 1px solid #23993a;
+}
+
+.inactive{
+    background-color: white;
+    border: 1px solid;
+}
+
