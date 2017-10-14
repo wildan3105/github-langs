@@ -30,10 +30,14 @@
 }
 
 .img-organisation {
-    position: absolute;
-    width: 9%;
-    top: 112px;
-    right: 805px;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: 70px;
+	transform: translateX(50%);
+	border: 3px solid #fff;
+	border-radius: 50%;
+	right: calc(50% - 35px);
 }
 
 #realContent {
