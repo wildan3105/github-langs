@@ -49,12 +49,15 @@
         </div>
         {{#if show.chart}}
         <div>
-          <div id="canvas-container" data-languages='{{languages}}'>
+          <div id="canvas-container" data-languages='{{languages}}' data-colors='{{colors}}'>
             <canvas id="myChart"></canvas>
+            <div id="toggle-button-container" onclick="toggleColor()">
+              <button>Toggle Color</button>
+            </div>
             {{#if limitLabel}}
             <span class="badge badge-pill badge-primary">For users with a lot of repo, only shown top 20 languages</span> {{/if}}
             <script>
-              chart(20)
+              let singleColor = chart({ limit: 20 })
             </script>
           </div>
         </div>
