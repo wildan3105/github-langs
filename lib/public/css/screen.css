@@ -2,11 +2,12 @@
     background-color: #1f1c21;
     color:white;
   }*/
-  body {
-    width: 100%;
-    height: 100%;
-    background-image: radial-gradient(circle, #0f229e 0, #202a6b 120%);
-    font-family: "proxima-nova", -apple-system, BlinkMacSystemFont, "Segoe UI",
+
+body {
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, #0f229e 0, #202a6b 120%);
+  font-family: "proxima-nova", -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue",
     "Arial", sans-serif;
 }
@@ -41,17 +42,17 @@
 }
 
 #realContent {
-    position: relative;
-    bottom: 85px;
+  position: relative;
+  bottom: 85px;
 }
 
 @keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .img-circle {
@@ -62,37 +63,32 @@
 }
 
 .mastfoot {
-    position: fixed;
-    left: 0px;
-    bottom: 0px;
-    width: 100%;
-    text-transform: uppercase;
-    background-color: #444547;
-    padding: 8px;
-    font-size: 0.8em;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 5%;
+  width: 100%;
+  text-transform: uppercase;
+  background-color: #444547;
+  padding-top: 8px;
+  font-size: 0.8em;
 }
-
-.mastfoot p {
-    margin: 0;
-}
-
 #search-form input {
-    padding: 10px;
-    border: none;
-    outline: none;
-    font-size: 1.4em;
-    border-radius: 35px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-    text-align: center;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 1.4em;
+  border-radius: 35px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  text-align: center;
 }
-
 #search-form button {
-    border-top-right-radius: 35px;
-    border-bottom-right-radius: 35px;
-    background-color: #0275d8;
-    color: white;
-    cursor: pointer;
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
+  background-color: #0275d8;
+  color: white;
+  cursor: pointer;
 }
 
 .result,
@@ -101,8 +97,8 @@ h3 {
 }
 
 #canvas-container {
-    height: 400px;
-    max-width: 680px
+  height: 400px;
+  max-width: 680px;
 }
 
 a .username {
@@ -132,4 +128,28 @@ Styles for the 404 page
     body {
         padding-top: 80px;
     }
+}
+
+.save {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  background-color: #fbfbfb;
+  padding: 8px 15px;
+  box-shadow: 0px 2px 1px #d6d5d5;
+  border-radius: 50px;
+  border-style: none;
+  color: #0275d8;
+  transition: 0.2s;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.save:focus,
+.save:hover {
+  box-shadow: 0px 0.5px 1px #d6d5d5;
 }

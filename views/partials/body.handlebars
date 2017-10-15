@@ -1,6 +1,7 @@
 <center>
   <div class="inner cover">
-    <br><br>
+    <br>
+    <br>
     <a style="text-decoration:none; color:white" href='./' title='Back to home'>
       <h1 class="cover-heading">GitHub Language Checker</h1>
     </a>
@@ -60,10 +61,13 @@
               <button>Toggle Color</button>
             </div>
             {{#if limitLabel}}
-            <span class="badge badge-pill badge-primary">For users with a lot of repo, only shown top 20 languages</span> {{/if}}
+              <span class="badge badge-pill badge-primary">For users with a lot of repo, only shown top 20 languages</span> 
+              <br>
+            {{/if}}
             <script>
               let singleColor = chart({ limit: 20 })
             </script>
+            <button class="save" onclick="saveChart();">Save chart as an image</button>
           </div>
         </div>
         {{/if}}
