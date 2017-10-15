@@ -130,10 +130,19 @@ Styles for the 404 page
     }
 }
 
-button#btn-toggle {
-     border-radius: 20px;
-     font-weight: 500;
-     padding: 2px 10px 2px 10px;
+button.funbtn {
+    border-radius: 20px;
+    font-weight: 500;
+    margin: 5px;
+    padding: 5px 20px 5px 20px;
+    outline: none;
+    position: relative;
+    transition: 0.2s all;
+    border: none;
+ }
+
+ button.funbtn:active {
+    border: 1px solid orange;
  }
  
  .active{
@@ -142,7 +151,11 @@ button#btn-toggle {
  }
  
  .inactive{
-     background-color: white;
-     border: 1px solid;
+     background-color: lightgrey;
  }
+
+div.message {
+    margin: 10px;
+    padding: 10px;
+}
 
