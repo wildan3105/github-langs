@@ -16,3 +16,7 @@ views/partials/footer.handlebars
 
 # Tests reports
 /build
+
+# MacOS
+
+.DS_Store
