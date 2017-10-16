@@ -50,7 +50,7 @@
         </div>
         {{#if show.chart}}
         <div>
-          <div 
+          <div
             id="canvas-container"
             data-username='{{username}}'
             data-languages='{{languages}}'
@@ -61,7 +61,7 @@
               <button id="btn-toggle" class="active">Toggle Color</button>
             </div>
             {{#if limitLabel}}
-              <span class="badge badge-pill badge-primary">For users with a lot of repo, only shown top 20 languages</span> 
+              <span class="badge badge-pill badge-primary">For users with a lot of repo, only shown top 20 languages</span>
               <br>
             {{/if}}
             <script>
@@ -81,10 +81,9 @@
               data-size="large">
             Tweet</a>
           </div>
-          <div class="fb-share-button social-btn" data-href="https://githublangs.herokuapp.com" data-layout="button" data-size="large">
+          <div class="fb-share-button social-btn" data-href="https://githublangs.herokuapp.com" data-layout="button" data-size="large" data-mobile-iframe="true">
             <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgithublangs.herokuapp.com%2F&amp;src=sdkpreparse">
-              Share
-            </a>
+            Share</a>
           </div>
         </div>
         {{/if}}
