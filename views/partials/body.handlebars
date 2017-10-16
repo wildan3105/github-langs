@@ -1,6 +1,7 @@
 <center>
   <div class="inner cover">
-    <br><br>
+    <br>
+    <br>
     <a style="text-decoration:none; color:white" href='./' title='Back to home'>
       <h1 class="cover-heading">GitHub Language Checker</h1>
     </a>
@@ -32,7 +33,7 @@
       <h3>{{msg}}</h3>
       {{#if show.result}}
       <div class="result">
-        <div class="img-container">
+        <div class="container">
           <center>
             {{#if type}}
               <img class="img-organisation" src="public/img/blue-check.png" title='{{username}}' alt='{{username}}'/>
@@ -42,20 +43,31 @@
             <div class="row">
               <div class="col-md-12">
                 <h4> {{repos}} {{showEmoji}}</h4>
-                <p>{{statement}}</p>
+                <p class="random-statement">{{statement}}</p>
               </div>
             </div>
           </center>
         </div>
         {{#if show.chart}}
         <div>
-          <div id="canvas-container" data-languages="{{#each languages}}{{@key}}:{{this}} {{/each}}">
+          <div 
+            id="canvas-container"
+            data-username='{{username}}'
+            data-languages='{{languages}}'
+            data-colors='{{colors}}'
+          >
             <canvas id="myChart"></canvas>
+            <div id="toggle-button-container" onclick="toggleColor()">
+              <button id="btn-toggle" class="active">Toggle Color</button>
+            </div>
             {{#if limitLabel}}
-            <span class="badge badge-pill badge-primary">For users with a lot of repo, only shown top 20 languages</span> {{/if}}
+              <span class="badge badge-pill badge-primary">For users with a lot of repo, only shown top 20 languages</span> 
+              <br>
+            {{/if}}
             <script>
-              chart(20)
+              let singleColor = chart({ limit: 20 })
             </script>
+            <button class="save" onclick="saveChart();">Save chart as an image</button>
           </div>
         </div>
         <br>

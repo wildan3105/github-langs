@@ -1,6 +1,7 @@
 # Github Language Checker
 
-[![Build Status](https://travis-ci.org/wildan3105/github-langs.svg?branch=master)](https://travis-ci.org/wildan3105/github-langs) [![HitCount](http://hits.dwyl.com/wildan3105/github-langs.svg)](http://hits.dwyl.com/wildan3105/github-langs)   [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/wildan3105/github-langs/issues)
+[![Build Status](https://travis-ci.org/wildan3105/github-langs.svg?branch=master)](https://travis-ci.org/wildan3105/github-langs)
+[![HitCount](http://hits.dwyl.com/wildan3105/github-langs.svg)](http://hits.dwyl.com/wildan3105/github-langs)   [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/wildan3105/github-langs/issues)
 
 
 ## What ?
@@ -9,7 +10,7 @@
 
 [Go to the web!](https://githublangs.herokuapp.com)
 
-![Screenshot](screenshot3.png)
+![Screenshot](screenshot4.png)
 
 ## Why ?
 
@@ -33,17 +34,25 @@ CLIENT_SECRET=your_client_secret
 ## Running app through Docker
 
 * Build image : `docker build -t local/github-langs .`
-* Run image : `docker run -it -p 5000:5000 --env-file .env local/github-langs`
-* App now available on `http://localhost:5000`
+* Run image : ```docker run -v `pwd`/tests/screenshot-testing/screenshots:/app/tests/screenshot-testing/screenshots -v `pwd`/views:/app/views -v `pwd`/lib:/app/lib -it -p 5000:5000 --env-file .env local/github-langs```
+* Start server in appeared terminal : `npm start`
+* App is now available on `http://localhost:5000`
 
-## TO DO LIST (sorted by priority) :
+## Testing app through Docker
+
+* Build image : `docker build -t local/github-langs .`
+* Run image : ```docker run -v `pwd`/tests/screenshot-testing/screenshots:/app/tests/screenshot-testing/screenshots -v `pwd`/views:/app/views -v `pwd`/lib:/app/lib -it -p 5000:5000 --env-file .env local/github-langs```
+* Redirect display output to xvfb : `source start-xvfb.sh`
+* Execute tests : `npm test`
+
+## TO DO LIST (ordered by priority) :
 - [x] : Show repo > 100 (currently, only support repo < 100)
 - [x] : Add vertical bar based on languages
 - [x] : Refactor the controller (**urgent**) [#22](https://github.com/wildan3105/github-langs/issues/22)
 - [x] : Beautify the page [#16](https://github.com/wildan3105/github-langs/issues/16)
+- [x] : Toggle graph color (white or colorful)
+- [x] : Save graph as image
 - [x] : Add social button (fb `share` & twitter `tweet`)
-- [ ] : Save graph as image
-- [ ] : Toggle graph color (white or colorful)
 - [ ] : Redirect to `/me` if user already logged in (Github)
 - [ ] : Improve UI
 - [ ] : Increase speed & security
@@ -51,6 +60,8 @@ CLIENT_SECRET=your_client_secret
 ## Contributing
 
 Check out this [page](CONTRIBUTING.md)
+## Related project(s)
+- [Githut](https://github.com/madnight/githut)
 
 ## License :
 

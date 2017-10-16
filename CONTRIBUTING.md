@@ -27,11 +27,15 @@ Here are the steps to contribute to this project :
 
 ## Contributors :
 
-- [Leonardo Cardoso](https://github.com/Leocardoso94)
-- [Premprakash singh](https://github.com/PREMPRAKASHSINGH)
-- [Dmitriy Derepko](https://github.com/xepozz)
-- [Patrick Rainier Juen](https://github.com/uLan08)
-- [Cole J Calamos](https://github.com/ccalamos)
-- [Mohammed Azhar](https://github.com/azharakbar)
-- [Slava Bezgachev](https://github.com/slavabez)
-- [Chris McNulty](https://github.com/ChrisMcNulty91)
+1. [Leonardo Cardoso](https://github.com/Leocardoso94)
+2. [Premprakash singh](https://github.com/PREMPRAKASHSINGH)
+3. [Dmitriy Derepko](https://github.com/xepozz)
+4. [Patrick Rainier Juen](https://github.com/uLan08)
+5. [Cole J Calamos](https://github.com/ccalamos)
+6. [Mohammed Azhar](https://github.com/azharakbar)
+7. [Slava Bezgachev](https://github.com/slavabez)
+8. [Chris McNulty](https://github.com/ChrisMcNulty91)
+9. [Danil](https://github.com/WarEnek)
+10. [Sarun Peetasai](https://github.com/iamham)
+11. [Alexey](https://github.com/masquel)
+12. [Rohit Yadav](https://github.com/roh77)
