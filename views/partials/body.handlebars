@@ -57,17 +57,20 @@
             data-colors='{{colors}}'
           >
             <canvas id="myChart"></canvas>
-            <div id="toggle-button-container" onclick="toggleColor()">
-              <button id="btn-toggle" class="active">Toggle Color</button>
+
+            <div> <!--container buttons and limit repo message -->
+                  <button id="btn-toggle" class="funbtn active" onclick="toggleColor()">Toggle Color</button>
+                  
+                  <script>
+                    let singleColor = chart({ limit: 20 })
+                  </script>
+                  <button class="funbtn save" onclick="saveChart();"><span class="glyphicon glyphicon-download">Save chart as an image</span></button>
+
+                    {{#if limitLabel}}
+                      <div class="message">For users with a lot of repo, only top 20 Languages are displayed.</div>
+                    {{/if}}
+
             </div>
-            {{#if limitLabel}}
-              <span class="badge badge-pill badge-primary">For users with a lot of repo, only shown top 20 languages</span>
-              <br>
-            {{/if}}
-            <script>
-              let singleColor = chart({ limit: 20 })
-            </script>
-            <button class="save" onclick="saveChart();">Save chart as an image</button>
           </div>
         </div>
         <br>
