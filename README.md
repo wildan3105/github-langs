@@ -51,8 +51,8 @@ CLIENT_SECRET=your_client_secret
 - [x] : Refactor the controller (**urgent**) [#22](https://github.com/wildan3105/github-langs/issues/22)
 - [x] : Beautify the page [#16](https://github.com/wildan3105/github-langs/issues/16)
 - [x] : Toggle graph color (white or colorful)
-- [ ] : Add social button (fb `share` & twitter `tweet`)
-- [ ] : Save graph as image
+- [x] : Save graph as image
+- [x] : Add social button (fb `share` & twitter `tweet`)
 - [ ] : Redirect to `/me` if user already logged in (Github)
 - [ ] : Improve UI
 - [ ] : Increase speed & security
