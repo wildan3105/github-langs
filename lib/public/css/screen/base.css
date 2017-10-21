@@ -50,12 +50,6 @@ body {
   position: relative;
   bottom: 85px; }
 
-@keyframes spin {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
-
 .img-circle {
   border-radius: 50%;
   border: 5px solid white;
@@ -90,8 +84,7 @@ body {
   color: white;
   cursor: pointer; }
 
-.result,
-h3 {
+.result, h3 {
   color: white; }
 
 #canvas-container {
@@ -104,12 +97,11 @@ a .username {
 .result {
   margin-bottom: 5%; }
 
-/*
-Styles for the 404 page
-*/
-.error-container {
-  color: white;
-  padding-top: 20vh; }
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
 
 @media only screen and (max-width: 768px) {
   body {
@@ -142,3 +134,10 @@ button.funbtn:active {
 div.message {
   margin: 10px;
   padding: 10px; }
+
+/*
+Styles for the 404 page
+*/
+.error-container {
+  color: white;
+  padding-top: 20vh; }
