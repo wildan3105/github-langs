@@ -41,6 +41,16 @@ body {
 }
 
 .img-organisation {
+<<<<<<< HEAD:lib/public/css/screen.css
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: 50px;
+	transform: translateX(50%);
+	border: 3px solid #fff;
+	border-radius: 50%;
+	right: calc(50% - 35px);
+=======
     position: absolute;
     width: 30px;
     height: 30px;
@@ -49,6 +59,7 @@ body {
     border: 3px solid #fff;
     border-radius: 50%;
     right: calc(50% - 35px);
+>>>>>>> b110b05b14ddc05cb41e090c6a38b4aea6c9b4fb:lib/public/css/base.scss
 }
 
 #realContent {
@@ -59,8 +70,8 @@ body {
 .img-circle {
     border-radius: 50%;
     border: 5px solid white;
-    width: 10%;
-    height: 10%;
+    width: 80px;
+    height: 80px;
 }
 
 .mastfoot {
