@@ -2,7 +2,6 @@
 
 First of all, thank you for taking the time to contribute! :+1::tada:
 
-
 Here are the steps to contribute to this project :
 - Check the open issue
 - Check the **TO-DO LIST**
@@ -40,4 +39,4 @@ Here are the steps to contribute to this project :
 11. [Alexey](https://github.com/masquel)
 12. [Rohit Yadav](https://github.com/roh77)
 13. [Zwtan](https://github.com/zwtan)
-14. [Krzysztof Lubiniecki] (https://github.com/Klubiniecki)
+14. [Krzysztof Lubiniecki](https://github.com/Klubiniecki)
