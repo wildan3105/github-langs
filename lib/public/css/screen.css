@@ -46,7 +46,7 @@ body {
 	position: absolute;
 	width: 30px;
 	height: 30px;
-	top: 70px;
+	top: 50px;
 	transform: translateX(50%);
 	border: 3px solid #fff;
 	border-radius: 50%;
@@ -70,8 +70,8 @@ body {
 .img-circle {
     border-radius: 50%;
     border: 5px solid white;
-    width: 10%;
-    height: 10%;
+    width: 80px;
+    height: 80px;
 }
 
 .mastfoot {
