@@ -1,13 +1,11 @@
-/*body{
-    background-color: #1f1c21;
-    color:white;
-  }*/
+@import "themes/light";
+@import "themes/dark";
 
 body {
-  width: 100%;
-  height: 100%;
-  background-image: radial-gradient(circle, #0f229e 0, #202a6b 120%);
-  font-family: "proxima-nova", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, #0f229e 0, #202a6b 120%);
+    font-family: "proxima-nova", -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue",
     "Arial", sans-serif;
 }
@@ -43,6 +41,7 @@ body {
 }
 
 .img-organisation {
+<<<<<<< HEAD:lib/public/css/screen.css
 	position: absolute;
 	width: 30px;
 	height: 30px;
@@ -51,20 +50,21 @@ body {
 	border: 3px solid #fff;
 	border-radius: 50%;
 	right: calc(50% - 35px);
+=======
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 70px;
+    transform: translateX(50%);
+    border: 3px solid #fff;
+    border-radius: 50%;
+    right: calc(50% - 35px);
+>>>>>>> b110b05b14ddc05cb41e090c6a38b4aea6c9b4fb:lib/public/css/base.scss
 }
 
 #realContent {
-  position: relative;
-  bottom: 85px;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    position: relative;
+    bottom: 85px;
 }
 
 .img-circle {
@@ -75,42 +75,43 @@ body {
 }
 
 .mastfoot {
-  position: fixed;
-  left: 0px;
-  bottom: 0px;
-  height: 5%;
-  width: 100%;
-  text-transform: uppercase;
-  background-color: #444547;
-  padding-top: 8px;
-  font-size: 0.8em;
-}
-#search-form input {
-  padding: 10px;
-  border: none;
-  outline: none;
-  font-size: 1.4em;
-  border-radius: 35px;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-  text-align: center;
-}
-#search-form button {
-  border-top-right-radius: 35px;
-  border-bottom-right-radius: 35px;
-  background-color: #0275d8;
-  color: white;
-  cursor: pointer;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    height: 5%;
+    width: 100%;
+    text-transform: uppercase;
+    background-color: #444547;
+    padding-top: 8px;
+    font-size: 0.8em;
 }
 
-.result,
-h3 {
+#search-form input {
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 1.4em;
+    border-radius: 35px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    text-align: center;
+}
+
+#search-form button {
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+    background-color: #0275d8;
+    color: white;
+    cursor: pointer;
+}
+
+.result, h3 {
     color: white;
 }
 
 #canvas-container {
-  height: 400px;
-  max-width: 680px;
+    height: 400px;
+    max-width: 680px;
 }
 
 a .username {
@@ -121,13 +122,13 @@ a .username {
     margin-bottom: 5%;
 }
 
-/*
-Styles for the 404 page
-*/
-
-.error-container {
-    color: white;
-    padding-top: 20vh;
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @media only screen and (max-width : 768px) {
@@ -151,23 +152,31 @@ button.funbtn {
     position: relative;
     transition: 0.2s all;
     border: none;
- }
+}
 
- button.funbtn:active {
+button.funbtn:active {
     border: 1px solid orange;
- }
+}
 
- .active{
-     background-color: #37e559;
-     border: 1px solid #23993a;
- }
+.active {
+    background-color: #37e559;
+    border: 1px solid #23993a;
+}
 
- .inactive{
-     background-color: lightgrey;
- }
+.inactive {
+    background-color: lightgrey;
+}
 
 div.message {
     margin: 10px;
     padding: 10px;
 }
 
+/*
+Styles for the 404 page
+*/
+
+.error-container {
+    color: white;
+    padding-top: 20vh;
+}

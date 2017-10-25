@@ -15,14 +15,13 @@
               <input type="text" class="form-control" autofocus="autofocus" id="username" name="username" placeholder="Github username"
                 required>
               <button type="submit" class="input-group-addon btn" name="" onClick="showLoader();">
-                <i class="fa fa-search"></i> &nbsp;Search
+                <i class="fa fa-search"></i>
               </button>
             </div>
           </form>
         </div>
         <div class="col-md-3"></div>
       </div>
-
     </div>
   </div>
   <div id="overlay">
@@ -59,12 +58,18 @@
             <canvas id="myChart"></canvas>
 
             <div> <!--container buttons and limit repo message -->
-                  <button id="btn-toggle" class="funbtn active" onclick="toggleColor()">Toggle Color</button>
-                  
+                  <button id="btn-toggle" class="funbtn active" onclick="toggleColor()">
+                    <i class="fa fa-toggle-on" aria-hidden="true"></i>
+                    Toggle Color
+                  </button>
+
                   <script>
                     let singleColor = chart({ limit: 20 })
                   </script>
-                  <button class="funbtn save" onclick="saveChart();"><span class="glyphicon glyphicon-download">Save chart as an image</span></button>
+                  <button class="funbtn save" onclick="saveChart();">
+                    <i class="fa fa-download" aria-hidden="true"></i>
+                    Download
+                  </button>
 
                     {{#if limitLabel}}
                       <div class="message">For users with a lot of repo, only top 20 Languages are displayed.</div>

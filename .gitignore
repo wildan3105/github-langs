@@ -20,3 +20,6 @@ views/partials/footer.handlebars
 # MacOS
 
 .DS_Store
+
+# SASS cache
+.sass-cache
