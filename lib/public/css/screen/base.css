@@ -40,6 +40,14 @@ body {
   position: absolute;
   width: 30px;
   height: 30px;
+  top: 50px;
+  transform: translateX(50%);
+  border: 3px solid #fff;
+  border-radius: 50%;
+  right: calc(50% - 35px);
+  position: absolute;
+  width: 30px;
+  height: 30px;
   top: 70px;
   transform: translateX(50%);
   border: 3px solid #fff;
@@ -50,17 +58,11 @@ body {
   position: relative;
   bottom: 85px; }
 
-@keyframes spin {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
-
 .img-circle {
   border-radius: 50%;
   border: 5px solid white;
-  width: 10%;
-  height: 10%; }
+  width: 80px;
+  height: 80px; }
 
 .mastfoot {
   position: fixed;
@@ -90,8 +92,7 @@ body {
   color: white;
   cursor: pointer; }
 
-.result,
-h3 {
+.result, h3 {
   color: white; }
 
 #canvas-container {
@@ -104,12 +105,11 @@ a .username {
 .result {
   margin-bottom: 5%; }
 
-/*
-Styles for the 404 page
-*/
-.error-container {
-  color: white;
-  padding-top: 20vh; }
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
 
 @media only screen and (max-width: 768px) {
   body {
@@ -142,3 +142,10 @@ button.funbtn:active {
 div.message {
   margin: 10px;
   padding: 10px; }
+
+/*
+Styles for the 404 page
+*/
+.error-container {
+  color: white;
+  padding-top: 20vh; }
