@@ -9,7 +9,7 @@
 
 > Useful web checker to see what languages are used from a github account.
 
-[Go to the web!](https://githublangs.herokuapp.com)
+[Go to the web!](https://github-langs.herokuapp.com)
 
 ![Screenshot](screenshot5.png)
 
