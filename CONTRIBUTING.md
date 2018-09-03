@@ -11,8 +11,8 @@ Here are the steps to contribute to this project :
 - Fork the repository
 - Create a feature/bug/whatever-you-mean branch
 - Commit the change
-- Push to the branch
-- Create pull request
+- Push to that branch
+- Create pull request to master branch
 
 ## Maintainer(s) :
 
