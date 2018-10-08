@@ -4,6 +4,9 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/d8bb38610b33412b993cdd4068bc0713)](https://www.codacy.com/app/wildan3105/github-langs?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=wildan3105/github-langs&amp;utm_campaign=Badge_Grade)
 [![HitCount](http://hits.dwyl.com/wildan3105/github-langs.svg)](http://hits.dwyl.com/wildan3105/github-langs)   [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/wildan3105/github-langs/issues)
 
+## 2018!
+
+I had some great ideas to improve this project! Unfortunately I don't have any much time to contribute it by myself, so I'm inviting you guys (existing contributors) and any open-source enthusiast :) Firstly, you could check on the **TODO LIST** to see the roadmap's checklist or you also can create your own issue to improve this project. Thank you and I'm waiting for your contributions!
 
 ## What ?
 
