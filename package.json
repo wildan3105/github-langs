@@ -1,6 +1,6 @@
 {
   "name": "github-langs",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "show programming language based on the repos of github's account",
   "main": "index.js",
   "scripts": {
