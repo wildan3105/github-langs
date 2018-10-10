@@ -49,14 +49,13 @@ body {
 	border: 3px solid #fff;
 	border-radius: 50%;
 	right: calc(50% - 35px);
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  top: 70px;
-  transform: translateX(50%);
-  border: 3px solid #fff;
-  border-radius: 50%;
-  right: calc(50% - 35px);
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    transform: translateX(50%);
+    border: 3px solid #fff;
+    border-radius: 50%;
+    right: calc(50% - 30px);
 }
 
 #realContent {
@@ -104,6 +103,16 @@ body {
 
 .result, h3 {
     color: white;
+}
+
+.result {
+    display: flex;
+    flex-flow: column nowrap;
+
+    .row {
+        margin: 30px 0px 10px;
+        text-align: center;
+    }
 }
 
 #canvas-container {

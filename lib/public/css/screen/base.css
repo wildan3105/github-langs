@@ -8,7 +8,7 @@ body {
   width: 100%;
   height: 100%;
   background-image: radial-gradient(circle, #0f229e 0, #202a6b 120%);
-  font-family: "proxima-nova", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", "Arial", sans-serif; }
+  font-family: "proxima-nova", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", "Arial", sans-serif; }
 
 #social {
   display: inline-flex;
@@ -48,11 +48,10 @@ body {
   position: absolute;
   width: 30px;
   height: 30px;
-  top: 70px;
   transform: translateX(50%);
   border: 3px solid #fff;
   border-radius: 50%;
-  right: calc(50% - 35px); }
+  right: calc(50% - 30px); }
 
 #realContent {
   position: relative;
@@ -94,6 +93,13 @@ body {
 
 .result, h3 {
   color: white; }
+
+.result {
+  display: flex;
+  flex-flow: column nowrap; }
+  .result .row {
+    margin: 30px 0px 10px;
+    text-align: center; }
 
 #canvas-container {
   height: 400px;
