@@ -8,6 +8,7 @@ Here are the steps to contribute to this project :
 - Have your own issue? Found a bug? Want add a feature? Just [submit!](https://github.com/wildan3105/github-langs/issues/new)
 
 ## Contribute :
+- IMPORTANT : Please claim the issue you want to solve
 - Fork the repository
 - Create a feature/bug/whatever-you-mean branch from `develop` branch
 - Commit the change
