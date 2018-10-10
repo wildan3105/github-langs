@@ -94,12 +94,9 @@ body {
 .result, h3 {
   color: white; }
 
-.result {
-  display: flex;
-  flex-flow: column nowrap; }
-  .result .row {
-    margin: 30px 0px 10px;
-    text-align: center; }
+.result .row {
+  margin: 30px 0px 10px;
+  text-align: center; }
 
 #canvas-container {
   height: 400px;
