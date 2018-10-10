@@ -32,6 +32,11 @@ CLIENT_SECRET=your_client_secret
 
 * Install dependency : `npm install`
 
+* Disable `https` by commenting line 12 of `app.js` :
+```javascript
+app.use(enforce.HTTPS({ trustProtoHeader: true }));
+```
+
 * Start the app `npm start` and go to : `http://localhost:5000`
 
 ## Running app through Docker
