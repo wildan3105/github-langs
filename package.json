@@ -41,8 +41,10 @@
   },
   "devDependencies": {
     "casperjs": "^1.1.4",
+    "chai": "4.2.0",
     "concurrently": "^3.5.0",
     "eslint": "~4.8.0",
+    "mocha": "6.2.0",
     "phantomcss": "^1.1.5",
     "phantomjs-prebuilt": "^2.1.16"
   }
