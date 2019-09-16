@@ -40,6 +40,7 @@
     "nodemon": "^1.18.4"
   },
   "devDependencies": {
+    "assert-plus": "1.0.0",
     "casperjs": "^1.1.4",
     "chai": "4.2.0",
     "concurrently": "^3.5.0",
