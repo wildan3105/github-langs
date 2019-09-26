@@ -20,6 +20,9 @@ I had some great ideas to improve this project! Unfortunately I don't have any m
 
 Let everyone know their languages statistic on github repo.
 
+## Running the app (general)
+* Disable https by commenting line **8** in `lib/app.js`
+
 ## Running the app locally
 
 * [Generate a GitHub OAuth client id and client secret](https://github.com/settings/applications/new) to ensure you don't get rate limited API call.
@@ -31,7 +34,6 @@ CLIENT_SECRET=your_client_secret
 ```
 
 * Install dependency : `npm install`
-
 * Start the app `npm start` and go to : `http://localhost:5000`
 
 ## Running app through Docker
