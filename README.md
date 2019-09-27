@@ -20,9 +20,6 @@ I had some great ideas to improve this project! Unfortunately I don't have any m
 
 Let everyone know their languages statistic on github repo.
 
-## Running the app (general)
-* Disable https by commenting line **8** in `lib/app.js`
-
 ## Running the app locally
 
 * [Generate a GitHub OAuth client id and client secret](https://github.com/settings/applications/new) to ensure you don't get rate limited API call.
@@ -52,7 +49,7 @@ ENV=local
 * Execute tests : `npm test`
 
 ## TO DO LIST (ordered by priority) :
-- [ ] : Redirect to `/me` if user already logged in (Github)
+- [ ] : Refactor existing codebase
 - [ ] : Improve UI
 - [ ] : Increase speed & security
 
@@ -64,4 +61,4 @@ Check out this [page](CONTRIBUTING.md)
 
 ## License :
 
-MIT (c) Wildan S. Nahar 2017 - 2018
+MIT (c) Wildan S. Nahar 2017 - 2019
