@@ -10,8 +10,9 @@ Here are the steps to contribute to this project :
 ## Contribute :
 - IMPORTANT : Please claim the issue you want to solve
 - Fork the repository
-- Create a feature/bug/whatever-you-mean branch from `develop` branch
+- Create a `feature/bug/whatever-you-mean` branch from `master` branch
 - Commit the change
+- Push the change to your branch
 - Create pull request to `master` branch
 
 ## Maintainer(s) :
