@@ -12,7 +12,7 @@ config.json
 .vscode
 
 # Analytics
-views/partials/footer.handlebars
+# views/partials/footer.handlebars
 
 # Tests reports
 /build
