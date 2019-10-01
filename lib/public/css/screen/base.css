@@ -8,7 +8,7 @@ body {
   width: 100%;
   height: 100%;
   background-image: radial-gradient(circle, #0f229e 0, #202a6b 120%);
-  font-family: "proxima-nova", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", "Arial", sans-serif; }
+  font-family: "proxima-nova", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", "Arial", sans-serif; }
 
 #social {
   display: inline-flex;
@@ -122,7 +122,7 @@ a .username {
   body {
     padding-top: 80px; } }
 
-button.funbtn {
+.funbtn {
   border-radius: 20px;
   font-weight: 500;
   margin: 5px;
@@ -130,7 +130,43 @@ button.funbtn {
   outline: none;
   position: relative;
   transition: 0.2s all;
-  border: none; }
+  border: 1px solid #ccc;
+  width: 153px;
+  height: 34px;
+  overflow: hidden; }
+  .funbtn:focus {
+    outline: none; }
+  .funbtn__main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 200%;
+    transition: left 0.3s; }
+  .funbtn__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding: 5px 20px; }
+  .funbtn__toggle--on {
+    left: 0;
+    right: 50%; }
+  .funbtn__toggle--off {
+    left: 50%;
+    right: 0;
+    background: lightgrey; }
+  .funbtn.active .funbtn__main {
+    left: -100%; }
+  .funbtn__icon {
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 4px; }
 
 button.funbtn:active {
   border: 1px solid orange; }

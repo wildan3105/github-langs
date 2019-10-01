@@ -146,7 +146,7 @@ a .username {
     }
 }
 
-button.funbtn {
+.funbtn {
     border-radius: 20px;
     font-weight: 500;
     margin: 5px;
@@ -154,7 +154,57 @@ button.funbtn {
     outline: none;
     position: relative;
     transition: 0.2s all;
-    border: none;
+    border: 1px solid #ccc;
+    width: 153px;
+    height: 34px;
+    overflow: hidden;
+
+    &:focus {
+        outline: none;
+    }
+      
+    &__main {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 200%;
+        transition: left 0.3s; 
+    }
+      
+    &__toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        padding: 5px 20px; 
+    }
+      
+     &__toggle--on {
+        left: 0;
+        right: 50%; 
+    }
+      
+    &__toggle--off {
+        left: 50%;
+        right: 0;
+        background: lightgrey; 
+    }
+      
+    &.active &__main {
+        left: -100%; 
+    }
+      
+    &__icon {
+        display: inline-block;
+        position: relative;
+        height: 100%;
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 4px; 
+    }
 }
 
 button.funbtn:active {

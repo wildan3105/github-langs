@@ -57,8 +57,11 @@
 
             <div> <!--container buttons and limit repo message -->
                   <button id="btn-toggle" class="funbtn active" onclick="toggleColor()">
-                    <i class="fa fa-toggle-on" aria-hidden="true"></i>
-                    Toggle Color
+                    <div class="funbtn__main">
+                      <span class="funbtn__toggle funbtn__toggle--on">Toggle color</span>
+                      <span class="funbtn__toggle funbtn__toggle--off active">Toggle color</span>
+                      <span class="funbtn__icon"></span>
+                    </div>
                   </button>
 
                   <script>
