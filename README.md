@@ -51,7 +51,11 @@ ENV=local
 * Execute tests : `npm test`
 
 ## TO DO LIST (ordered by priority) :
-- TBD
+- [ ] Github deprecation notice for authentication via URL query params
+- [ ] Code clean up (env variable settings, ES6 features, etc)
+- [ ] Add proper tests
+- [ ] Add preview URL when doing PR (via now.sh ?)
+- [ ] Support multi-language
 
 ## Contributing
 
