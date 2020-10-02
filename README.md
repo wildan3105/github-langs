@@ -4,9 +4,9 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/d8bb38610b33412b993cdd4068bc0713)](https://www.codacy.com/app/wildan3105/github-langs?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=wildan3105/github-langs&amp;utm_campaign=Badge_Grade)
 [![HitCount](http://hits.dwyl.com/wildan3105/github-langs.svg)](http://hits.dwyl.com/wildan3105/github-langs)   [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/wildan3105/github-langs/issues)
 
-## 2019!
+## 2020!
 
-In this year, I'd love to try to fix internal codebases (e.g: refactoring, adding unit test, clean up unused codes, fix for environment issues, etc). Other than that, I'll try to improve the performance of the web (exclude API call). So, in the next couple of days I'll gather information from existing contributors and active maintainers to make a list regarding this. Thank you and I'm waiting for your contributions!
+New year, new resolution. But the vision remains the same though. This year, I'll try to make this repo is completely easy to contribute to. Starting to re-organize the code structure, fix some linter issues, add proper test (unit, integration, and E2E test), also fix some security issues. After those are done, we can plan to add some features (update th UI?, differentiate between fork & original repos, etc). And as always, I'll be very open to any feedbacks/issues/suggestions. Just open a PR! Thank you and happy coding!
 
 ## What ?
 
@@ -36,26 +36,8 @@ ENV=local
 * Install dependency : `npm install`
 * Start the app `npm start` and go to : `http://localhost:5000`
 
-## Running app through Docker
-
-* Build image : `docker build -t local/github-langs .`
-* Run image : ```docker run -v `pwd`/tests/screenshot-testing/screenshots:/app/tests/screenshot-testing/screenshots -v `pwd`/views:/app/views -v `pwd`/lib:/app/lib -it -p 5000:5000 --env-file .env local/github-langs```
-* Start server in appeared terminal : `npm start`
-* App is now available on `http://localhost:5000`
-
-## Testing app through Docker
-
-* Build image : `docker build -t local/github-langs .`
-* Run image : ```docker run -v `pwd`/tests/screenshot-testing/screenshots:/app/tests/screenshot-testing/screenshots -v `pwd`/views:/app/views -v `pwd`/lib:/app/lib -it -p 5000:5000 --env-file .env local/github-langs```
-* Redirect display output to xvfb : `source start-xvfb.sh`
-* Execute tests : `npm test`
-
-## TO DO LIST (ordered by priority) :
-- [ ] Github deprecation notice for authentication via URL query params
-- [ ] Code clean up (env variable settings, ES6 features, etc)
-- [ ] Add proper tests
-- [ ] Add preview URL when doing PR (via now.sh ?)
-- [ ] Support multi-language
+## TO DO LIST:
+You can see and pick up some issues in the [issues](https://github.com/wildan3105/github-langs/projects) or [projects](https://github.com/wildan3105/github-langs/projects)
 
 ## Contributing
 
@@ -66,4 +48,4 @@ Check out this [page](CONTRIBUTING.md)
 
 ## License :
 
-MIT (c) Wildan S. Nahar 2017 - 2019
+MIT (c) Wildan S. Nahar 2017 - 2020
