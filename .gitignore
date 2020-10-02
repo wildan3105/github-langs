@@ -23,3 +23,7 @@ config.json
 
 # SASS cache
 .sass-cache
+
+# test files
+.nyc_output/
+coverage/
