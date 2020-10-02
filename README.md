@@ -6,7 +6,7 @@
 
 ## 2020!
 
-New year, new resolution. But the vision remains the same though. This year, I'll try to make this repo is completely easy to contribute to. Starting to re-organize the code structure, fix some linter issues, add proper test (unit, integration, and E2E test), also fix some security issues. After those are done, we can plan to add some features (update th UI?, differentiate between fork & original repos, etc). And as always, I'll be very open to any feedbacks/issues/suggestions. Just open a PR! Thank you and happy coding!
+New year, new resolution. But the vision remains the same though. This year, I'll try to make this repo is completely easy to contribute to. Starting to re-organize the code structure, fix some linter issues, add proper test (unit, integration, and E2E test), also fix some security issues. After those are done, we can plan to add some features (update th UI?, differentiate between fork & original repos, etc). And as always, I'll be very open to any feedbacks/issues/suggestions. Just open an issue or a PR! Thank you and happy coding!
 
 ## What ?
 
@@ -37,7 +37,7 @@ ENV=local
 * Start the app `npm start` and go to : `http://localhost:5000`
 
 ## TO DO LIST:
-You can see and pick up some issues in the [issues](https://github.com/wildan3105/github-langs/projects) or [projects](https://github.com/wildan3105/github-langs/projects)
+You can see and pick up some issues in the [issues](https://github.com/wildan3105/github-langs/issues) or [projects](https://github.com/wildan3105/github-langs/projects)
 
 ## Contributing
 
