@@ -47,7 +47,8 @@
       ]
     },
     "include": [
-      "lib/public/js/*.js"
+      "lib/public/js/*.js",
+      "lib/*.js"
     ],
     "exclude": [
       "**/enum/*.js",
