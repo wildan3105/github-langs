@@ -1,16 +1,40 @@
-const gulp = require('gulp');
+/* eslint-disable func-style */
+const {
+    src,
+    dest,
+    series,
+    watch
+} = require('gulp');
 const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 
-gulp.task('sass', () => gulp.src('lib/public/css/base.scss')
-    .pipe(sass({
-        outputStyle: 'compressed',
-        includePaths: ['node_modules']
-    }).on('error', sass.logError))
-    .pipe(
-        rename((file) => {
-            file.basename += '.min';
-        })
-    )
-    .pipe(gulp.dest('lib/public/css/screen'))
-);
+function generateStyles(cb) {
+    src('lib/public/css/base.scss')
+        .pipe(
+            sass({
+                outputStyle: 'compressed',
+                includePaths: ['node_modules']
+            }).on(
+                'error',
+                sass.logError
+            )
+        )
+        .pipe(
+            rename((file) => {
+                file.basename += '.min';
+            })
+        )
+        .pipe(
+            dest('lib/public/css/screen')
+        );
+    cb();
+}
+
+function watchFiles(cb) {
+    watch('lib/public/css/**/*.scss', generateStyles);
+}
+
+exports.styles = generateStyles;
+exports.watch = series(generateStyles, watchFiles);
+
+exports.default = series(generateStyles);
