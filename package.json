@@ -1,6 +1,6 @@
 {
   "name": "github-langs",
-  "version": "2.0.13",
+  "version": "2.0.14",
   "description": "show programming language based on the repos of github's account",
   "main": "index.js",
   "scripts": {
@@ -84,11 +84,13 @@
   "dependencies": {
     "axios": "^0.19.0",
     "body-parser": "^1.15.1",
+    "bootstrap": "^4.5.2",
     "express": "4.16.0",
     "express-handlebars": "3.0.0",
     "express-sslify": "1.2.0",
     "fs": "0.0.1-security",
     "gulp": "^4.0.0",
+    "gulp-rename": "^2.0.0",
     "gulp-sass": "^3.1.0",
     "lodash": "^4.17.19",
     "method-override": "^2.3.5",
