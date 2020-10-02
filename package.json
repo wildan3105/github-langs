@@ -5,10 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js | gulp sass",
-    "test": "npm run test:screenshot",
-    "lint": "eslint lib/*.js index.js",
-    "lint:fix": "eslint --fix lib/*.js index.js",
-    "test:screenshot": "concurrently --success first --kill-others \"export PORT=5001 && npm start\" \"casperjs test tests/screenshot-testing/suite.js --debug=true --engine=slimerjs --verbose --log-level=debug --xunit=build/screenshot-testing/results.xml\""
+    "lint": "eslint '**/*.js' --ignore-pattern node_modules/"
   },
   "husky": {
     "hooks": {
@@ -45,13 +42,10 @@
   },
   "devDependencies": {
     "assert-plus": "1.0.0",
-    "casperjs": "^1.1.4",
     "chai": "4.2.0",
     "concurrently": "^3.5.0",
     "eslint": "~4.8.0",
     "husky": "^4.2.3",
-    "mocha": "6.2.0",
-    "phantomcss": "^1.1.5",
-    "phantomjs-prebuilt": "^2.1.16"
+    "mocha": "6.2.0"
   }
 }
