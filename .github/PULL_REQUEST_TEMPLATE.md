@@ -1,5 +1,10 @@
-Fixes issue #[Add issue number here. If you do not solve the issue entirely, please change the message e.g. "First steps for issues #IssueNumber]
+## Description
 
-Changes: [Add here what changes were made in this issue and if possible provide links.]
+## Type of change
 
-Screenshots for the change:
+- [ ] Bug fix (non-breaking change which fixes an issue)
+- [ ] New feature (non-breaking change which adds functionality)
+- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
+- [ ] Other (security config, docs update, etc.)
+
+## Screenshot of change (if there's UI update)

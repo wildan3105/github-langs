@@ -2,7 +2,7 @@
 <!-- Describe how the bug manifests. -->
 
 **Expected behavior:**
-<!-- Describe what the behavior would be without the bug. -->
+<!-- Describe what the behavior would be without the bug or if it's a suggestion/feature request, explain why it matters and useful for this repo. -->
 
 **Steps to reproduce:**
 <!-- If you are able to illustrate the bug or feature request with an example, please provide steps to reproduce -->
