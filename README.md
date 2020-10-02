@@ -23,8 +23,8 @@ Let everyone know their languages statistic on github repo.
 ## GENERAL SETUP
 
 * [Generate a GitHub OAuth client id and client secret](https://github.com/settings/applications/new) to ensure you don't get rate limited API call.
-* Create `.env` file with this content :
 
+* Set `process.env` with these values:
 ```
 CLIENT_ID=your_client_id
 CLIENT_SECRET=your_client_secret
