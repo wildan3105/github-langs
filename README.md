@@ -10,7 +10,7 @@ New year, new resolution. But the vision remains the same though. This year, I'l
 
 ## What ?
 
-> Useful web checker to see what languages are used from a github account.
+> Useful web checker to see what programming languages are used from a github account.
 
 [Go to the web!](https://github-langs.herokuapp.com)
 
@@ -18,9 +18,17 @@ New year, new resolution. But the vision remains the same though. This year, I'l
 
 ## Why ?
 
-Let everyone know their languages statistic on github repo.
+Let everyone know their language statistics on github repo (you can spy on others as well!).
 
-## GENERAL SETUP
+## Key features
+- Show statistics of repo's programming language on github account
+- Display total of each programming language based on github [programming language color](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)
+- Browse the repo with specific programming language directly from the chart bar
+- Ability to display the color in multicolor or single color (white)
+- Ability to download the chart in a JPG file
+- Social media sharing via facebook & twitter
+
+## Running locally
 
 * [Generate a GitHub OAuth client id and client secret](https://github.com/settings/applications/new) to ensure you don't get rate limited API call.
 
@@ -31,13 +39,11 @@ CLIENT_SECRET=your_client_secret
 ENV=local
 ```
 
-## Running the app locally
+* Install dependency: `npm install`
+* Start the app `npm start` and go to `http://localhost:5000`
 
-* Install dependency : `npm install`
-* Start the app `npm start` and go to : `http://localhost:5000`
-
-## TO DO LIST:
-You can see and pick up some issues in the [issues](https://github.com/wildan3105/github-langs/issues) or [projects](https://github.com/wildan3105/github-langs/projects)
+## Feature tracker:
+You can see the feature progress and pick up some issues in the [issues](https://github.com/wildan3105/github-langs/issues) or [projects](https://github.com/wildan3105/github-langs/projects)
 
 ## Contributing
 
