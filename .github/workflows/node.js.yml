@@ -8,6 +8,8 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+  pull_request_target:
+    branches: [ master ]
 
 jobs:
   build:
@@ -20,7 +22,6 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '12.x'
-      
     - name: Installing dependencies
       run: npm ci
     - name: Running linter
