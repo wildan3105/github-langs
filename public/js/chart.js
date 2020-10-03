@@ -1,8 +1,6 @@
 /* eslint-disable no-useless-escape */
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
-const _ = require('lodash');
-
 const sum = (array) => {
     if (array.length === 0) {
         return 0;
@@ -59,7 +57,7 @@ const chart = ({ limit, singleColor }) => {
     const labels = keys.slice(0, limit);
     const data = values.slice(0, limit);
     if (keys.length > 20) {
-        const valueOthers = sum(values.slice(limit, keys.length));
+        const valueOthers = _.sum(values.slice(limit, keys.length));
         labels.push('Others');
         data.push(valueOthers);
     }
@@ -125,9 +123,9 @@ const chart = ({ limit, singleColor }) => {
             let language = chart.data.labels[activeElement._index];
             language = slugify(language);
             const value =
-                chart.data.datasets[activeElement._datasetIndex].data[
-                    activeElement._index
-                ];
+              chart.data.datasets[activeElement._datasetIndex].data[
+                  activeElement._index
+              ];
             const url = `https://github.com/${username}?tab=repositories&type=&language=${language}`;
             window.open(url, '_blank');
         }
