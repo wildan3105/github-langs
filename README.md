@@ -14,7 +14,7 @@ New year, new resolution. But the vision remains the same though. This year, I'l
 
 [Go to the web!](https://github-langs.herokuapp.com)
 
-![Screenshot](screenshot5.png)
+![Screenshot](screenshot.png)
 
 ## Why ?
 
