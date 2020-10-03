@@ -2,8 +2,8 @@
   <div class="inner cover">
     <br>
     <br>
-    <a style="text-decoration:none; color:white" href='./' title='Back to home'>
-      <h1 class="cover-heading">GitHub Language Checker</h1>
+    <a style="text-decoration:none; color:white" href='./' title='Kembali ke beranda'>
+      <h1 class="cover-heading">Pemeriksa Bahasa GitHub</h1>
     </a>
 
     <br>
@@ -12,7 +12,7 @@
         <div class="order-md-2 col-md-6">
           <form id="search-form" action="" method="get" action="#">
             <div class="input-group">
-              <input type="text" class="form-control" autofocus="autofocus" id="username" name="username" placeholder="Github username"
+              <input type="text" class="form-control" autofocus="autofocus" id="username" name="username" placeholder="Nama pengguna Github"
                 required>
               <button type="submit" class="input-group-addon btn" name="" onClick="showLoader();">
                 <i class="fa fa-search"></i>
@@ -58,7 +58,7 @@
             <div> <!--container buttons and limit repo message -->
                   <button id="btn-toggle" class="funbtn active" onclick="toggleColor()">
                     
-                    Toggle Color
+                    Ubah warna
                   </button>
 
                   <script>
@@ -66,11 +66,11 @@
                   </script>
                   <button class="funbtn save" onclick="saveChart();">
                     <i class="fa fa-download" aria-hidden="true"></i>
-                    Download
+                    Unduh
                   </button>
 
                     {{#if limitLabel}}
-                      <div class="message">For users with a lot of repo, only top 20 Languages are displayed.</div>
+                      <div class="message">Untuk pengguna yang memiliki banyak repository, hanya 20 bahasa teratas yang ditampilkan. </div>
                     {{/if}}
 
             </div>
@@ -82,7 +82,7 @@
             <a class="twitter-share-button"
               href="https://twitter.com/intent/tweet"
               data-url="https://githublangs.herokuapp.com?username={{username}}"
-              data-text="My most used language is {{goodAt}}"
+              data-text="Bahasa yang paling sering saya gunakan adalah {{goodAt}}"
               data-hashtags="github,{{goodAt}}"
               data-size="large">
             Tweet</a>
@@ -97,7 +97,7 @@
       {{/if}}
       <div class="mastfoot">
         <div class="inner">
-          <p style="color:white"> Copyright &copy 2017 - {{currentYear}} Wildan S. Nahar | Disclaimer : This site is fan made and not affiliated with GitHub.</p>
+          <p style="color:white"> Hak cipta &salinan 2017 - {{currentYear}} Wildan S. Nahar | Perhatian : Situs ini adalah buatan penggemar dan tidak berafiliasi dengan GitHub.</p>
         </div>
       </div>
     </center>
