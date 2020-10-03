@@ -1,24 +1,7 @@
 /* eslint-disable no-useless-escape */
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
-const parse = (text) => {
-    const languages = {};
-    text.trim()
-        .split(' ')
-        .forEach((string) => {
-            const [key, value] = string.split(':');
-            languages[key] = parseInt(value);
-        });
-    return languages;
-};
-
-const sum = (array) => {
-    if (array.length === 0) {
-        return 0;
-    }
-    // eslint-disable-next-line no-confusing-arrow
-    return array.reduce((acum, val) => (!isNaN(val) ? acum + val : 0), 0);
-};
+const _ = require('lodash');
 
 const saveChart = () => {
     const ctx = document.getElementById('myChart').getContext('2d');
@@ -57,7 +40,7 @@ const chart = ({ limit, singleColor }) => {
     const labels = keys.slice(0, limit);
     const data = values.slice(0, limit);
     if (keys.length > 20) {
-        const valueOthers = sum(values.slice(limit, keys.length));
+        const valueOthers = _.sum(values.slice(limit, keys.length));
         labels.push('Others');
         data.push(valueOthers);
     }
