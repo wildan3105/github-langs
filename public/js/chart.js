@@ -57,7 +57,7 @@ const chart = ({ limit, singleColor }) => {
     const labels = keys.slice(0, limit);
     const data = values.slice(0, limit);
     if (keys.length > 20) {
-        const valueOthers = _.sum(values.slice(limit, keys.length));
+        const valueOthers = sum(values.slice(limit, keys.length));
         labels.push('Others');
         data.push(valueOthers);
     }

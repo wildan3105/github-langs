@@ -3,13 +3,13 @@ const _ = require('lodash');
 const axios = require('axios');
 
 // config related variables
-const { CLIENT_ID_AND_CLIENT_SECRET_MISSING } = require('../config/error_messages');
-const { statements, mysteryStatements } = require('../config/random_statements');
-const { GITHUB_API_URL } = require('../config/api_url');
+const { CLIENT_ID_AND_CLIENT_SECRET_MISSING } = require('../../config/error_messages');
+const { statements, mysteryStatements } = require('../../config/random_statements');
+const { GITHUB_API_URL } = require('../../config/api_url');
 
 // load utils
-const { emojiGenerator } = require('./utils/emoji_generator');
-const { getColorsForLanguages } = require('./utils/language_colors_generator');
+const { emojiGenerator } = require('../utils/emoji_generator');
+const { getColorsForLanguages } = require('../utils/language_colors_generator');
 
 
 const client_id = process.env.CLIENT_ID || false;

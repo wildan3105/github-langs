@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 
-gulp.task('sass', () => gulp.src('src/public/css/base.scss')
+gulp.task('sass', () => gulp.src('public/css/base.scss')
     .pipe(sass({
         outputStyle: 'compressed',
         includePaths: ['node_modules']
@@ -12,5 +12,5 @@ gulp.task('sass', () => gulp.src('src/public/css/base.scss')
             file.basename += '.min';
         })
     )
-    .pipe(gulp.dest('src/public/css/screen'))
+    .pipe(gulp.dest('public/css/screen'))
 );

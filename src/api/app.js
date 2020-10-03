@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const enforce = require('express-sslify');
 const app = express();
 
-const { ENV_MISSING } = require('../config/error_messages');
+const { ENV_MISSING } = require('../../config/error_messages');
 
 const enableHttps = () => {
     if (!process.env.ENV) {
@@ -24,9 +24,5 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/public', express.static('public'));
 
 app.use('/', require('./routes'));
-
-const server = app.listen(process.env.PORT || 5000, () => {
-    console.log(`github-langs running on port: ${server.address().port}`);
-});
 
 module.exports = app;
