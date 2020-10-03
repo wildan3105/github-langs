@@ -4,7 +4,7 @@
   "description": "show programming language based on the repos of github's account",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon lib/app.js | gulp sass",
+    "start": "nodemon src/app.js | gulp sass",
     "lint": "eslint '**/*.js' --ignore-pattern node_modules/",
     "mocha": "mocha",
     "test": "nyc mocha"
@@ -47,8 +47,8 @@
       ]
     },
     "include": [
-      "lib/public/js/*.js",
-      "lib/*.js"
+      "src/public/js/*.js",
+      "src/*.js"
     ],
     "exclude": [
       "**/enum/*.js",

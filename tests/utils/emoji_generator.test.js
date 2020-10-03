@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-const { emojiGenerator } = require('../../lib/public/js/emoji_generator');
+const { emojiGenerator } = require('../../src/public/js/emoji_generator');
 const expect = require('expect.js');
 
 describe('emojiGenerator', () => {
