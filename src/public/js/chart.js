@@ -3,6 +3,25 @@
 /* eslint-disable no-unused-vars */
 const _ = require('lodash');
 
+const sum = (array) => {
+    if (array.length === 0) {
+        return 0;
+    }
+    // eslint-disable-next-line no-confusing-arrow
+    return array.reduce((acum, val) => (!isNaN(val) ? acum + val : 0), 0);
+};
+
+const slugify = (text) =>
+    text
+        .toString()
+        .toLowerCase()
+        .replace(/\s+/g, '-') // Replace spaces with -
+        .replace(/#/g, '%23') // Change all '#' chars with '%23'
+        .replace(/\+/g, '%2B') // Replace all '+' with '%2B'
+        .replace(/\-\-+/g, '-') // Replace multiple - with single -
+        .replace(/^-+/, '') // Trim - from start of text
+        .replace(/-+$/, ''); // Trim - from end of text
+
 const saveChart = () => {
     const ctx = document.getElementById('myChart').getContext('2d');
     const tcanvas = document.createElement('canvas');
@@ -40,7 +59,7 @@ const chart = ({ limit, singleColor }) => {
     const labels = keys.slice(0, limit);
     const data = values.slice(0, limit);
     if (keys.length > 20) {
-        const valueOthers = _.sum(values.slice(limit, keys.length));
+        const valueOthers = sum(values.slice(limit, keys.length));
         labels.push('Others');
         data.push(valueOthers);
     }
@@ -99,16 +118,6 @@ const chart = ({ limit, singleColor }) => {
         }
     }));
 
-    const slugify = (text) =>
-        text
-            .toString()
-            .toLowerCase()
-            .replace(/\s+/g, '-') // Replace spaces with -
-            .replace(/#/g, '%23') // Change all '#' chars with '%23'
-            .replace(/\+/g, '%2B') // Replace all '+' with '%2B'
-            .replace(/\-\-+/g, '-') // Replace multiple - with single -
-            .replace(/^-+/, '') // Trim - from start of text
-            .replace(/-+$/, ''); // Trim - from end of text
     const onCanvasClick = (e) => {
         const activeElement = chart.getElementAtEvent(e)[0];
 
