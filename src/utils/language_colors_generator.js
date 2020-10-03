@@ -1,6 +1,6 @@
 'use strict';
 
-const colorList = require('../json/colors.json');
+const colorList = require('../public/json/colors.json');
 
 const getColorsForLanguages = (languages) => {
     const defaultColor = '#000';

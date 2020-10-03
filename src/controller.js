@@ -8,8 +8,8 @@ const { statements, mysteryStatements } = require('../config/random_statements')
 const { GITHUB_API_URL } = require('../config/api_url');
 
 // load utils
-const { emojiGenerator } = require('./public/js/emoji_generator');
-const { getColorsForLanguages } = require('./public/js/language_colors_generator');
+const { emojiGenerator } = require('./utils/emoji_generator');
+const { getColorsForLanguages } = require('./utils/language_colors_generator');
 
 
 const client_id = process.env.CLIENT_ID || false;
