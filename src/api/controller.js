@@ -19,11 +19,9 @@ if (!(client_id && client_secret)) {
 }
 const clientParams = `client_id=${client_id}&client_secret=${client_secret}`;
 
-const reqUser = (username) => {
-    const url = `${GITHUB_API_URL}/users/${username}?${clientParams}`;
-    const headers = { 'User-Agent': `${username}` };
-    return axios.get(url, { headers });
-};
+// load service
+const GithubService = require('./service');
+const githubService = new GithubService();
 
 const reqRepos = (username, numberOfPages) => {
     const headers = { 'User-Agent': `${username}` };
@@ -36,7 +34,7 @@ const reqRepos = (username, numberOfPages) => {
     return requests;
 };
 
-exports.index = (req, res) => {
+exports.index = async (req, res) => {
     const { username } = req.query;
     const currentYear = new Date().getFullYear();
     let avatar, msg, repos, statement, type, title = '';
@@ -60,7 +58,7 @@ exports.index = (req, res) => {
         });
         return;
     }
-    reqUser(username)
+    await githubService.getUser(username)
         .then((usr) => {
             const usrData = usr.data;
             avatar = usrData.avatar_url;
