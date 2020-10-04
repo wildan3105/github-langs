@@ -1,0 +1,13 @@
+{
+	"title": "GitHub Language Checker",
+	"back": "Back to home",
+	"username.placeholder": "Github username", 
+	"button.color": "Toggle Color",
+	"button.download": "Download", 
+    "button.share": "Bagikan", 
+	"limit": "For users with a lot of repo, only top 20 Languages are displayed.",
+	"mostused": "My most used language is",
+	"footer.copyright": "Copyright",
+	"footer.disclaimer": "Disclaimer",
+	"footer.siteinfo": "This site is fan made and not affiliated with GitHub."
+}
