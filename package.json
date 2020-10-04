@@ -48,7 +48,8 @@
     },
     "include": [
       "public/js/*.js",
-      "src/*/*.js"
+      "src/*/*.js",
+      "src/*.js"
     ],
     "exclude": [
       "**/enum/*.js",
