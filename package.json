@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start-dev": "nodemon lib/app.js | gulp watch",
-    "start-prod": "nodemon lib/app.js | gulp",
+    "start": "nodemon lib/app.js | gulp",
     "lint": "eslint '**/*.js' --ignore-pattern node_modules/",
     "mocha": "mocha",
     "test": "nyc mocha"
