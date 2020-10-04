@@ -4,8 +4,8 @@
   "description": "show programming language based on the repos of github's account",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon lib/app.js | gulp watch",
-    "build": "nodemon lib/app.js | gulp",
+    "start-dev": "nodemon lib/app.js | gulp watch",
+    "start-prod": "nodemon lib/app.js | gulp",
     "lint": "eslint '**/*.js' --ignore-pattern node_modules/",
     "mocha": "mocha",
     "test": "nyc mocha"
