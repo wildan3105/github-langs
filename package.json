@@ -92,15 +92,15 @@
     "gulp": "^4.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^3.1.0",
+    "i18n": "^0.13.2",
     "lodash": "^4.17.19",
     "method-override": "^2.3.5",
     "nodemon": "^1.19.3"
   },
   "devDependencies": {
-    "eslint": "~4.8.0",
     "expect.js": "~0.3.1",
+    "eslint": "~4.8.0",
     "husky": "^4.2.3",
-    "jsdom": "^16.4.0",
     "mocha": "6.2.0",
     "nyc": "^13.3.0"
   }
