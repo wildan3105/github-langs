@@ -24,10 +24,10 @@
   "nyc": {
     "check-coverage": true,
     "per-file": false,
-    "lines": 0,
-    "statements": 0,
-    "functions": 0,
-    "branches": 0,
+    "lines": 15,
+    "statements": 15,
+    "functions": 20,
+    "branches": 30,
     "watermarks": {
       "lines": [
         0,
