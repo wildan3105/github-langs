@@ -143,3 +143,5 @@ const toggleColor = () => {
     btn.classList.toggle('active');
     btn.classList.toggle('inactive');
 };
+
+(typeof module !== 'undefined' && module !== null ? module : {}).exports = { chart, toggleColor, saveChart, sum, slugify };
