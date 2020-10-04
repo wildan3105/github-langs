@@ -1,0 +1,13 @@
+{
+    "title": "Pemeriksa Bahasa GitHub", 
+    "back": "Kembali ke beranda", 
+    "username.placeholder": "Nama pengguna Github", 
+    "button.color": "Ubah warna", 
+    "button.download": "Unduh",
+    "button.share": "Bagikan", 
+    "limit": "Untuk pengguna yang memiliki banyak repository, hanya 20 bahasa teratas yang ditampilkan.", 
+    "mostused": "Bahasa yang paling sering saya gunakan adalah", 
+    "footer.copyright": "Hak cipta", 
+    "footer.disclaimer": "Perhatian", 
+    "footer.siteinfo": "Situs ini adalah buatan penggemar dan tidak berafiliasi dengan GitHub."
+}

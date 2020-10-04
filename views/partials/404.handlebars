@@ -3,16 +3,16 @@
   <h1 class="display-3">Error {{error.code}} </h1>
   <p class="lead">{{error.message}}</p>
   <hr class="my-4">
-  <p>If you think you believe there is a bug, please submit an <a
-    href="https://github.com/wildan3105/github-langs/issues" target="_blank">issue on GitHub</a>.</p>
+  <p>{{ __ '404.bugreport' }}<a
+    href="https://github.com/wildan3105/github-langs/issues" target="_blank">{{ __ '404.issue' }}</a>.</p>
   <p class="lead">
-    <a class="btn btn-lg" href="/" role="button">Back to home</a>
+    <a class="btn btn-lg" href="/" role="button">{{ __ 'back' }}</a>
   </p>
 
 </div>
 
 <div class="mastfoot">
   <div class="inner text-center">
-    <p style="color:white"> Copyright &copy 2017 - {{currentYear}} Wildan S. Nahar | Disclaimer : This site is fan made and not affiliated with GitHub.</p>
+    <p style="color:white"> {{ __ 'footer.copyright' }} &copy 2017 - {{currentYear}} Wildan S. Nahar | {{ __ 'footer.disclaimer' }} : {{ __ 'footer.siteinfo' }}</p>
   </div>
 </div>
