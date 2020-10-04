@@ -22,7 +22,6 @@ class GithubService {
         try {
             return await axios(options);
         } catch (e) {
-            console.log(e);
             throw e;
         }
     }
@@ -39,7 +38,6 @@ class GithubService {
         try {
             return await axios(options);
         } catch (e) {
-            console.log(e);
             throw e;
         }
     }

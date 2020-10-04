@@ -40,7 +40,7 @@ exports.index = async (req, res) => {
     let avatar, msg, repos, statement, type, title = '';
     let languages = {};
 
-    if (username === undefined) {
+    if (_.isUndefined(username)) {
         res.render('layouts/main', {
             show: {
                 result: false,
