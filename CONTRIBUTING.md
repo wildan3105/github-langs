@@ -14,6 +14,7 @@ Here are the steps to contribute to this project :
 - Commit the change
 - Push the change to your branch
 - Create a pull request to the `master` branch
+- Make sure the unit tests are passed
 
 ## Contributor(s)
 A full list of contributors can be found [here](https://github.com/wildan3105/github-langs/graphs/contributors)
