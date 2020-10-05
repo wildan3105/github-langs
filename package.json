@@ -4,7 +4,8 @@
   "description": "show programming language based on the repos of github's account",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon lib/app.js | gulp sass",
+    "start-dev": "nodemon lib/app.js | gulp watch",
+    "start": "nodemon lib/app.js | gulp",
     "lint": "eslint '**/*.js' --ignore-pattern node_modules/",
     "mocha": "mocha",
     "test": "nyc mocha"
@@ -94,7 +95,7 @@
     "gulp-sass": "^3.1.0",
     "lodash": "^4.17.19",
     "method-override": "^2.3.5",
-    "nodemon": "^1.19.3"
+    "nodemon": "^1.19.4"
   },
   "devDependencies": {
     "eslint": "~4.8.0",
