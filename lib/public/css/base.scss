@@ -185,3 +185,12 @@ Styles for the 404 page
     color: white;
     padding-top: 20vh;
 }
+
+.lead {
+ a {
+  color: #007bff;
+  &:hover {
+    color: #ffffff;
+  }
+ }
+}
