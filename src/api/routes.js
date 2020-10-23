@@ -29,6 +29,13 @@ router.get('/api/repos', async (req, res) => {
 
 router.get('/api/existing/repos', controller.index);
 
-router.use('*', controller.notFound);
+router.use('*', (req, res) => {
+    res.render('layouts/main', {
+        error: {
+            code: 404,
+            message: 'Page not found!'
+        }
+    });
+});
 
 module.exports = router;

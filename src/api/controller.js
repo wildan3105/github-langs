@@ -1,4 +1,5 @@
 'use strict';
+
 const _ = require('lodash');
 const axios = require('axios');
 
@@ -160,12 +161,3 @@ exports.index = async (req, res) => {
             }
         });
 };
-
-exports.notFound = (req, res) => res
-    .status(404)
-    .render('layouts/main', {
-        error: {
-            code: 404,
-            message: 'Page not found!'
-        }
-    });
