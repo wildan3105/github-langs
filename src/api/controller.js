@@ -7,6 +7,7 @@ const axios = require('axios');
 const { CLIENT_ID_AND_CLIENT_SECRET_MISSING } = require('../../config/error_messages');
 const { statements, mysteryStatements } = require('../../config/random_statements');
 const { GITHUB_API_URL } = require('../../config/api_url');
+const { REPOS_PER_PAGE, MAX_REPOS_PER_CHART } = require('../../config/constants');
 
 // load utils
 const { emojiGenerator } = require('../utils/emoji_generator');
@@ -27,7 +28,7 @@ const githubService = new GithubService();
 const reqRepos = (username, numberOfPages) => {
     const headers = { 'User-Agent': `${username}` };
     const url = (page) =>
-        `${GITHUB_API_URL}/users/${username}/repos?${clientParams}&per_page=100&page=${page}`;
+        `${GITHUB_API_URL}/users/${username}/repos?${clientParams}&per_page=${REPOS_PER_PAGE}&page=${page}`;
     const requests = [];
     for (let i = 1; i <= numberOfPages; i++) {
         requests.push(axios.get(url(i), { headers }));
@@ -86,7 +87,7 @@ exports.index = async (req, res) => {
                 });
                 return;
             }
-            const numberOfPages = parseInt(numberOfRepos / 100) + 1;
+            const numberOfPages = (parseInt(numberOfRepos) / REPOS_PER_PAGE) + 1;
             axios.all(reqRepos(username, numberOfPages))
                 .then((pages) => {
                     const reposData = _.flatMap(pages, (page) => page.data);
@@ -115,7 +116,7 @@ exports.index = async (req, res) => {
                     const randomStatement = goodAtMysteryLanguage ? _.sample(mysteryStatements) : _.sample(statements);
                     goodAtMysteryLanguage ? statement = `${randomStatement}` : statement = `${randomStatement} ${goodAt}!`;
 
-                    const limitLabel = Object.keys(languages).length > 20;
+                    const limitLabel = Object.keys(languages).length > MAX_REPOS_PER_CHART;
 
                     res.render('layouts/main', {
                         show: {
