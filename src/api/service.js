@@ -16,6 +16,7 @@ class GithubService {
             headers: {
                 'User-Agent': `${username}`
             },
+            timeout: this.timeout,
             url: `${this.url}/users/${username}?${this.clientParams}`
         };
 
@@ -32,6 +33,7 @@ class GithubService {
             headers: {
                 'User-Agent': `${username}`
             },
+            timeout: this.timeout,
             url: `${this.url}/users/${username}/repos?${this.clientParams}&per_page=100&page=${page}`
         };
 
