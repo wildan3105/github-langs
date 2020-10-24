@@ -37,13 +37,10 @@ const reqRepos = (username, numberOfPages) => {
 };
 
 exports.index = async (req, res) => {
+    let avatar, msg, repos, statement, type, title, languages = {};
     const { username } = req.query;
-    const currentYear = new Date().getFullYear();
-    let avatar, msg, repos, statement, type, title = '', languages = {};
-    const show = { result: false, chart: false };
-
     const defaultRenderValue = {
-        show, avatar, msg, repos, statement, type, title, languages, currentYear, username: ''
+        show: { result: false, chart: false }, avatar, msg, repos, statement, type, title, languages, currentYear: new Date().getFullYear(), username: ''
     };
 
     if (_.isUndefined(username)) {
@@ -52,29 +49,34 @@ exports.index = async (req, res) => {
         });
         return;
     }
+
     await githubService.getUser(username)
-        .then((usr) => {
-            const usrData = usr.data;
-            avatar = usrData.avatar_url;
-            type = usrData.type === 'Organization' ? 'Organization' : 'Personal';
-            title = `| ${username} - ${type}`;
-            const numberOfRepos = usrData.public_repos;
+        .then((user) => {
+            const userData = user.data;
+            const numberOfRepos = userData.public_repos;
+            const fetchedRenderValue = {
+                avatar: userData.avatar_url,
+                type: userData.type === 'Organization' ? 'Organization' : 'Personal'
+            };
+
+            fetchedRenderValue.title = `| ${username} - ${fetchedRenderValue.type}`;
+
             if (numberOfRepos === 0) {
                 repos = `${username} has no repo`;
                 res.render('layouts/main', {
                     ..._.defaults({
                         show: { result: true, chart: false },
                         username,
-                        type,
-                        avatar,
                         repos,
                         showEmoji: emojiGenerator(numberOfRepos),
-                        title },
+                        ...fetchedRenderValue },
                     defaultRenderValue)
                 });
                 return;
             }
+
             const numberOfPages = (parseInt(numberOfRepos) / REPOS_PER_PAGE) + 1;
+
             axios.all(reqRepos(username, numberOfPages))
                 .then((pages) => {
                     const reposData = _.flatMap(pages, (page) => page.data);
@@ -109,8 +111,6 @@ exports.index = async (req, res) => {
                         ..._.defaults({
                             show: { result: true, chart: true },
                             username,
-                            type,
-                            avatar,
                             repos,
                             languages: JSON.stringify(languages),
                             colors: JSON.stringify(getColorsForLanguages(languages)),
@@ -118,7 +118,7 @@ exports.index = async (req, res) => {
                             statement,
                             limitLabel,
                             goodAt,
-                            title },
+                            ...fetchedRenderValue },
                         defaultRenderValue)
                     });
                 });
