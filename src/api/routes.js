@@ -5,6 +5,13 @@ const controller = require('./controller');
 
 router.get('/', controller.index);
 
-router.use('*', controller.notFound);
+router.use('*', (req, res) => {
+    res.render('layouts/main', {
+        error: {
+            code: 404,
+            message: 'Page not found!'
+        }
+    });
+});
 
 module.exports = router;

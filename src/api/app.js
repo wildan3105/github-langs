@@ -4,11 +4,11 @@ const bodyParser = require('body-parser');
 const enforce = require('express-sslify');
 const app = express();
 
-const error_messages = require('./config/error_messages');
+const { ENV_MISSING } = require('../../config/error_messages');
 
 const enableHttps = () => {
     if (!process.env.ENV) {
-        throw error_messages.ENV_MISSING;
+        throw ENV_MISSING;
     }
     const enableScript = process.env.ENV === 'local' ? null : app.use(enforce.HTTPS({ trustProtoHeader: true }));
     return enableScript;
@@ -16,17 +16,21 @@ const enableHttps = () => {
 
 enableHttps();
 
-// app setup
-app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
-app.set('view engine', 'handlebars');
+// template engine setup
+app.set('views', 'src/pages');
+app.engine('.handlebars', exphbs({
+    defaultLayout: 'main',
+    extname: '.handlebars',
+    layoutsDir:'src/pages/layouts',
+    partialsDir:'src/pages/partials'
+}));
+app.set('view engine', '.handlebars');
+
+// useful middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use('/public', express.static(`${__dirname}/public`));
+app.use('/public', express.static('public'));
 
 app.use('/', require('./routes'));
-
-const server = app.listen(process.env.PORT || 5000, () => {
-    console.log(`github-langs running on port: ${server.address().port}`);
-});
 
 module.exports = app;

@@ -1,7 +1,6 @@
 /* eslint-disable no-useless-escape */
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
-
 const sum = (array) => {
     if (array.length === 0) {
         return 0;
@@ -124,9 +123,9 @@ const chart = ({ limit, singleColor }) => {
             let language = chart.data.labels[activeElement._index];
             language = slugify(language);
             const value =
-                chart.data.datasets[activeElement._datasetIndex].data[
-                    activeElement._index
-                ];
+              chart.data.datasets[activeElement._datasetIndex].data[
+                  activeElement._index
+              ];
             const url = `https://github.com/${username}?tab=repositories&type=&language=${language}`;
             window.open(url, '_blank');
         }

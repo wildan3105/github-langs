@@ -1,11 +1,11 @@
 {
   "name": "github-langs",
-  "version": "2.0.16",
+  "version": "2.1.0",
   "description": "show programming language based on the repos of github's account",
   "main": "index.js",
   "scripts": {
-    "start-dev": "nodemon lib/app.js | gulp watch",
-    "start": "nodemon lib/app.js | gulp",
+    "start-dev": "nodemon src/index.js | gulp watch",
+    "start": "nodemon src/index.js | gulp",
     "lint": "eslint '**/*.js' --ignore-pattern node_modules/",
     "mocha": "mocha",
     "test": "nyc mocha"
@@ -25,10 +25,10 @@
   "nyc": {
     "check-coverage": true,
     "per-file": false,
-    "lines": 0,
-    "statements": 0,
-    "functions": 0,
-    "branches": 0,
+    "lines": 15,
+    "statements": 15,
+    "functions": 20,
+    "branches": 30,
     "watermarks": {
       "lines": [
         0,
@@ -48,8 +48,9 @@
       ]
     },
     "include": [
-      "lib/public/js/*.js",
-      "lib/*.js"
+      "public/js/*.js",
+      "src/*/*.js",
+      "src/*.js"
     ],
     "exclude": [
       "**/enum/*.js",

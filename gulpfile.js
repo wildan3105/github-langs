@@ -9,7 +9,7 @@ const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 
 function generateStyles(cb) {
-    src('lib/public/css/base.scss')
+    src('public/css/base.scss')
         .pipe(
             sass({
                 outputStyle: 'compressed',
@@ -25,13 +25,13 @@ function generateStyles(cb) {
             })
         )
         .pipe(
-            dest('lib/public/css/screen')
+            dest('public/css/screen')
         );
     cb();
 }
 
 function watchFiles(cb) {
-    watch('lib/public/css/**/*.scss', generateStyles);
+    watch('public/css/**/*.scss', generateStyles);
 }
 
 exports.styles = generateStyles;

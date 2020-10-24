@@ -19,7 +19,7 @@ const dom = new JSDOM(`
 
 global.document = dom.window.document;
 
-const showLoader = require('../../lib/public/js/spinner');
+const showLoader = require('../../public/js/spinner');
 const loadingEl = document.getElementById('overlay');
 const contentEl = document.getElementById('realContent');
 const usernameEl = document.getElementById('username');
@@ -51,4 +51,3 @@ describe('showSpinner', () => {
         expect(contentEl.style.visibility).to.be('visible');
     });
 });
-

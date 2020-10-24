@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-const { sum, slugify } = require('../../lib/public/js/chart');
+const { sum, slugify } = require('../../public/js/chart');
 const expect = require('expect.js');
 
 describe('charts', () => {
