@@ -39,24 +39,16 @@ const reqRepos = (username, numberOfPages) => {
 exports.index = async (req, res) => {
     const { username } = req.query;
     const currentYear = new Date().getFullYear();
-    let avatar, msg, repos, statement, type, title = '';
-    let languages = {};
+    let avatar, msg, repos, statement, type, title = '', languages = {};
+    const show = { result: false, chart: false };
+
+    const defaultRenderValue = {
+        show, avatar, msg, repos, statement, type, title, languages, currentYear, username: ''
+    };
 
     if (_.isUndefined(username)) {
         res.render('layouts/main', {
-            show: {
-                result: false,
-                chart: false
-            },
-            username: '',
-            type,
-            avatar,
-            languages,
-            msg,
-            repos,
-            statement,
-            currentYear,
-            title
+            ...defaultRenderValue
         });
         return;
     }
@@ -70,20 +62,15 @@ exports.index = async (req, res) => {
             if (numberOfRepos === 0) {
                 repos = `${username} has no repo`;
                 res.render('layouts/main', {
-                    show: {
-                        result: true,
-                        chart: false
-                    },
-                    username,
-                    type,
-                    avatar,
-                    languages: {},
-                    msg,
-                    repos,
-                    showEmoji: emojiGenerator(numberOfRepos),
-                    statement,
-                    currentYear,
-                    title
+                    ..._.defaults({
+                        show: { result: true, chart: false },
+                        username,
+                        type,
+                        avatar,
+                        repos,
+                        showEmoji: emojiGenerator(numberOfRepos),
+                        title },
+                    defaultRenderValue)
                 });
                 return;
             }
@@ -119,44 +106,27 @@ exports.index = async (req, res) => {
                     const limitLabel = Object.keys(languages).length > MAX_REPOS_PER_CHART;
 
                     res.render('layouts/main', {
-                        show: {
-                            result: true,
-                            chart: true
-                        },
-                        username,
-                        type,
-                        avatar,
-                        languages: JSON.stringify(languages),
-                        colors: JSON.stringify(getColorsForLanguages(languages)),
-                        showEmoji: emojiGenerator(numberOfRepos),
-                        msg,
-                        repos,
-                        statement,
-                        limitLabel,
-                        goodAt,
-                        currentYear,
-                        title
+                        ..._.defaults({
+                            show: { result: true, chart: true },
+                            username,
+                            type,
+                            avatar,
+                            repos,
+                            languages: JSON.stringify(languages),
+                            colors: JSON.stringify(getColorsForLanguages(languages)),
+                            showEmoji: emojiGenerator(numberOfRepos),
+                            statement,
+                            limitLabel,
+                            goodAt,
+                            title },
+                        defaultRenderValue)
                     });
                 });
         })
         .catch((err) => {
             if (err.response.data.message === 'Not Found') {
-                msg = 'User was not found';
                 res.render('layouts/main', {
-                    show: {
-                        result: false,
-                        chart: false
-                    },
-                    username,
-                    type,
-                    avatar,
-                    languages: JSON.stringify(languages),
-                    colors: JSON.stringify(getColorsForLanguages(languages)),
-                    msg,
-                    repos,
-                    statement,
-                    currentYear,
-                    title
+                    ..._.defaults({ msg: 'User was not found' }, defaultRenderValue)
                 });
                 return;
             }
