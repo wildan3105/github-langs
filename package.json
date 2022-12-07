@@ -87,7 +87,7 @@
     "axios": "^0.19.0",
     "body-parser": "^1.15.1",
     "bootstrap": "^4.5.2",
-    "express": "4.16.0",
+    "express": "4.17.3",
     "express-handlebars": "3.0.0",
     "express-sslify": "1.2.0",
     "fs": "0.0.1-security",
