@@ -27,3 +27,6 @@ config.json
 # test files
 .nyc_output/
 coverage/
+
+# script
+*.sh
