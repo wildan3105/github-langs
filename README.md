@@ -30,7 +30,8 @@ Let everyone know their language statistics on github repo (you can spy on other
 
 ## Running locally
 
-* Prerequisite: Node v18.0 or higher
+### Supported environment:
+* Prerequisite: Node v14.0.0
 
 * [Generate a GitHub OAuth client id and client secret](https://github.com/settings/applications/new) to ensure you don't get rate limited API call.
 
