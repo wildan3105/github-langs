@@ -6,8 +6,6 @@ name: Node.js env unit testing
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
   pull_request_target:
     branches: [ master ]
 
@@ -16,12 +14,17 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x]
+
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js
-      uses: actions/setup-node@v1
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
       with:
-        node-version: '12.x'
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
     - name: Installing dependencies
       run: npm ci
     - name: Running linter

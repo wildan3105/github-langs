@@ -30,14 +30,19 @@ Let everyone know their language statistics on github repo (you can spy on other
 
 ## Running locally
 
+### Supported environment:
+* Prerequisite: Node v14.0.0
+
 * [Generate a GitHub OAuth client id and client secret](https://github.com/settings/applications/new) to ensure you don't get rate limited API call.
 
-* Set `process.env` with these values:
+* Create an environment variable with the following values:
 ```
 CLIENT_ID=your_client_id
 CLIENT_SECRET=your_client_secret
 ENV=local
 ```
+
+An example of environment variable is provided [here](.env.example)
 
 * Install dependency: `npm install`
 * Start the app `npm start` and go to `http://localhost:5000`

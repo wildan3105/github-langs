@@ -2,6 +2,9 @@
   "name": "github-langs",
   "version": "2.1.0",
   "description": "show programming language based on the repos of github's account",
+  "engines": {
+    "node": "14.0.0"
+  },
   "main": "index.js",
   "scripts": {
     "start-dev": "nodemon src/index.js | gulp watch",
