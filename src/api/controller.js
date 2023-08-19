@@ -137,6 +137,7 @@ exports.index = async (req, res) => {
                 });
         })
         .catch((err) => {
+            // handle rate limit error here
             if (err.response.data.message === 'Not Found') {
                 res.render('layouts/main', {
                     ..._.defaults({ msg: 'User was not found' }, defaultRenderValue)
