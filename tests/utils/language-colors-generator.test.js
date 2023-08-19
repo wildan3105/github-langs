@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-const { getColorsForLanguages } = require('../../src/utils/language_colors_generator');
+const { getColorsForLanguages } = require('../../src/utils/language-colors-generator');
 const expect = require('expect.js');
 
 describe('emojiGenerator', () => {

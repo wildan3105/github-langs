@@ -5,7 +5,7 @@ const controller = require('./controller');
 
 router.get('/', controller.index);
 
-router.use('*', (req, res) => {
+router.use('*', (_, res) => {
     res.render('layouts/main', {
         error: {
             code: 404,

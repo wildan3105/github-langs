@@ -20,6 +20,17 @@
         "keyword-spacing":"error",
         "max-depth": ["error", 4],
         "max-statements": [1, 30],
+        "max-len": [
+            "error",
+            {
+                "code": 135,         // Maximum line length
+                "tabWidth": 4,      // Number of spaces for a tab
+                "ignoreUrls": true, // Ignore long URLs
+                "ignoreStrings": true, // Ignore long strings
+                "ignoreTemplateLiterals": true, // Ignore long template literals
+                "ignoreRegExpLiterals": true // Ignore long regular expressions
+            }
+        ],
         "newline-per-chained-call":"error",
         "no-array-constructor":"error",
         "no-confusing-arrow":"error",
@@ -45,7 +56,10 @@
         "no-use-before-define": "error",
         "no-whitespace-before-property":"error",
         "no-cond-assign": [2, "except-parens"],
-        "no-unused-vars": [1, {"vars": "local", "args": "none"}],
+        "no-unused-vars": [
+            "error",
+            { "vars": "local", "args": "none" }
+        ],
         "no-loop-func":"error",
         "object-shorthand":"error",
         "object-curly-spacing": [2, "always"],
