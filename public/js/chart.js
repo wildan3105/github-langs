@@ -1,8 +1,6 @@
 /* eslint-disable no-useless-escape */
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
-const { MAX_REPOS_PER_CHART } = require('../../src/config');
-
 const sum = (array) => {
     if (array.length === 0) {
         return 0;
@@ -58,7 +56,7 @@ const chart = ({ limit, singleColor }) => {
     }
     const labels = keys.slice(0, limit);
     const data = values.slice(0, limit);
-    if (keys.length > MAX_REPOS_PER_CHART) {
+    if (keys.length > 20) {
         const valueOthers = sum(values.slice(limit, keys.length));
         labels.push('Others');
         data.push(valueOthers);
@@ -135,7 +133,7 @@ const chart = ({ limit, singleColor }) => {
 const toggleColor = () => {
     window.chart.destroy();
     // eslint-disable-next-line no-undef
-    singleColor = chart({ limit: MAX_REPOS_PER_CHART, singleColor: !singleColor });
+    singleColor = chart({ limit: 20, singleColor: !singleColor });
     const btn = document.getElementById('btn-toggle');
 
     btn.classList.toggle('active');

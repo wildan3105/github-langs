@@ -1,10 +1,8 @@
-const GITHUB_API_URL = 'https://api.github.com';
-
 const REPOS_PER_PAGE = 100;
 const MAX_REPOS_PER_CHART = 20;
 
 const ENV_MISSING_ERROR_MESSAGE = 'Missing ENV environment variables';
-const CLIENT_ID_AND_CLIENT_SECRET_MISSING_ERROR_MESSAGE = 'Missing CLIENT_ID and CLIENT_SECRET environment variables';
+const TOKEN_MISSING_ERROR_MESSAGE = 'Missing token';
 
 const RANDOM_STATEMENTS = [
     'You\'ve got skills on',
@@ -22,11 +20,10 @@ const MISTERY_STATEMENTS = [
 ];
 
 module.exports = {
-    GITHUB_API_URL,
     REPOS_PER_PAGE,
     MAX_REPOS_PER_CHART,
     ENV_MISSING_ERROR_MESSAGE,
-    CLIENT_ID_AND_CLIENT_SECRET_MISSING_ERROR_MESSAGE,
+    TOKEN_MISSING_ERROR_MESSAGE,
     RANDOM_STATEMENTS,
     MISTERY_STATEMENTS
 };
