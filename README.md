@@ -1,37 +1,37 @@
 # Github Language Checker
 
-[![Build Status](https://travis-ci.org/wildan3105/github-langs.svg?branch=master)](https://travis-ci.org/wildan3105/github-langs)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d8bb38610b33412b993cdd4068bc0713)](https://www.codacy.com/app/wildan3105/github-langs?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=wildan3105/github-langs&amp;utm_campaign=Badge_Grade)
-[![HitCount](http://hits.dwyl.com/wildan3105/github-langs.svg)](http://hits.dwyl.com/wildan3105/github-langs)   [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/wildan3105/github-langs/issues)
+![test pipeline](https://github.com/wildan3105/github-langs/actions/workflows/node.js.yml/badge.svg)
+[![HitCount](http://hits.dwyl.com/wildan3105/github-langs.svg)](http://hits.dwyl.com/wildan3105/github-langs) 
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/wildan3105/github-langs/issues)
 
 ## What ?
 
-> Useful web checker to see what programming languages are used from a github account.
+> A website to show the stats of programming language in the repos that a certain github account has.
 
 [Go to the web!](https://github-langs.herokuapp.com)
 
 ![Screenshot](screenshot.png)
 
-## Why ?
+## Why does this project exist?
 
-Let everyone know their language statistics on github repo (you can spy on others as well!).
+So people can see the stats of programming language being used in their repositories easily.
 
 ## Key features
-- Show statistics of repo's programming language on github account
-- Display total of each programming language based on github [programming language color](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)
+- Show statistics of repo's programming language (overall) from a given github account
+- Display the total of each programming language based on github [programming language color](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)
 - Browse the repo with specific programming language directly from the chart bar
-- Ability to display the color in multicolor or single color (white)
+- Ability to switch between multicolor or single color (white)
 - Ability to download the chart in a JPG file
-- Social media sharing via facebook & twitter
+- Ability to share the result via facebook or twitter
 
 ## Running locally
 
 ### Supported environment:
-* Prerequisite: Node v14.0.0
+* Prerequisite: v10.0.0 <= Node <= v14.0.0
 
 * [Generate a GitHub OAuth client id and client secret](https://github.com/settings/applications/new) to ensure you don't get rate limited API call.
 
-* Create an environment variable with the following values:
+* Define environment variable with the following values:
 ```
 CLIENT_ID=your_client_id
 CLIENT_SECRET=your_client_secret
@@ -49,9 +49,9 @@ You can see the feature progress and pick up some issues in the [issues](https:/
 ## Contributing
 
 Check out this [page](CONTRIBUTING.md)
-## Related project(s)
+## Other similar projects:
 - [Githut](https://github.com/madnight/githut)
-- [Hacktoberfest Checker](https://github.com/jenkoian/hacktoberfest-checker)
+- [Hacktoberfest Checker](https://github.com/jenkoian/hacktoberfest-checker) (sadly it's not live anymore)
 
 ## License :
 
