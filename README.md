@@ -29,12 +29,11 @@ So people can see the stats of programming language being used in their reposito
 ### Supported environment:
 * Prerequisite: Node >= v18.0.0 and NPM >= 9.5.0
 
-* [Generate a GitHub OAuth client id and client secret](https://github.com/settings/applications/new) to ensure you don't get rate limited API call.
+* [Generate access token (classic)](https://github.com/settings/tokens/new) to ensure you don't get rate limited API call.
 
 * Define environment variable with the following values:
 ```
-CLIENT_ID=your_client_id
-CLIENT_SECRET=your_client_secret
+TOKEN=your-access-token
 ENV=local
 ```
 

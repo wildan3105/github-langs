@@ -102,6 +102,7 @@
     "lodash": "^4.17.19",
     "method-override": "^2.3.5",
     "nodemon": "^1.19.4",
+    "octokit": "^3.1.0",
     "sass": "^1.66.1"
   },
   "devDependencies": {
