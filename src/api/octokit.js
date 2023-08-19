@@ -22,7 +22,7 @@ class OctokitService {
 
     async getReposForUser(username, page) {
         try {
-            const data = await this.octokit.request(`GET /users/${username}/repos?per_page=${REPOS_PER_PAGE}&page=${page}`);
+            const { data } = await this.octokit.request(`GET /users/${username}/repos?per_page=${REPOS_PER_PAGE}&page=${page}`);
             return data;
         } catch (e) {
             throw e;

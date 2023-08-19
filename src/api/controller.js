@@ -90,7 +90,7 @@ exports.index = async (req, res) => {
 
             axios.all(await reqRepos(username, numberOfPages))
                 .then((pages) => {
-                    const reposData = _.flatMap(pages, (page) => page.data);
+                    const reposData = _.flatMap(pages, (page) => page);
 
                     (numberOfRepos === 1) ? repos = `${numberOfRepos} repo` : repos = `${numberOfRepos} repos`;
                     reposData.forEach((repo) => {

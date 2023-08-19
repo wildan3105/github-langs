@@ -44,6 +44,7 @@ const saveChart = () => {
 const chart = ({ limit, singleColor }) => {
     const canvasContainer = document.getElementById('canvas-container');
     const color = 'white';
+    const type = canvasContainer.dataset.type;
     const username = canvasContainer.dataset.username;
     const languages = JSON.parse(canvasContainer.dataset.languages);
     const colors = singleColor
@@ -116,13 +117,25 @@ const chart = ({ limit, singleColor }) => {
         }
     }));
 
+    const getURLBasedOnUserType = (userType, username) => {
+        let prefixURL;
+        if (userType === 'Organization') {
+            prefixURL = `https://github.com/orgs/${username}/repositories?q=`;
+        } else if (userType === 'Personal') {
+            prefixURL = `https://github.com/${username}?tab=repositories`;
+        }
+
+        return prefixURL;
+    };
+
     const onCanvasClick = (e) => {
         const activeElement = chart.getElementAtEvent(e)[0];
 
         if (activeElement) {
             let language = chart.data.labels[activeElement._index];
             language = slugify(language);
-            const url = `https://github.com/${username}?tab=repositories&type=&language=${language}`;
+            const prefixURL = getURLBasedOnUserType(type, username);
+            const url = `${prefixURL}&language=${language}`;
             window.open(url, '_blank');
         }
     };
