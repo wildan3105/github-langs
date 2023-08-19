@@ -5,12 +5,11 @@ const axios = require('axios');
 
 // config related variables
 const {
-    GITHUB_API_URL,
-    CLIENT_ID_AND_CLIENT_SECRET_MISSING_ERROR_MESSAGE,
     REPOS_PER_PAGE,
     MAX_REPOS_PER_CHART,
     RANDOM_STATEMENTS,
-    MISTERY_STATEMENTS
+    MISTERY_STATEMENTS,
+    TOKEN_MISSING_ERROR_MESSAGE
 } = require('../config');
 
 // load utils
@@ -18,20 +17,19 @@ const { emojiGenerator } = require('../utils/emoji-generator');
 const { getColorsForLanguages } =require('../utils/language-colors-generator');
 
 
-const client_id = process.env.CLIENT_ID || false;
-const client_secret = process.env.CLIENT_SECRET || false;
-if (!(client_id && client_secret)) {
-    throw CLIENT_ID_AND_CLIENT_SECRET_MISSING_ERROR_MESSAGE;
+const token = process.env.TOKEN || false;
+if (!token) {
+    throw TOKEN_MISSING_ERROR_MESSAGE;
 }
 
-// load service
-const GithubService = require('./service');
-const githubService = new GithubService(GITHUB_API_URL, client_id, client_secret);
+// initialize service
+const OctokitService = require('./octokit');
+const octokitService = new OctokitService(token);
 
 const reqRepos = async (username, numberOfPages) => {
     const requests = [];
     for (let i = 1; i <= numberOfPages; i++) {
-        requests.push(await githubService.getReposForUser(username, i));
+        requests.push(await octokitService.getReposForUser(username, i));
     }
     return requests;
 };
@@ -63,9 +61,9 @@ exports.index = async (req, res) => {
         return;
     }
 
-    await githubService.getUser(username)
+    await octokitService.getUser(username)
         .then(async (user) => {
-            const userData = user.data;
+            const userData = user;
             const numberOfRepos = userData.public_repos;
             const fetchedRenderValue = {
                 avatar: userData.avatar_url,
