@@ -27,7 +27,7 @@ So people can see the stats of programming language being used in their reposito
 ## Running locally
 
 ### Supported environment:
-* Prerequisite: v10.0.0 <= Node <= v14.0.0
+* Prerequisite: Node >= v18.0.0 and NPM >= 9.5.0
 
 * [Generate a GitHub OAuth client id and client secret](https://github.com/settings/applications/new) to ensure you don't get rate limited API call.
 
