@@ -120,12 +120,8 @@ const chart = ({ limit, singleColor }) => {
         const activeElement = chart.getElementAtEvent(e)[0];
 
         if (activeElement) {
-            let language = chart.data.labels[activeElement.index];
+            let language = chart.data.labels[activeElement._index];
             language = slugify(language);
-            const value =
-              chart.data.datasets[activeElement.datasetIndex].data[
-                  activeElement.index
-              ];
             const url = `https://github.com/${username}?tab=repositories&type=&language=${language}`;
             window.open(url, '_blank');
         }
