@@ -5,7 +5,7 @@ const {
     series,
     watch
 } = require('gulp');
-const sass = require('gulp-sass');
+var sass = require('gulp-sass')(require('sass'));
 const rename = require('gulp-rename');
 
 function generateStyles(cb) {
