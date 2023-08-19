@@ -1,8 +1,7 @@
 'use strict';
 
 const axios = require('axios');
-const { GITHUB_API_URL } = require('../../config/api_url');
-const { REPOS_PER_PAGE } = require('../../config/constants');
+const { GITHUB_API_URL, REPOS_PER_PAGE } = require('../config');
 
 class GithubService {
     constructor() {

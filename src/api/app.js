@@ -4,11 +4,11 @@ const bodyParser = require('body-parser');
 const enforce = require('express-sslify');
 const app = express();
 
-const { ENV_MISSING } = require('../../config/error_messages');
+const { ENV_MISSING_ERROR_MESSAGE } = require('../config');
 
 const enableHttps = () => {
     if (!process.env.ENV) {
-        throw ENV_MISSING;
+        throw ENV_MISSING_ERROR_MESSAGE;
     }
     const enableScript = process.env.ENV === 'local' ? null : app.use(enforce.HTTPS({ trustProtoHeader: true }));
     return enableScript;
