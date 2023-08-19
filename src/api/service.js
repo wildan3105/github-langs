@@ -1,13 +1,14 @@
 'use strict';
 
 const axios = require('axios');
-const { GITHUB_API_URL, REPOS_PER_PAGE } = require('../config');
+const { REPOS_PER_PAGE } = require('../config');
 
 class GithubService {
-    constructor() {
-        this.url = GITHUB_API_URL,
+    constructor(url, clientId, clientSecret) {
+        this.url = url,
+        this.clientParams = `client_id=${clientId}&client_secret=${clientSecret}`;
+
         this.timeout = 10000;
-        this.clientParams = `client_id=${process.env.CLIENT_ID}&client_secret=${process.env.CLIENT_SECRET}`;
         this.reposPerPage = REPOS_PER_PAGE;
     }
 

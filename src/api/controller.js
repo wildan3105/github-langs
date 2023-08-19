@@ -23,19 +23,15 @@ const client_secret = process.env.CLIENT_SECRET || false;
 if (!(client_id && client_secret)) {
     throw CLIENT_ID_AND_CLIENT_SECRET_MISSING_ERROR_MESSAGE;
 }
-const clientParams = `client_id=${client_id}&client_secret=${client_secret}`;
 
 // load service
 const GithubService = require('./service');
-const githubService = new GithubService();
+const githubService = new GithubService(GITHUB_API_URL, client_id, client_secret);
 
-const reqRepos = (username, numberOfPages) => {
-    const headers = { 'User-Agent': `${username}` };
-    const url = (page) =>
-        `${GITHUB_API_URL}/users/${username}/repos?${clientParams}&per_page=${REPOS_PER_PAGE}&page=${page}`;
+const reqRepos = async (username, numberOfPages) => {
     const requests = [];
     for (let i = 1; i <= numberOfPages; i++) {
-        requests.push(axios.get(url(i), { headers }));
+        requests.push(await githubService.getReposForUser(username, i));
     }
     return requests;
 };
@@ -68,7 +64,7 @@ exports.index = async (req, res) => {
     }
 
     await githubService.getUser(username)
-        .then((user) => {
+        .then(async (user) => {
             const userData = user.data;
             const numberOfRepos = userData.public_repos;
             const fetchedRenderValue = {
@@ -94,7 +90,7 @@ exports.index = async (req, res) => {
 
             const numberOfPages = (parseInt(numberOfRepos) / REPOS_PER_PAGE) + 1;
 
-            axios.all(reqRepos(username, numberOfPages))
+            axios.all(await reqRepos(username, numberOfPages))
                 .then((pages) => {
                     const reposData = _.flatMap(pages, (page) => page.data);
 

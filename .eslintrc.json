@@ -56,7 +56,10 @@
         "no-use-before-define": "error",
         "no-whitespace-before-property":"error",
         "no-cond-assign": [2, "except-parens"],
-        "no-unused-vars": [1, {"vars": "local", "args": "none"}],
+        "no-unused-vars": [
+            "error",
+            { "vars": "local", "args": "none" }
+        ],
         "no-loop-func":"error",
         "object-shorthand":"error",
         "object-curly-spacing": [2, "always"],
