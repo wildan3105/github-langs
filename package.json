@@ -101,7 +101,7 @@
     "gulp-sass": "^5.1.0",
     "lodash": "^4.17.19",
     "method-override": "^2.3.5",
-    "nodemon": "^1.19.4",
+    "nodemon": "^3.0.1",
     "octokit": "^3.1.0",
     "sass": "^1.66.1"
   },
