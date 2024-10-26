@@ -13,7 +13,8 @@ function generateStyles(cb) {
         .pipe(
             sass({
                 outputStyle: 'compressed',
-                includePaths: ['node_modules']
+                includePaths: ['node_modules'],
+                quietDeps: true
             }).on(
                 'error',
                 sass.logError
