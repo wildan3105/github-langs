@@ -40,7 +40,7 @@ ENV=local
 An example of environment variable is provided [here](.env.example)
 
 * Install dependency: `npm install`
-* Start the app `npm start` and go to `http://localhost:5000`
+* Start the app `<list-of-env-and-values> npm start` and go to `http://localhost:5000`
 
 ## Feature tracker:
 You can see the feature progress and pick up some issues in the [issues](https://github.com/wildan3105/github-langs/issues) or [projects](https://github.com/wildan3105/github-langs/projects) or [milestones](https://github.com/wildan3105/github-langs/milestones)
