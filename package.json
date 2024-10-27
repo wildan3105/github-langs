@@ -10,6 +10,7 @@
   "scripts": {
     "start-dev": "nodemon src/index.js | gulp watch",
     "start": "nodemon src/index.js | gulp",
+    "start-prod": "./node_modules/.bin/nodemon src/index.js | ./node_modules/.bin/gulp watch",
     "lint": "eslint '**/*.js' --ignore-pattern node_modules/",
     "lint:fix": "eslint --fix '**/*.js' --ignore-pattern node_modules/",
     "mocha": "mocha",
