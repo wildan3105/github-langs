@@ -1,0 +1,65 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out the code
+      uses: actions/checkout@v3
+
+    - name: Verify SSH connection and deploy
+      uses: appleboy/ssh-action@v0.1.6
+      with:
+        host: ${{ secrets.VPS_HOST }}
+        username: ${{ secrets.VPS_USERNAME }}
+        password: ${{ secrets.VPS_PASSWORD }}
+        port: 22
+        script: |
+          # Define directories
+          TARGET_DIR="/var/www/html"
+          TEMP_DIR="${TARGET_DIR}/tmp"
+          SYMLINK="${TARGET_DIR}/current"
+
+          # Prepare the temporary area
+          echo "Preparing the temporary deployment directory..."
+          sudo rm -rf $TEMP_DIR
+          sudo mkdir -p $TEMP_DIR
+
+          # Clone the repo into the temporary directory
+          echo "Cloning repository to the temporary directory..."
+          git clone git@github.com:wildan3105/github-langs.git $TEMP_DIR
+
+          # Ensure necessary files are present
+          if [ -f "$TEMP_DIR/src/index.js" ]; then
+            echo "Entry point found in the temporary directory"
+          else
+            echo "Error: Entry point not found in the temporary directory!"
+            exit 1
+          fi
+
+          # Set environment variables
+          export ENV=${{ secrets.ENV }}
+          export TOKEN=${{ secrets.TOKEN }}
+
+          # Install dependencies
+          echo "Installing dependencies..."
+          cd $TEMP_DIR
+          npm install
+
+          # Start the application in the background
+          echo "Starting the application..."
+          nohup npm run start-prod &
+
+          # Switch symlink atomically
+          echo "Updating symlink to point to the new temporary directory..."
+          sudo ln -sfn $TEMP_DIR $SYMLINK
+
+          # Verify that the symlink points to the latest deployment
+          echo "Deployment verification:"
+          ls -l $SYMLINK
