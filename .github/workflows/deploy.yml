@@ -64,7 +64,7 @@ jobs:
 
           # Start the application in the background using Node
           echo "Starting the application..."
-          nohup node src/index.js --env=$ENV --token=$TOKEN &
+          nohup npm run start-prod &
 
           # Switch symlink atomically
           echo "Updating symlink to point to the new temporary directory..."
