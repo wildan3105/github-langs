@@ -64,23 +64,11 @@ jobs:
 
           # Start the application in the background using Node
           echo "Starting the application..."
-          nohup npm run start-prod &
+          ENV=$ENV TOKEN=$TOKEN npm run start-prod
 
           # Switch symlink atomically
           echo "Updating symlink to point to the new temporary directory..."
           sudo ln -sfn $TEMP_DIR $SYMLINK
-
-          # Wait for the application to start
-          sleep 5  # Adjust this as necessary for your app to start
-
-          # Check if the application is running on port 5000
-          while ! lsof -i:5000; do
-           echo "Waiting for the application to start on port 5000..."
-           sleep 1
-          done
-
-          echo "Application is running on port 5000."
-          exit 0
 
           # Verify that the symlink points to the latest deployment
           echo "Deployment verification:"
