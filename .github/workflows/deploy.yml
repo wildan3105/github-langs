@@ -21,6 +21,9 @@ jobs:
         password: ${{ secrets.VPS_PASSWORD }}
         port: 22
         script: |
+          # Set npm path
+          export PATH=$PATH:/root/.nvm/versions/node/v18.10.0/bin
+
           # Define directories
           TARGET_DIR="/var/www/html"
           TEMP_DIR="${TARGET_DIR}/tmp"
