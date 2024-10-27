@@ -21,7 +21,7 @@ jobs:
         password: ${{ secrets.VPS_PASSWORD }}
         port: 22
         script: |
-          # Set npm path
+          # Set paths for npm and node
           export PATH=$PATH:/root/.nvm/versions/node/v18.10.0/bin
 
           # Define directories
@@ -62,19 +62,9 @@ jobs:
             sudo kill -9 $PID || echo "Failed to kill process with PID $PID"
           fi
 
-          # Start the application in the background
+          # Start the application in the background using Node
           echo "Starting the application..."
-          npm run start-prod &
-
-          # Wait for the application to start (you can adjust the sleep duration)
-          sleep 5
-
-          # Check if the application is running on port 5000
-          while ! nc -z localhost 5000; do
-            sleep 1 # wait for 1 second before checking again
-          done
-
-          echo "Application is now running on port 5000."
+          nohup node src/index.js --env=$ENV --token=$TOKEN &
 
           # Switch symlink atomically
           echo "Updating symlink to point to the new temporary directory..."
