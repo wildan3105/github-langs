@@ -57,7 +57,17 @@ jobs:
 
           # Start the application in the background
           echo "Starting the application..."
-          nohup npm run start-prod &
+          npm run start-prod &
+
+          # Wait for the application to start (you can adjust the sleep duration)
+          sleep 5
+
+          # Check if the application is running on port 5000
+          while ! nc -z localhost 5000; do
+            sleep 1 # wait for 1 second before checking again
+          done
+
+          echo "Application is now running on port 5000."
 
           # Switch symlink atomically
           echo "Updating symlink to point to the new temporary directory..."
