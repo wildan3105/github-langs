@@ -26,7 +26,7 @@ jobs:
 
           # Define directories
           TARGET_DIR="/var/www/html"
-          TEMP_DIR="${TARGET_DIR}/staging"
+          TEMP_DIR="${TARGET_DIR}/tmp"
           SYMLINK="${TARGET_DIR}/current"
 
           # Prepare the temporary area
