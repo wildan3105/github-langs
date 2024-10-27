@@ -55,6 +55,13 @@ jobs:
           cd $TEMP_DIR
           npm install
 
+          # Gracefully stop the existing application if it's running on port 5000
+          if lsof -i:5000; then
+            echo "Stopping existing application running on port 5000..."
+            PID=$(lsof -t -i:5000)
+            sudo kill -9 $PID || echo "Failed to kill process with PID $PID"
+          fi
+
           # Start the application in the background
           echo "Starting the application..."
           npm run start-prod &
