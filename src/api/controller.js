@@ -69,7 +69,7 @@ exports.index = async (req, res) => {
 
             // display "too many repos" per user layout
             if (numberOfRepos > MAX_REPOS_PER_USER) {
-                const warningMessage = 'Uh oh! Looks like this user has a large number of entries! To keep things running smoothly, we can only display a limited amount right now. Please try a different user.';
+                const warningMessage = 'Uh oh! Looks like this user has a large number of repos! To keep things running smoothly, we can only display a limited amount right now. Please try a different user.';
                 res.render('layouts/main', {
                     error: {
                         code: 'Too many repos',
