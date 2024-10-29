@@ -7,6 +7,7 @@ const axios = require('axios');
 const {
     REPOS_PER_PAGE,
     MAX_REPOS_PER_CHART,
+    MAX_REPOS_PER_USER,
     RANDOM_STATEMENTS,
     MISTERY_STATEMENTS,
     TOKEN_MISSING_ERROR_MESSAGE
@@ -65,6 +66,19 @@ exports.index = async (req, res) => {
         .then(async (user) => {
             const userData = user;
             const numberOfRepos = userData.public_repos;
+
+            // display "too many repos" per user layout
+            if (numberOfRepos > MAX_REPOS_PER_USER) {
+                const warningMessage = 'Uh oh! Looks like this user has a large number of repos! To keep things running smoothly, we can only display a limited amount right now. Please try a different user.';
+                res.render('layouts/main', {
+                    error: {
+                        code: 'Too many repos',
+                        message: warningMessage
+                    }
+                });
+                return;
+            }
+
             const fetchedRenderValue = {
                 avatar: userData.avatar_url,
                 type: userData.type === 'Organization' ? 'Organization' : 'Personal'
