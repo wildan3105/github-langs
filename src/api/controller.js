@@ -36,6 +36,7 @@ const reqRepos = async (username, numberOfPages) => {
 };
 
 exports.index = async (req, res) => {
+    const currentYear = new Date().getFullYear();
     let avatar, msg, repos, statement, type, title, languages = {};
     const { username } = req.query;
     const defaultRenderValue = {
@@ -51,7 +52,7 @@ exports.index = async (req, res) => {
         type,
         title,
         languages,
-        currentYear: new Date().getFullYear(),
+        currentYear,
         username: ''
     };
 
@@ -74,7 +75,8 @@ exports.index = async (req, res) => {
                     error: {
                         code: 'Too many repos',
                         message: warningMessage
-                    }
+                    },
+                    currentYear
                 });
                 return;
             }
