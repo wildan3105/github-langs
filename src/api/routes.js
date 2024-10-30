@@ -10,7 +10,8 @@ router.use('*', (_, res) => {
         error: {
             code: 404,
             message: 'Page not found!'
-        }
+        },
+        currentYear: new Date().getFullYear()
     });
 });
 
