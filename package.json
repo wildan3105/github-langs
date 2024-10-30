@@ -89,7 +89,7 @@
   },
   "homepage": "https://github.com/wildan3105/github-langs#readme",
   "dependencies": {
-    "axios": "^1.6.2",
+    "axios": "^1.7.7",
     "body-parser": "^1.20.3",
     "bootstrap": "^4.5.2",
     "express": "4.21.1",
