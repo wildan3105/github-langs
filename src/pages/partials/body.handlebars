@@ -107,8 +107,8 @@
 <script>
   function validateInput() {
     const inputField = document.getElementById("username");
-    if (inputField.value.trim() === "") {
-      alert("Username cannot be empty or contain only spaces");
+    if (/\s/.test(inputField.value)) {
+      alert("Username cannot contain any spaces.");
       return false;
     }
     showLoader();
