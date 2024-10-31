@@ -73,3 +73,17 @@ jobs:
           # Verify that the symlink points to the latest deployment
           echo "Deployment verification:"
           ls -l $SYMLINK
+
+          # delay before performing healthcheck
+          sleep 10s
+
+          # perform healthcheck
+          echo "Performing health check on http://localhost:5000..."
+          STATUS_CODE=$(curl -o /dev/null -s -w "%{http_code}" http://localhost:5000)
+
+          if [ "$STATUS_CODE" -ne 200 ]; then
+              echo "Health check failed with status code: $STATUS_CODE"
+              exit 1
+          else
+              echo "Health check passed with status code: $STATUS_CODE"
+          fi
