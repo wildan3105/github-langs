@@ -36,6 +36,8 @@ jobs:
         envs: ACTIVE_ENV,TARGET_ENV,TARGET_DIR,TARGET_PORT
         script: |
           echo "Deployment using blue-green is started..."
+          export NVM_DIR=~/.nvm
+          source ~/.nvm/nvm.sh
           echo "Determining the current active environment..."
           if grep -q "proxy_pass http://localhost:${{ env.BLUE_PORT }};" "${{ env.NGINX_CONF }}"; then
             export ACTIVE_ENV="${{ env.BLUE_NAME }}"
