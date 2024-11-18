@@ -101,4 +101,6 @@ jobs:
           echo "Delay finished"
 
           echo "Update nginx port..."
+          sudo sed -i "s|proxy_pass http://localhost:[0-9]*;|proxy_pass http://localhost:$TARGET_PORT;|" "${{ env.NGINX_CONF }}"
+          sudo nginx -s reload
           echo "Nginx updated"
