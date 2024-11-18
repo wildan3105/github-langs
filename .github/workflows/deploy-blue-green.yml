@@ -80,31 +80,32 @@ jobs:
 
           echo "Install and build application..."
           cd $TARGET_DIR
-          npm install
-          echo "Dependencies installed and app built"
+          npm --help
+        #   npm install
+        #   echo "Dependencies installed and app built"
 
-          echo "Reading from env variables..."
-          if [ -f ".env" ]; then
-            export $(grep -v '^#' .env | xargs)
-          else
-            echo "Error: .env file not found!"
-            exit 1
-          fi
+        #   echo "Reading from env variables..."
+        #   if [ -f ".env" ]; then
+        #     export $(grep -v '^#' .env | xargs)
+        #   else
+        #     echo "Error: .env file not found!"
+        #     exit 1
+        #   fi
 
-          echo "Start or restart application via PM2..."
-          if pm2 list | grep -q "$TARGET_ENV"; then
-            echo "App detected. Restarting the app..."
-            pm2 restart "$TARGET_ENV" || { echo "Failed to restart app"; exit 1; }
-          else
-            echo "App is not started yet. Starting the app..."
-            pm2 start npm --name "$TARGET_ENV" -- run start -- -p "$TARGET_PORT" || { echo "Failed to start app"; exit 1; }
-          fi
-          echo "Application started/restarted"
+        #   echo "Start or restart application via PM2..."
+        #   if pm2 list | grep -q "$TARGET_ENV"; then
+        #     echo "App detected. Restarting the app..."
+        #     pm2 restart "$TARGET_ENV" || { echo "Failed to restart app"; exit 1; }
+        #   else
+        #     echo "App is not started yet. Starting the app..."
+        #     pm2 start npm --name "$TARGET_ENV" -- run start -- -p "$TARGET_PORT" || { echo "Failed to start app"; exit 1; }
+        #   fi
+        #   echo "Application started/restarted"
 
-          echo "Adding delay to ensure the app is ready..."
-          sleep 10s
-          echo "Delay finished"
+        #   echo "Adding delay to ensure the app is ready..."
+        #   sleep 10s
+        #   echo "Delay finished"
 
-          echo "Update nginx port..."
+        #   echo "Update nginx port..."
 
-          echo "Nginx updated"
+        #   echo "Nginx updated"
