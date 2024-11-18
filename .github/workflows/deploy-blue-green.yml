@@ -28,12 +28,14 @@ jobs:
         TARGET_ENV: ""
         TARGET_DIR: ""
         TARGET_PORT: ""
+        TOKEN: ""
+        ENV: ""
       with:
         host: ${{ secrets.VPS_HOST }}
         username: ${{ secrets.VPS_USERNAME }}
         password: ${{ secrets.VPS_PASSWORD }}
         port: 22
-        envs: ACTIVE_ENV,TARGET_ENV,TARGET_DIR,TARGET_PORT
+        envs: ACTIVE_ENV,TARGET_ENV,TARGET_DIR,TARGET_PORT, TOKEN, ENV
         script: |
           echo "Deployment using blue-green is started..."
           export NVM_DIR=~/.nvm
@@ -73,6 +75,11 @@ jobs:
           mkdir -p $TARGET_DIR
           git clone -b chore/blue-green-deployment ${{ env.PROJECT_REPO }} $TARGET_DIR
           echo "Repository cloned"
+
+          echo "Writing to environment variables..."
+          export ENV="${{ secrets.ENV }}"
+          export TOKEN="${{ secrets.TOKEN }}"
+          echo "Environment variables written"
 
           echo "Install and build application..."
           cd $TARGET_DIR
