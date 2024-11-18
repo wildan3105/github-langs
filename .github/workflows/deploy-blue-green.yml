@@ -75,7 +75,7 @@ jobs:
           echo "Repository cloned"
 
           echo "Writing to environment variables..."
-          echo "ENV=${{ secrets.ENV " >> $TARGET_DIR/.env
+          echo "ENV=${{ secrets.ENV }} >> $TARGET_DIR/.env
           echo "TOKEN=${{ secrets.TOKEN }}" >> $TARGET_DIR/.env
           echo "PORT=$TARGET_PORT" >> $TARGET_DIR/.env
           echo "Environment variables written"
