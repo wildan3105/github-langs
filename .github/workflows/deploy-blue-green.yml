@@ -69,20 +69,27 @@ jobs:
           echo "Cloning the repository..."
           rm -rf $TARGET_DIR
           mkdir -p $TARGET_DIR
-          git clone ${{ env.PROJECT_REPO }} $TARGET_DIR
+          git clone -b chore/blue-green-deployment ${{ env.PROJECT_REPO }} $TARGET_DIR
           echo "Repository cloned"
 
           echo "Writing to environment variables..."
-          echo "ELASTIC_API_KEY=${{ secrets.ELASTIC_API_KEY }}" >> $TARGET_DIR/.env
-          echo "ELASTIC_BASE_URL=${{ secrets.ELASTIC_BASE_URL }}" >> $TARGET_DIR/.env
-          echo "TO_EMAIL=${{ secrets.TO_EMAIL }}" >> $TARGET_DIR/.env
+          echo "ENV=${{ secrets.ENV }}" >> $TARGET_DIR/.env
+          echo "TOKEN=${{ secrets.TOKEN }}" >> $TARGET_DIR/.env
+          echo "PORT=${{ secrets.PORT }}" >> $TARGET_DIR/.env
           echo "Environment variables written"
 
           echo "Install and build application..."
           cd $TARGET_DIR
           npm install
-          npm run build
           echo "Dependencies installed and app built"
+
+          echo "Reading from env variables..."
+          if [ -f ".env" ]; then
+            export $(grep -v '^#' .env | xargs)
+          else
+            echo "Error: .env file not found!"
+            exit 1
+          fi
 
           echo "Start or restart application via PM2..."
           if pm2 list | grep -q "$TARGET_ENV"; then
@@ -99,6 +106,6 @@ jobs:
           echo "Delay finished"
 
           echo "Update nginx port..."
-          sudo sed -i "s|proxy_pass http://localhost:[0-9]*;|proxy_pass http://localhost:$TARGET_PORT;|" "${{ env.NGINX_CONF }}"
-          sudo nginx -s reload
+        #   sudo sed -i "s|proxy_pass http://localhost:[0-9]*;|proxy_pass http://localhost:$TARGET_PORT;|" "${{ env.NGINX_CONF }}"
+        #   sudo nginx -s reload
           echo "Nginx updated"
