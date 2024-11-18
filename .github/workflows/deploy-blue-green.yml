@@ -74,23 +74,10 @@ jobs:
           git clone -b chore/blue-green-deployment ${{ env.PROJECT_REPO }} $TARGET_DIR
           echo "Repository cloned"
 
-        #   echo "Writing to environment variables..."
-        #   echo "ENV=${{ secrets.ENV }} >> $TARGET_DIR/.env
-        #   echo "TOKEN=${{ secrets.TOKEN }}" >> $TARGET_DIR/.env
-        #   echo "Environment variables written"
-
           echo "Install and build application..."
           cd $TARGET_DIR
           npm install
           echo "Dependencies installed and app built"
-
-        #   echo "Reading from env variables..."
-        #   if [ -f ".env" ]; then
-        #     export $(grep -v '^#' .env | xargs)
-        #   else
-        #     echo "Error: .env file not found!"
-        #     exit 1
-        #   fi
 
           echo "Start or restart application via PM2..."
           if pm2 list | grep -q "$TARGET_ENV"; then
