@@ -98,7 +98,7 @@ jobs:
             pm2 restart "$TARGET_ENV" || { echo "Failed to restart app"; exit 1; }
           else
             echo "App is not started yet. Starting the app..."
-            pm2 start npm --name "$TARGET_ENV" -- run start -- -p "$TARGET_PORT" || { echo "Failed to start app"; exit 1; }
+            PORT=$TARGET_PORT pm2 start npm --name "$TARGET_ENV" -- run start || { echo "Failed to start app"; exit 1; }
           fi
           echo "Application started/restarted"
 
