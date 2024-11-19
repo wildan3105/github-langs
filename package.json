@@ -94,7 +94,7 @@
     "express": "4.21.1",
     "express-handlebars": "3.0.0",
     "fs": "0.0.1-security",
-    "gulp": "^4.0.0",
+    "gulp": "^5.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
     "lodash": "^4.17.19",
