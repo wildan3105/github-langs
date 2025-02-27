@@ -1,7 +1,6 @@
 # Github Language Checker
 
 ![test pipeline](https://github.com/wildan3105/github-langs/actions/workflows/node.js.yml/badge.svg)
-[![HitCount](http://hits.dwyl.com/wildan3105/github-langs.svg)](http://hits.dwyl.com/wildan3105/github-langs) 
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/wildan3105/github-langs/issues)
 
 ## What ?
