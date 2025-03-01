@@ -7,7 +7,7 @@
 
 > A website to show the stats of programming language in the repos that a certain github account has.
 
-[Go to the web!](https://gitstats.wildans.site))
+[Go to the web!](https://gitstats.wildans.site)
 
 ![Screenshot](screenshot.png)
 
