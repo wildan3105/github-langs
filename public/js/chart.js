@@ -1,11 +1,11 @@
 /* eslint-disable no-useless-escape */
 /* eslint-disable no-undef */
-/* eslint-disable no-unused-vars */
+
 const sum = (array) => {
     if (array.length === 0) {
         return 0;
     }
-    // eslint-disable-next-line no-confusing-arrow
+
     return array.reduce((acum, val) => (!isNaN(val) ? acum + val : 0), 0);
 };
 
@@ -145,7 +145,7 @@ const chart = ({ limit, singleColor }) => {
 
 const toggleColor = () => {
     window.chart.destroy();
-    // eslint-disable-next-line no-undef
+
     singleColor = chart({ limit: 20, singleColor: !singleColor });
     const btn = document.getElementById('btn-toggle');
 
