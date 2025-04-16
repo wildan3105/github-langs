@@ -16,6 +16,7 @@ class OctokitService {
             const { data } = await this.octokit.request(`GET /users/${username}`);
             return data;
         } catch (e) {
+            console.log('An error occurred while fetching user:', e);
             throw e;
         }
     }
@@ -25,6 +26,7 @@ class OctokitService {
             const { data } = await this.octokit.request(`GET /users/${username}/repos?per_page=${REPOS_PER_PAGE}&page=${page}`);
             return data;
         } catch (e) {
+            console.log('An error occurred while fetching repos for user:', e);
             throw e;
         }
     }

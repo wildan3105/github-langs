@@ -1,7 +1,7 @@
 document.getElementById('overlay').style.visibility = 'hidden';
 document.getElementById('realContent').style.visibility = 'visible';
 
-// eslint-disable-next-line no-unused-vars
+
 const showLoader = () => {
     const val = document.getElementById('username').value;
     if (val !== undefined && val !== null && val.length !== 0) {

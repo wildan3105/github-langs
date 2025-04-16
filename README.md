@@ -53,4 +53,4 @@ Check out this [page](CONTRIBUTING.md)
 
 ## License :
 
-MIT (c) Wildan S. Nahar 2017 - 2023
+MIT (c) Wildan S. Nahar 2017 - 2025

@@ -1,5 +1,5 @@
 /* eslint-disable prefer-const */
-/* eslint-disable no-underscore-dangle */
+
 window.twttr = (function(d, s, id) {
     let js, fjs = d.getElementsByTagName(s)[0],
         t = window.twttr || {};
