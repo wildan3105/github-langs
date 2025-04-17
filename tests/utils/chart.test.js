@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
-const { sum, slugify } = require('../../public/js/chart');
-const expect = require('expect.js');
+import { sum, slugify } from '../../public/js/chart.js';
+import expect from 'expect.js';
 
 describe('charts', () => {
     it('should return calculated sum of array elements',  () => {
