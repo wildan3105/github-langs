@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
-const { getColorsForLanguages } = require('../../src/utils/language-colors-generator');
-const expect = require('expect.js');
+import { getColorsForLanguages } from '../../src/utils/language-colors-generator.js';
+import expect from 'expect.js';
 
 describe('emojiGenerator', () => {
     it('should return [`#E8274B`] for language `ABAP`', () => {
