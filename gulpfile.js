@@ -4,26 +4,22 @@ import gulpSass from 'gulp-sass';
 const sass = gulpSass(dartSass);
 import rename from 'gulp-rename';
 
-async function generateStyles() {
-    gulp.src('public/css/base.scss')
+function generateStyles() {
+    return gulp
+        .src('public/css/base.scss')
         .pipe(
             sass({
                 outputStyle: 'compressed',
                 includePaths: ['node_modules'],
                 quietDeps: true
-            }).on(
-                'error',
-                sass.logError
-            )
+            }).on('error', sass.logError)
         )
         .pipe(
             rename((file) => {
                 file.basename += '.min';
             })
         )
-        .pipe(
-            gulp.dest('public/css/screen')
-        );
+        .pipe(gulp.dest('public/css/screen'));
 }
 
 function watchFiles() {
