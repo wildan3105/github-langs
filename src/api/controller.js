@@ -1,22 +1,15 @@
 'use strict';
 
-const _ = require('lodash');
-const axios = require('axios');
+import _ from 'lodash';
+const { isUndefined, defaults, flatMap, fromPairs, sortBy, toPairs, maxBy, keys, sample } = _;
+import { all } from 'axios';
 
 // config related variables
-const {
-    REPOS_PER_PAGE,
-    MAX_REPOS_PER_CHART,
-    MAX_REPOS_PER_USER,
-    RANDOM_STATEMENTS,
-    MISTERY_STATEMENTS,
-    TOKEN_MISSING_ERROR_MESSAGE
-} = require('../config');
+import { REPOS_PER_PAGE, MAX_REPOS_PER_CHART, MAX_REPOS_PER_USER, RANDOM_STATEMENTS, MISTERY_STATEMENTS, TOKEN_MISSING_ERROR_MESSAGE } from '../config.js';
 
 // load utils
-const { emojiGenerator } = require('../utils/emoji-generator');
-const { getColorsForLanguages } =require('../utils/language-colors-generator');
-
+import { emojiGenerator } from '../utils/emoji-generator.js';
+import { getColorsForLanguages } from '../utils/language-colors-generator.js';
 
 const token = process.env.TOKEN || false;
 if (!token) {
@@ -24,7 +17,7 @@ if (!token) {
 }
 
 // initialize service
-const OctokitService = require('./octokit');
+import OctokitService from './octokit.js';
 const octokitService = new OctokitService(token);
 
 const reqRepos = async (username, numberOfPages) => {
@@ -35,7 +28,7 @@ const reqRepos = async (username, numberOfPages) => {
     return requests;
 };
 
-exports.index = async (req, res) => {
+export async function index(req, res) {
     const currentYear = new Date().getFullYear();
     let avatar, msg, repos, statement, type, title, languages = {};
     const { username } = req.query;
@@ -56,7 +49,7 @@ exports.index = async (req, res) => {
         username: ''
     };
 
-    if (_.isUndefined(username)) {
+    if (isUndefined(username)) {
         res.render('layouts/main', {
             ...defaultRenderValue
         });
@@ -91,7 +84,7 @@ exports.index = async (req, res) => {
             if (numberOfRepos === 0) {
                 repos = `${username} has no repo`;
                 res.render('layouts/main', {
-                    ..._.defaults({
+                    ...defaults({
                         show: { result: true, chart: false },
                         username,
                         repos,
@@ -104,21 +97,21 @@ exports.index = async (req, res) => {
 
             const numberOfPages = (parseInt(numberOfRepos) / REPOS_PER_PAGE) + 1;
 
-            axios.all(await reqRepos(username, numberOfPages))
+            all(await reqRepos(username, numberOfPages))
                 .then((pages) => {
-                    const reposData = _.flatMap(pages, (page) => page);
+                    const reposData = flatMap(pages, (page) => page);
 
                     (numberOfRepos === 1) ? repos = `${numberOfRepos} repo` : repos = `${numberOfRepos} repos`;
                     reposData.forEach((repo) => {
                         languages[repo.language] = (languages[repo.language] || 0) + 1;
                     });
-                    languages = _.fromPairs(_.sortBy(_.toPairs(languages), (a) => a[1]).reverse());
+                    languages = fromPairs(sortBy(toPairs(languages), (a) => a[1]).reverse());
 
                     if (languages.null) {
                         languages.unknown = languages.null;
                         delete languages.null;
                     }
-                    const goodAt = _.maxBy(_.keys(languages), (o) => languages[o]);
+                    const goodAt = maxBy(keys(languages), (o) => languages[o]);
                     const goodAtMysteryLanguage = (goodAt === 'unknown');
 
                     // change language of 'unknown' to 'unknown (fork repository)'
@@ -129,13 +122,13 @@ exports.index = async (req, res) => {
                         delete Object.assign(languages, { [newKey] : languages[oldKey] })[oldKey];
                     }
 
-                    const randomStatement = goodAtMysteryLanguage ? _.sample(MISTERY_STATEMENTS) : _.sample(RANDOM_STATEMENTS);
+                    const randomStatement = goodAtMysteryLanguage ? sample(MISTERY_STATEMENTS) : sample(RANDOM_STATEMENTS);
                     goodAtMysteryLanguage ? statement = `${randomStatement}` : statement = `${randomStatement} ${goodAt}!`;
 
                     const limitLabel = Object.keys(languages).length > MAX_REPOS_PER_CHART;
 
                     res.render('layouts/main', {
-                        ..._.defaults({
+                        ...defaults({
                             show: { result: true, chart: true },
                             username,
                             repos,
@@ -153,9 +146,9 @@ exports.index = async (req, res) => {
         .catch((err) => {
             if (err.response.data.message === 'Not Found') {
                 res.render('layouts/main', {
-                    ..._.defaults({ msg: 'User was not found' }, defaultRenderValue)
+                    ...defaults({ msg: 'User was not found' }, defaultRenderValue)
                 });
                 return;
             }
         });
-};
+}

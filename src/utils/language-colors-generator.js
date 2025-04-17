@@ -1,16 +1,12 @@
 'use strict';
 
-const colorList = require('../../public/json/colors.json');
+import colorList from '../../public/js/language-colors.js';
 
-const getColorsForLanguages = (languages) => {
+export const getColorsForLanguages = (languages) => {
     const defaultColor = '#000';
     const colors = [];
     Object.keys(languages).forEach((key) => {
         colors.push(colorList[key] || defaultColor);
     });
     return colors;
-};
-
-module.exports = {
-    getColorsForLanguages
 };

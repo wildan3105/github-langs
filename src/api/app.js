@@ -1,9 +1,12 @@
-const express = require('express');
-const exphbs = require('express-handlebars');
-const bodyParser = require('body-parser');
+import express from 'express';
+import exphbs from 'express-handlebars';
+import bodyParser from 'body-parser';
+const { json, urlencoded } = bodyParser;
 const app = express();
 
-const { ENV_MISSING_ERROR_MESSAGE } = require('../config');
+import routes from './routes.js';
+
+import { ENV_MISSING_ERROR_MESSAGE } from '../config.js';
 
 if (!process.env.ENV) {
     throw ENV_MISSING_ERROR_MESSAGE;
@@ -20,10 +23,12 @@ app.engine('.handlebars', exphbs({
 app.set('view engine', '.handlebars');
 
 // useful middleware
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(json());
+app.use(urlencoded({ extended: false }));
 app.use('/public', express.static('public'));
 
-app.use('/', require('./routes'));
+app.use('/', routes);
 
-module.exports = app;
+app.listen(process.env.PORT || 3000, () => {
+    console.log(`github-langs running on port: ${process.env.PORT || 3000}`);
+});

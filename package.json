@@ -1,6 +1,7 @@
 {
   "name": "github-langs",
   "version": "2.1.0",
+  "type": "module",
   "description": "show programming language based on the repos of github's account",
   "engines": {
     "node": "18.10.0",
@@ -8,8 +9,8 @@
   },
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js | gulp",
-    "lint": "eslint '**/*.js' --ignore-pattern node_modules/",
+    "start": "node src/api/app.js | gulp",
+    "lint": "eslint '**/*.js' --ignore-pattern src/utils/*.js",
     "lint:fix": "eslint --fix '**/*.js' --ignore-pattern node_modules/",
     "mocha": "mocha",
     "test": "nyc mocha"

@@ -1,9 +1,9 @@
-const express = require('express');
-const router = express.Router();
+import { Router } from 'express';
+const router = Router();
 
-const controller = require('./controller');
+import { index } from './controller.js';
 
-router.get('/', controller.index);
+router.get('/', index);
 
 router.use('*', (_, res) => {
     res.render('layouts/main', {
@@ -15,4 +15,4 @@ router.use('*', (_, res) => {
     });
 });
 
-module.exports = router;
+export default router;
