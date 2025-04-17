@@ -23,7 +23,7 @@ export default defineConfig([{
         },
 
         ecmaVersion: 2018,
-        sourceType: "commonjs",
+        sourceType: "module",
     },
 
     rules: {
@@ -42,7 +42,6 @@ export default defineConfig([{
         "dot-notation": "error",
         "eol-last": "error",
         eqeqeq: ["error", "smart"],
-        "func-style": ["error", "expression"],
         indent: "error",
         "keyword-spacing": "error",
         "max-depth": ["error", 4],

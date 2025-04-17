@@ -1,15 +1,11 @@
-/* eslint-disable func-style */
-const {
-    src,
-    dest,
-    series,
-    watch
-} = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
-const rename = require('gulp-rename');
+import gulp from 'gulp';
+import dartSass from 'sass';
+import gulpSass from 'gulp-sass';
+const sass = gulpSass(dartSass);
+import rename from 'gulp-rename';
 
-function generateStyles(cb) {
-    src('public/css/base.scss')
+async function generateStyles() {
+    gulp.src('public/css/base.scss')
         .pipe(
             sass({
                 outputStyle: 'compressed',
@@ -26,16 +22,14 @@ function generateStyles(cb) {
             })
         )
         .pipe(
-            dest('public/css/screen')
+            gulp.dest('public/css/screen')
         );
-    cb();
 }
 
-function watchFiles(cb) {
-    watch('public/css/**/*.scss', generateStyles);
+function watchFiles() {
+    gulp.watch('public/css/**/*.scss', generateStyles);
 }
 
-exports.styles = generateStyles;
-exports.watch = series(generateStyles, watchFiles);
-
-exports.default = series(generateStyles);
+export const styles = generateStyles;
+export const watch = gulp.series(generateStyles, watchFiles);
+export default gulp.series(generateStyles);

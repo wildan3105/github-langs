@@ -1,7 +1,7 @@
 'use strict';
 
-const { Octokit } = require('octokit');
-const { REPOS_PER_PAGE } = require('../config');
+import { Octokit } from 'octokit';
+import { REPOS_PER_PAGE } from '../config.js';
 
 class OctokitService {
     constructor(token) {
@@ -32,4 +32,4 @@ class OctokitService {
     }
 }
 
-module.exports = OctokitService;
+export default OctokitService;

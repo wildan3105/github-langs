@@ -1,5 +1,5 @@
 
-const emojiGenerator = (repoLength) => {
+export const emojiGenerator = (repoLength) => {
     if (repoLength >= 100) {
         return '💯 👍 😎 👏';
     } else if (repoLength >= 75) {
@@ -15,8 +15,4 @@ const emojiGenerator = (repoLength) => {
     }
 
     return '';
-};
-
-module.exports = {
-    emojiGenerator
 };
