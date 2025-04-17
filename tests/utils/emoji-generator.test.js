@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
-const { emojiGenerator } = require('../../src/utils/emoji-generator');
-const expect = require('expect.js');
+import { emojiGenerator } from '../../src/utils/emoji-generator.js';
+import expect from 'expect.js';
 
 describe('emojiGenerator', () => {
     it('should return `` if the total repo is not a number', () => {
