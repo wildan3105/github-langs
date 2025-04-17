@@ -41,6 +41,11 @@ An example of environment variable is provided [here](.env.example)
 * Install dependency: `npm install`
 * Start the app `<list-of-env-and-values> npm run start` and go to `http://localhost:3000`
 
+## Running with hot-reload
+```bash
+npm run dev # it will reload the application whenever there's scss file changes
+```
+
 ## Feature tracker:
 You can see the feature progress and pick up some issues in the [issues](https://github.com/wildan3105/github-langs/issues) or [projects](https://github.com/wildan3105/github-langs/projects) or [milestones](https://github.com/wildan3105/github-langs/milestones)
 
