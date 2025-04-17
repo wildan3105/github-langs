@@ -2,7 +2,7 @@ document.getElementById('overlay').style.visibility = 'hidden';
 document.getElementById('realContent').style.visibility = 'visible';
 
 
-export const showLoader = () => {
+const showLoader = () => {
     const val = document.getElementById('username').value;
     if (val !== undefined && val !== null && val.length !== 0) {
         document.getElementById('overlay').style.visibility = 'visible';
