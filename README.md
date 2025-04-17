@@ -1,6 +1,7 @@
 # Github Language Checker
 
-![test pipeline](https://github.com/wildan3105/github-langs/actions/workflows/node.js.yml/badge.svg)
+[![Deploy to VPS](https://github.com/wildan3105/github-langs/actions/workflows/deploy.yml/badge.svg)](https://github.com/wildan3105/github-langs/actions/workflows/deploy.yml)
+[![Node.js test pipeline](https://github.com/wildan3105/github-langs/actions/workflows/test.yml/badge.svg)](https://github.com/wildan3105/github-langs/actions/workflows/test.yml)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/wildan3105/github-langs/issues)
 
 ## What ?
