@@ -26,7 +26,11 @@ So people can see the stats of programming language being used in their reposito
 ## Running locally
 
 ### Supported environment:
-* Prerequisite: Node >= v18.0.0 and NPM >= 9.5.0
+* Prerequisite: 
+```bash
+Node >= v18.18.0
+NPM >= 9.5.0
+```
 
 * [Generate access token (classic)](https://github.com/settings/tokens/new) with `repo` scope to ensure you don't get rate limited API call.
 
