@@ -50,8 +50,8 @@ An example of environment variable is provided [here](.env.example)
 npm run dev # it will reload the application whenever there's scss file changes
 ```
 
-## Feature tracker:
-You can see the feature progress and pick up some issues in the [issues](https://github.com/wildan3105/github-langs/issues) or [projects](https://github.com/wildan3105/github-langs/projects) or [milestones](https://github.com/wildan3105/github-langs/milestones)
+## Feature tracker / bug report:
+You can see the feature progress / bug report and pick up some issues in the [issues](https://github.com/wildan3105/github-langs/issues)
 
 ## Contributing
 
