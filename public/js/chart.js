@@ -1,7 +1,7 @@
 /* eslint-disable no-useless-escape */
 /* eslint-disable no-undef */
 
-export const sum = (array) => {
+const sum = (array) => {
     if (array.length === 0) {
         return 0;
     }
@@ -9,7 +9,7 @@ export const sum = (array) => {
     return array.reduce((acum, val) => (!isNaN(val) ? acum + val : 0), 0);
 };
 
-export const slugify = (text) =>
+const slugify = (text) =>
     text
         .toString()
         .toLowerCase()
