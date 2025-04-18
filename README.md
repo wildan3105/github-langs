@@ -22,7 +22,7 @@ So people can see the stats of programming language being used in their reposito
 - Browse the repo with specific programming language directly from the chart bar
 - Ability to switch between multicolor or single color (white)
 - Ability to download the chart in a JPG file
-- Ability to share the result via facebook or twitter
+- Ability to share the result via facebook or X (formerly Twitter)
 
 ## Running locally
 
