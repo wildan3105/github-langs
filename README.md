@@ -27,7 +27,11 @@ So people can see the stats of programming language being used in their reposito
 ## Running locally
 
 ### Supported environment:
-* Prerequisite: Node >= v18.0.0 and NPM >= 9.5.0
+* Prerequisite: 
+```bash
+Node >= v18.18.0
+NPM >= 9.5.0
+```
 
 * [Generate access token (classic)](https://github.com/settings/tokens/new) with `repo` scope to ensure you don't get rate limited API call.
 
@@ -47,8 +51,8 @@ An example of environment variable is provided [here](.env.example)
 npm run dev # it will reload the application whenever there's scss file changes
 ```
 
-## Feature tracker:
-You can see the feature progress and pick up some issues in the [issues](https://github.com/wildan3105/github-langs/issues) or [projects](https://github.com/wildan3105/github-langs/projects) or [milestones](https://github.com/wildan3105/github-langs/milestones)
+## Feature tracker / bug report:
+You can see the feature progress / bug report and pick up some issues in the [issues](https://github.com/wildan3105/github-langs/issues)
 
 ## Contributing
 
