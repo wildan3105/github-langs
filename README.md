@@ -28,7 +28,7 @@ So people can see the stats of programming language being used in their reposito
 ### Supported environment:
 * Prerequisite: 
 ```bash
-Node >= v18.0.0
+Node >= v18.18.0
 NPM >= 9.5.0
 ```
 
