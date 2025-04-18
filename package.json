@@ -93,7 +93,7 @@
     "body-parser": "^2.2.0",
     "bootstrap": "^5.3.5",
     "express": "4.21.1",
-    "express-handlebars": "3.0.0",
+    "express-handlebars": "8.0.2",
     "fs": "0.0.1-security",
     "gulp": "^4.0.0",
     "gulp-rename": "^2.0.0",
