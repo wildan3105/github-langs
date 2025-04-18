@@ -30,6 +30,7 @@ jobs:
           CI: true
 
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     env:
       PROJECT_REPO: git@github.com:wildan3105/github-langs.git
