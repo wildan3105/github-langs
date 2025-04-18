@@ -6,6 +6,29 @@ on:
       - master
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.18.0]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - name: Clear npm cache
+        run: npm cache clean --force
+      - name: Installing dependencies
+        run: npm ci
+      - name: Running linter
+        run: npm run lint
+      - name: Running test
+        run: npm run test
+        env:
+          CI: true
+
   deploy:
     runs-on: ubuntu-latest
     env:
