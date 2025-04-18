@@ -90,7 +90,7 @@
   "homepage": "https://github.com/wildan3105/github-langs#readme",
   "dependencies": {
     "axios": "^1.8.4",
-    "body-parser": "^1.20.3",
+    "body-parser": "^2.2.0",
     "bootstrap": "^4.5.2",
     "express": "4.21.1",
     "express-handlebars": "3.0.0",
@@ -99,7 +99,6 @@
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
     "lodash": "^4.17.21",
-    "method-override": "^2.3.5",
     "octokit": "^3.1.2",
     "sass": "^1.86.3"
   },
