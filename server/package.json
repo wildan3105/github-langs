@@ -1,0 +1,11 @@
+{
+  "name": "server",
+  "version": "2.0.0",
+  "description": "Backend app for github-langs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
