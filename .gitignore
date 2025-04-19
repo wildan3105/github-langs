@@ -1,0 +1,14 @@
+# Node
+node_modules
+dist
+.env
+.env.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Optional build cache
+.cache
+turbo

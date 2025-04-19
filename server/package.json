@@ -1,14 +1,22 @@
 {
-  "name": "server",
-  "version": "2.0.0",
-  "description": "Backend app for github-langs",
-  "main": "index.js",
+  "name": "github-langs-server",
+  "version": "1.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint 'src/**/*.{ts,js}'",
+    "format": "prettier --write .",
+    "check:format": "prettier --check .",
+    "prepare": "husky install"
   },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "husky": "^9.1.7"
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "husky": "^9.0.7",
+    "lint-staged": "^15.2.0"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,js}": [
+      "npm run lint",
+      "npm run check:format"
+    ]
   }
 }
