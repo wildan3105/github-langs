@@ -1,0 +1,23 @@
+{
+  "name": "github-langs-server",
+  "version": "1.0.0",
+  "scripts": {
+    "lint": "eslint 'src/**/*.{ts,js}'",
+    "format": "prettier --write .",
+    "check:format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "husky": "^9.0.7",
+    "lint-staged": "^15.2.0"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,js}": [
+      "npm run lint",
+      "npm run check:format"
+    ]
+  }
+}
